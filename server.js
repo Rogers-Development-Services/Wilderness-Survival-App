@@ -12,6 +12,23 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
+// PLANTS
+const axios = require('axios');
+ 
+// Make a request for a user with a given ID
+axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')
+  .then(function (response) {
+    // handle success
+    console.log(response.data);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });
+
 
 // Send every other request to the React app
 // Define any API routes before this runs

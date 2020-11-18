@@ -132,4 +132,7 @@ A screenshot of your Project Management Board that shows breakdown of tasks, ass
 * #D7FFF1
 
 ## Wireframe: 
-https://wireframepro.mockflow.com/editor.jsp?editor=off&publicid=M7553ed4f01799388035ce1bd72b3e2571605581327046&projectid=Me6dd3a2e9e27ee5c72cf4f76de3a33f41605552968657&perm=Owner#/page/f9fd5991f23545a2a75188c6718a3ba2
+[Click Here for our outline](https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fs3.amazonaws.com%2Fassets.mockflow.com%2Fapp%2Fwireframepro%2Fcompany%2FCa7256b44d73b4257b2884d30210e64e7%2Fprojects%2FMe6dd3a2e9e27ee5c72cf4f76de3a33f41605552968657%2Fpages%2Ff9fd5991f23545a2a75188c6718a3ba2%2Fimage%2Ff9fd5991f23545a2a75188c6718a3ba2.png)
+
+## User Stories
+[Click Here for our User Stories]()

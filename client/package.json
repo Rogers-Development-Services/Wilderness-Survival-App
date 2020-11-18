@@ -5,6 +5,7 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "@auth0/auth0-react": "^1.2.0",
     "axios": "^0.21.0",
     "materialize-css": "^1.0.0-rc.2",
     "react": "^16.6.3",

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Location from "./pages/Location";
 import Notes from "./pages/Notes";
@@ -12,7 +11,7 @@ import "materialize-css";
 import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon } from 'react-materialize';
 // import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/Homepage";
+import Homepage from "./pages/Homepage";
 import "./App.css";
 
 function App() {

@@ -23,6 +23,7 @@
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "materialize-css": "^1.0.0-rc.2",
-    "mongoose": "^5.10.15"
+    "mongoose": "^5.10.15",
+    "react-materialize": "^3.9.3"
   }
 }

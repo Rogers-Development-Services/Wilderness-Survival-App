@@ -9,35 +9,27 @@
     },
     {
         "name": "Moose",
-        "description": "",
-        "image": "./assets/animalPictures/moose/",
-        "footprint": "./assets/animalPictures/moose/",
-        "map": "./assets/animalPictures/moose/",
-        "status": "./assets/animalPictures/moose/"
-    },
-    {
-        "name": "Dog",
-        "description": "",
-        "image": "./assets/animalPictures/dog/",
-        "footprint": "./assets/animalPictures/dog/",
-        "map": "./assets/animalPictures/dog/",
-        "status": "./assets/animalPictures/dog/"
+        "description": "The moose or elk, Alces alces, is a member of the New World deer subfamily and is the largest and heaviest extant species in the deer family. Most adult male moose have distinctive broad, palmate antlers; most other members of the deer family have antlers with a dendritic configuration.",
+        "image": "./assets/animalPictures/moose/image.jpg",
+        "footprint": "./assets/animalPictures/moose/footprint.png",
+        "map": "./assets/animalPictures/moose/map.png",
+        "status": "./assets/animalPictures/moose/status.png"
     },
     {
         "name": "Cayote",
-        "description": "",
-        "image": "./assets/animalPictures/cayote/",
-        "footprint": "./assets/animalPictures/cayote/",
-        "map": "./assets/animalPictures/cayote/",
-        "status": "./assets/animalPictures/cayote/"
+        "description": "The coyote is a species of canine native to North America. It is smaller than its close relative, the wolf, and slightly smaller than the closely related eastern wolf and red wolf. It fills much of the same ecological niche as the golden jackal does in Eurasia.",
+        "image": "./assets/animalPictures/cayote/image.jpg",
+        "footprint": "./assets/animalPictures/cayote/footprint.jpg",
+        "map": "./assets/animalPictures/cayote/map.png",
+        "status": "./assets/animalPictures/cayote/status.png"
     },
     {
         "name": "Red Fox",
-        "description": "",
-        "image": "./assets/animalPictures/redfox/",
-        "footprint": "./assets/animalPictures/redfox/",
-        "map": "./assets/animalPictures/redfox/",
-        "status": "./assets/animalPictures/redfox/"
+        "description": "The red fox is the largest of the true foxes and one of the most widely distributed members of the order Carnivora, being present across the entire Northern Hemisphere including most of North America, Europe and Asia, plus parts of North Africa. It is listed as least concern by the IUCN.",
+        "image": "./assets/animalPictures/redfox/image.jpg",
+        "footprint": "./assets/animalPictures/redfox/footprint.png",
+        "map": "./assets/animalPictures/redfox/map.png",
+        "status": "./assets/animalPictures/redfox/status.png"
     },
     {
         "name": "Gray Fox",

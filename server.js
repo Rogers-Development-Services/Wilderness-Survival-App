@@ -29,6 +29,8 @@ axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw
     // always executed
   });
 
+// Api routes
+require("./routes/apiRoutes")(app);
 
 // Send every other request to the React app
 // Define any API routes before this runs

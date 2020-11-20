@@ -22,3 +22,10 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* Navbar renders the <nav> on the actual DOM
+ */
+/* direct children need to be styled  */
+div#root > div > nav{
+  background-color: #2E7D32;
+};

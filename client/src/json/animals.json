@@ -1,0 +1,202 @@
+[
+    {
+        "name": "White-Tailed Deer",
+        "description": "The white-tailed deer, also known as the whitetail or Virginia deer, is a medium-sized deer native to North America, Central America, Ecuador, and South America as far south as Peru and Bolivia.",
+        "image": "./assets/animalPictures/whiteTailedDeer/image.png",
+        "footprint": "./assets/animalPictures/whiteTailedDeer/footprint.png",
+        "map": "./assets/animalPictures/whiteTailedDeer/map.png",
+        "status": "./assets/animalPictures/whiteTailedDeer/status.png"
+    },
+    {
+        "name": "Moose",
+        "description": "The moose or elk, Alces alces, is a member of the New World deer subfamily and is the largest and heaviest extant species in the deer family. Most adult male moose have distinctive broad, palmate antlers; most other members of the deer family have antlers with a dendritic configuration.",
+        "image": "./assets/animalPictures/moose/image.jpg",
+        "footprint": "./assets/animalPictures/moose/footprint.png",
+        "map": "./assets/animalPictures/moose/map.png",
+        "status": "./assets/animalPictures/moose/status.png"
+    },
+    {
+        "name": "Cayote",
+        "description": "The coyote is a species of canine native to North America. It is smaller than its close relative, the wolf, and slightly smaller than the closely related eastern wolf and red wolf. It fills much of the same ecological niche as the golden jackal does in Eurasia.",
+        "image": "./assets/animalPictures/cayote/image.jpg",
+        "footprint": "./assets/animalPictures/cayote/footprint.jpg",
+        "map": "./assets/animalPictures/cayote/map.png",
+        "status": "./assets/animalPictures/cayote/status.png"
+    },
+    {
+        "name": "Red Fox",
+        "description": "The red fox is the largest of the true foxes and one of the most widely distributed members of the order Carnivora, being present across the entire Northern Hemisphere including most of North America, Europe and Asia, plus parts of North Africa. It is listed as least concern by the IUCN.",
+        "image": "./assets/animalPictures/redfox/image.jpg",
+        "footprint": "./assets/animalPictures/redfox/footprint.png",
+        "map": "./assets/animalPictures/redfox/map.png",
+        "status": "./assets/animalPictures/redfox/status.png"
+    },
+    {
+        "name": "Gray Fox",
+        "description": "",
+        "image": "./assets/animalPictures/grayfox/",
+        "footprint": "./assets/animalPictures/grayfox/",
+        "map": "./assets/animalPictures/grayfox/",
+        "status": "./assets/animalPictures/grayfox/"
+    },
+    {
+        "name": "Bob Cat",
+        "description": "",
+        "image": "./assets/animalPictures/bobcat/",
+        "footprint": "./assets/animalPictures/bobcat/",
+        "map": "./assets/animalPictures/bobcat/",
+        "status": "./assets/animalPictures/bobcat/"
+    },
+    {
+        "name": "Otter",
+        "description": "",
+        "image": "./assets/animalPictures/otter/",
+        "footprint": "./assets/animalPictures/otter/",
+        "map": "./assets/animalPictures/otter/",
+        "status": "./assets/animalPictures/otter/"
+    },
+    {
+        "name": "Fisher",
+        "description": "",
+        "image": "./assets/animalPictures/fisher/",
+        "footprint": "./assets/animalPictures/fisher/",
+        "map": "./assets/animalPictures/fisher/",
+        "status": "./assets/animalPictures/fisher/"
+    },
+    {
+        "name": "Mink",
+        "description": "",
+        "image": "./assets/animalPictures/mink/",
+        "footprint": "./assets/animalPictures/mink/",
+        "map": "./assets/animalPictures/mink/",
+        "status": "./assets/animalPictures/mink/"
+    },
+    {
+        "name": "Weasel",
+        "description": "",
+        "image": "./assets/animalPictures/weasel/",
+        "footprint": "./assets/animalPictures/weasel/",
+        "map": "./assets/animalPictures/weasel/",
+        "status": "./assets/animalPictures/weasel/"
+    },
+    {
+        "name": "Racoon",
+        "description": "",
+        "image": "./assets/animalPictures/racoon/",
+        "footprint": "./assets/animalPictures/racoon/",
+        "map": "./assets/animalPictures/racoon/",
+        "status": "./assets/animalPictures/racoon/"
+    },
+    {
+        "name": "Striped Skunk",
+        "description": "",
+        "image": "./assets/animalPictures/stripedskunk/",
+        "footprint": "./assets/animalPictures/stripedskunk/",
+        "map": "./assets/animalPictures/stripedskunk/",
+        "status": "./assets/animalPictures/stripedskunk/"
+    },
+    {
+        "name": "Porcupine",
+        "description": "",
+        "image": "./assets/animalPictures/porcupine/",
+        "footprint": "./assets/animalPictures/porcupine/",
+        "map": "./assets/animalPictures/porcupine/",
+        "status": "./assets/animalPictures/porcupine/"
+    },
+    {
+        "name": "Beaver",
+        "description": "",
+        "image": "./assets/animalPictures/beaver/",
+        "footprint": "./assets/animalPictures/beaver/",
+        "map": "./assets/animalPictures/beaver/",
+        "status": "./assets/animalPictures/beaver/"
+    },
+    {
+        "name": "Black Bear",
+        "description": "",
+        "image": "./assets/animalPictures/blackbear/",
+        "footprint": "./assets/animalPictures/blackbear/",
+        "map": "./assets/animalPictures/blackbear/",
+        "status": "./assets/animalPictures/blackbear/"
+    },
+    {
+        "name": "Opossum",
+        "description": "",
+        "image": "./assets/animalPictures/opossum/",
+        "footprint": "./assets/animalPictures/opossum/",
+        "map": "./assets/animalPictures/opossum/",
+        "status": "./assets/animalPictures/opossum/"
+    },
+    {
+        "name": "Woodchuck",
+        "description": "",
+        "image": "./assets/animalPictures/woodchuck/",
+        "footprint": "./assets/animalPictures/woodchuck/",
+        "map": "./assets/animalPictures/woodchuck/",
+        "status": "./assets/animalPictures/woodchuck/"
+    },
+    {
+        "name": "Muskrat",
+        "description": "",
+        "image": "./assets/animalPictures/muskrat/",
+        "footprint": "./assets/animalPictures/muskrat/",
+        "map": "./assets/animalPictures/muskrat/",
+        "status": "./assets/animalPictures/muskrat/"
+    },
+    {
+        "name": "Showshoe Hare",
+        "description": "",
+        "image": "./assets/animalPictures/showshoehare/",
+        "footprint": "./assets/animalPictures/showshoehare/",
+        "map": "./assets/animalPictures/showshoehare/",
+        "status": "./assets/animalPictures/showshoehare/"
+    },
+    {
+        "name": "Cottontail Rabbit",
+        "description": "",
+        "image": "./assets/animalPictures/cottontailrabbit/",
+        "footprint": "./assets/animalPictures/cottontailrabbit/",
+        "map": "./assets/animalPictures/cottontailrabbit/",
+        "status": "./assets/animalPictures/cottontailrabbit/"
+    },
+    {
+        "name": "Gray Squirrel",
+        "description": "",
+        "image": "./assets/animalPictures/graysquirrel/",
+        "footprint": "./assets/animalPictures/graysquirrel/",
+        "map": "./assets/animalPictures/graysquirrel/",
+        "status": "./assets/animalPictures/graysquirrel/"
+    },
+    {
+        "name": "White-Footed Mouse",
+        "description": "",
+        "image": "./assets/animalPictures/whitefootedmouse/",
+        "footprint": "./assets/animalPictures/whitefootedmouse/",
+        "map": "./assets/animalPictures/whitefootedmouse/",
+        "status": "./assets/animalPictures/whitefootedmouse/"
+    },
+    {
+        "name": "Crow",
+        "description": "",
+        "image": "./assets/animalPictures/crow/",
+        "footprint": "./assets/animalPictures/crow/",
+        "map": "./assets/animalPictures/crow/",
+        "status": "./assets/animalPictures/crow/"
+    },
+    {
+        "name": "Turkey",
+        "description": "",
+        "image": "./assets/animalPictures/turkey/",
+        "footprint": "./assets/animalPictures/turkey/",
+        "map": "./assets/animalPictures/turkey/",
+        "status": "./assets/animalPictures/turkey/"
+    },
+    {
+        "name": "Grizzely Bear",
+        "description": "",
+        "image": "./assets/animalPictures/grizzelybear/",
+        "footprint": "./assets/animalPictures/grizzelybear/",
+        "map": "./assets/animalPictures/grizzelybear/",
+        "status": "./assets/animalPictures/grizzelybear/"
+    }
+]

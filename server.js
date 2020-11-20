@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const mongoose = require("mongoose");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -14,6 +15,16 @@ if (process.env.NODE_ENV === "production") {
 // Define API routes here
 // PLANTS
 const axios = require('axios');
+
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/survival",
+  {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false
+  }
+);
  
 // Make a request for a user with a given ID
 axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')
@@ -29,6 +40,8 @@ axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw
     // always executed
   });
 
+// Api routes
+require("./routes/apiRoutes")(app);
 
 // Send every other request to the React app
 // Define any API routes before this runs

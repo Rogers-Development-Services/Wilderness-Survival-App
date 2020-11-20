@@ -11,7 +11,6 @@ import "materialize-css";
 import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon } from 'react-materialize';
 // import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Homepage from "./pages/Homepage";
 import "./App.css";
 
 function App() {

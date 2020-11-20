@@ -14,6 +14,16 @@ if (process.env.NODE_ENV === "production") {
 // Define API routes here
 // PLANTS
 const axios = require('axios');
+
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/survival",
+  {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false
+  }
+);
  
 // Make a request for a user with a given ID
 axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')

@@ -1,0 +1,210 @@
+[
+    {
+        "name": "White-Tailed Deer",
+        "description": "The white-tailed deer, also known as the whitetail or Virginia deer, is a medium-sized deer native to North America, Central America, Ecuador, and South America as far south as Peru and Bolivia.",
+        "image": "./assets/animalPictures/whiteTailedDeer/image.png",
+        "footprint": "./assets/animalPictures/whiteTailedDeer/footprint.png",
+        "map": "./assets/animalPictures/whiteTailedDeer/map.png",
+        "status": "./assets/animalPictures/whiteTailedDeer/status.png"
+    },
+    {
+        "name": "Moose",
+        "description": "",
+        "image": "./assets/animalPictures/moose/",
+        "footprint": "./assets/animalPictures/moose/",
+        "map": "./assets/animalPictures/moose/",
+        "status": "./assets/animalPictures/moose/"
+    },
+    {
+        "name": "Dog",
+        "description": "",
+        "image": "./assets/animalPictures/dog/",
+        "footprint": "./assets/animalPictures/dog/",
+        "map": "./assets/animalPictures/dog/",
+        "status": "./assets/animalPictures/dog/"
+    },
+    {
+        "name": "Cayote",
+        "description": "",
+        "image": "./assets/animalPictures/cayote/",
+        "footprint": "./assets/animalPictures/cayote/",
+        "map": "./assets/animalPictures/cayote/",
+        "status": "./assets/animalPictures/cayote/"
+    },
+    {
+        "name": "Red Fox",
+        "description": "",
+        "image": "./assets/animalPictures/redfox/",
+        "footprint": "./assets/animalPictures/redfox/",
+        "map": "./assets/animalPictures/redfox/",
+        "status": "./assets/animalPictures/redfox/"
+    },
+    {
+        "name": "Gray Fox",
+        "description": "",
+        "image": "./assets/animalPictures/grayfox/",
+        "footprint": "./assets/animalPictures/grayfox/",
+        "map": "./assets/animalPictures/grayfox/",
+        "status": "./assets/animalPictures/grayfox/"
+    },
+    {
+        "name": "Bob Cat",
+        "description": "",
+        "image": "./assets/animalPictures/bobcat/",
+        "footprint": "./assets/animalPictures/bobcat/",
+        "map": "./assets/animalPictures/bobcat/",
+        "status": "./assets/animalPictures/bobcat/"
+    },
+    {
+        "name": "Otter",
+        "description": "",
+        "image": "./assets/animalPictures/otter/",
+        "footprint": "./assets/animalPictures/otter/",
+        "map": "./assets/animalPictures/otter/",
+        "status": "./assets/animalPictures/otter/"
+    },
+    {
+        "name": "Fisher",
+        "description": "",
+        "image": "./assets/animalPictures/fisher/",
+        "footprint": "./assets/animalPictures/fisher/",
+        "map": "./assets/animalPictures/fisher/",
+        "status": "./assets/animalPictures/fisher/"
+    },
+    {
+        "name": "Mink",
+        "description": "",
+        "image": "./assets/animalPictures/mink/",
+        "footprint": "./assets/animalPictures/mink/",
+        "map": "./assets/animalPictures/mink/",
+        "status": "./assets/animalPictures/mink/"
+    },
+    {
+        "name": "Weasel",
+        "description": "",
+        "image": "./assets/animalPictures/weasel/",
+        "footprint": "./assets/animalPictures/weasel/",
+        "map": "./assets/animalPictures/weasel/",
+        "status": "./assets/animalPictures/weasel/"
+    },
+    {
+        "name": "Racoon",
+        "description": "",
+        "image": "./assets/animalPictures/racoon/",
+        "footprint": "./assets/animalPictures/racoon/",
+        "map": "./assets/animalPictures/racoon/",
+        "status": "./assets/animalPictures/racoon/"
+    },
+    {
+        "name": "Striped Skunk",
+        "description": "",
+        "image": "./assets/animalPictures/stripedskunk/",
+        "footprint": "./assets/animalPictures/stripedskunk/",
+        "map": "./assets/animalPictures/stripedskunk/",
+        "status": "./assets/animalPictures/stripedskunk/"
+    },
+    {
+        "name": "Porcupine",
+        "description": "",
+        "image": "./assets/animalPictures/porcupine/",
+        "footprint": "./assets/animalPictures/porcupine/",
+        "map": "./assets/animalPictures/porcupine/",
+        "status": "./assets/animalPictures/porcupine/"
+    },
+    {
+        "name": "Beaver",
+        "description": "",
+        "image": "./assets/animalPictures/beaver/",
+        "footprint": "./assets/animalPictures/beaver/",
+        "map": "./assets/animalPictures/beaver/",
+        "status": "./assets/animalPictures/beaver/"
+    },
+    {
+        "name": "Black Bear",
+        "description": "",
+        "image": "./assets/animalPictures/blackbear/",
+        "footprint": "./assets/animalPictures/blackbear/",
+        "map": "./assets/animalPictures/blackbear/",
+        "status": "./assets/animalPictures/blackbear/"
+    },
+    {
+        "name": "Opossum",
+        "description": "",
+        "image": "./assets/animalPictures/opossum/",
+        "footprint": "./assets/animalPictures/opossum/",
+        "map": "./assets/animalPictures/opossum/",
+        "status": "./assets/animalPictures/opossum/"
+    },
+    {
+        "name": "Woodchuck",
+        "description": "",
+        "image": "./assets/animalPictures/woodchuck/",
+        "footprint": "./assets/animalPictures/woodchuck/",
+        "map": "./assets/animalPictures/woodchuck/",
+        "status": "./assets/animalPictures/woodchuck/"
+    },
+    {
+        "name": "Muskrat",
+        "description": "",
+        "image": "./assets/animalPictures/muskrat/",
+        "footprint": "./assets/animalPictures/muskrat/",
+        "map": "./assets/animalPictures/muskrat/",
+        "status": "./assets/animalPictures/muskrat/"
+    },
+    {
+        "name": "Showshoe Hare",
+        "description": "",
+        "image": "./assets/animalPictures/showshoehare/",
+        "footprint": "./assets/animalPictures/showshoehare/",
+        "map": "./assets/animalPictures/showshoehare/",
+        "status": "./assets/animalPictures/showshoehare/"
+    },
+    {
+        "name": "Cottontail Rabbit",
+        "description": "",
+        "image": "./assets/animalPictures/cottontailrabbit/",
+        "footprint": "./assets/animalPictures/cottontailrabbit/",
+        "map": "./assets/animalPictures/cottontailrabbit/",
+        "status": "./assets/animalPictures/cottontailrabbit/"
+    },
+    {
+        "name": "Gray Squirrel",
+        "description": "",
+        "image": "./assets/animalPictures/graysquirrel/",
+        "footprint": "./assets/animalPictures/graysquirrel/",
+        "map": "./assets/animalPictures/graysquirrel/",
+        "status": "./assets/animalPictures/graysquirrel/"
+    },
+    {
+        "name": "White-Footed Mouse",
+        "description": "",
+        "image": "./assets/animalPictures/whitefootedmouse/",
+        "footprint": "./assets/animalPictures/whitefootedmouse/",
+        "map": "./assets/animalPictures/whitefootedmouse/",
+        "status": "./assets/animalPictures/whitefootedmouse/"
+    },
+    {
+        "name": "Crow",
+        "description": "",
+        "image": "./assets/animalPictures/crow/",
+        "footprint": "./assets/animalPictures/crow/",
+        "map": "./assets/animalPictures/crow/",
+        "status": "./assets/animalPictures/crow/"
+    },
+    {
+        "name": "Turkey",
+        "description": "",
+        "image": "./assets/animalPictures/turkey/",
+        "footprint": "./assets/animalPictures/turkey/",
+        "map": "./assets/animalPictures/turkey/",
+        "status": "./assets/animalPictures/turkey/"
+    },
+    {
+        "name": "Grizzely Bear",
+        "description": "",
+        "image": "./assets/animalPictures/grizzelybear/",
+        "footprint": "./assets/animalPictures/grizzelybear/",
+        "map": "./assets/animalPictures/grizzelybear/",
+        "status": "./assets/animalPictures/grizzelybear/"
+    }
+]

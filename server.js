@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const axios = require('axios');
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -12,14 +13,12 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
-// PLANTS
-const axios = require('axios');
- 
+// PLANTS API
 // Make a request for a user with a given ID
 axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')
   .then(function (response) {
     // handle success
-    console.log(response.data);
+    // console.log(response.data);
   })
   .catch(function (error) {
     // handle error
@@ -29,6 +28,14 @@ axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw
     // always executed
   });
 
+//Animal json file
+'use strict';
+
+const fs = require('fs');
+
+let rawdata = fs.readFileSync('animals.json');
+let student = JSON.parse(rawdata);
+console.log(animal);
 
 // Send every other request to the React app
 // Define any API routes before this runs

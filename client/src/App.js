@@ -12,7 +12,7 @@ import "materialize-css";
 import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon } from 'react-materialize';
 // import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/Homepage";
+import Homepage from "./pages/Homepage";
 import "./App.css";
 
 function App() {
@@ -60,6 +60,7 @@ function App() {
         <Footer /> */}
       </div>
     </Router >
+  );
 }
 
 

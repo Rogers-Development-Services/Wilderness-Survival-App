@@ -12,32 +12,12 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// JSON FILES
-// Animals
-//Try to get a json file to show up to see if it works (Uncomment to see)
-// 'use strict';
-// const fs = require('fs');
-
-// let rawdata = fs.readFileSync('./client/src/json/animals.json');
-// let animals = JSON.parse(rawdata);
-// console.log(animals);
-
-// TIPS
-//Try to get a json file to show up to see if it works (Uncomment to see)
-// 'use strict';
-// const fs = require('fs');
-
-// let rawdata = fs.readFileSync('./client/src/json/tips.json');
-// let tips = JSON.parse(rawdata);
-// console.log(tips);
-
-
 // Define API routes here
 // PLANTS
 const axios = require('axios');
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/survival",
+  process.env.MONGODB_URI || "mongodb://localhost/survivaldb",
   {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -65,9 +45,10 @@ require("./routes/apiRoutes")(app);
 
 // Send every other request to the React app
 // Define any API routes before this runs
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

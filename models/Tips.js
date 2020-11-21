@@ -15,6 +15,6 @@ const SurvivalTipsSchema = new Schema({
     }
 });
 
-const SurvivalTips = mongoose.model("SurvivalTips", SurvivalTipsSchema);
+const SurvivalTips = mongoose.model("survivaltips", SurvivalTipsSchema);
 
 module.exports = SurvivalTips;

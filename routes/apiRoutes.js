@@ -6,13 +6,12 @@ module.exports = function (app) {
     app.post("/create/user", ({ body }, res) => {
         const user = body;
 
-        db.user.save(user, (error, saved) => {
-            if (errror) {
-                console.log(error);
-            } else {
-                console.log(saved);
-                res.send(saved);
-            }
+        db.User.create({ name: body.username, password: body.password, email: body.email })
+        .then(dbUser => {
+          console.log(dbUser);
+        })
+        .catch(({ message }) => {
+          console.log(message);
         });
     });
 

@@ -14,5 +14,18 @@ module.exports = function (app) {
           console.log(message);
         });
     });
+    
+    // Retrieve all users in db
+    app.get("/user", (req, res) => {
+        db.User.find({})
+        .then(dbUser => {
+          console.log(dbUser);
+          res.json(dbUser);
+        })
+        .catch(error => {
+          console.log(message);
+          res.json(error)
+        });
+    });
 
 };

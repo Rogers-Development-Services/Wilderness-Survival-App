@@ -2,8 +2,12 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const NotesSchema = new Schema({
-    // Schema for the notes collections of the db
+const NoteSchema = new Schema({
+    userID: {
+        type: String,
+        trim: false
+    },
+
     title: {
         type: String,
         trim: false,
@@ -20,6 +24,6 @@ const NotesSchema = new Schema({
     }
 });
 
-const Notes = mongoose.model("notes", NotesSchema);
+const Note = mongoose.model("Note", NoteSchema);
 
-module.exports = Notes;
+module.exports = Note;

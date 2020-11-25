@@ -1,29 +1,18 @@
-const db = require("../db/models/");
+const db = require("../models");
 
-module.exports = function(app) {
+module.exports = function (app) {
 
     // Creates a new user in the db
-    app.post("/api/create/user", async (req, res)=> {
-        try{
-            const response = await db.survivaldb.create({type: "user"})
-            res.json(response);
-        }
-        catch(error){
-            console.log("An error occurred while creating account: ", error)
-            res.json(error);
-        }
-    });
-    
-    // Creates a new note in the db linked to user's account
-    app.post("/api/create/note", async (req, res)=> {
-        try{
-            const response = await db.survivaldb.create({type: "note"})
-            res.json(response);
-        }
-        catch(error){
-            console.log("An error occurred while creating note: ", error)
-            res.json(error);
-        }
+    app.post("/create/user", ({ body }, res) => {
+        const user = body;
+
+        db.User.create({ name: body.username, password: body.password, email: body.email })
+        .then(dbUser => {
+          console.log(dbUser);
+        })
+        .catch(({ message }) => {
+          console.log(message);
+        });
     });
 
 };

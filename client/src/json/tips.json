@@ -1,6 +1,272 @@
 [
     {
-        "Title": "",
-        "How to": ""
+        "id": 1,
+        "title": "Stay Calm!",
+        "description": "Finding yourself in a survival situation can be extremely unsettling. I mean it’s not like you practice getting in such cases every day, right? Most people can get very nervous and panic in situations like these. This outdoor survival skill can alone save your life in many situations.",
+        "notes": "The first thing that you must tell yourself is to take a deep breath and try to control your anxiety and panic. In all likelihood, you are in a much less dangerous situation that you may believe at the moment. If you keep a cool head, you will soon start seeing ways to get out of the bind."
+    },
+    {
+        "id": 2,
+        "title": "Set Your Priorities Right",
+        "description": "The key to a successful survival is getting your priorities in order when you are stranded. You have a lot on your plate, and if you don’t prioritize, you will have huge problems.",
+        "notes": "If you are in a warm, dry weather, water is your top priority. Make sure that you get access to water first before you do anything else."
+    },
+    {
+        "id": 3,
+        "title": "Starting a Fire",
+        "description": "Fire is the one thing that we almost take for granted. It is there when we need it just light a match or press a button on your lighter and poof! The fire is there. Things are not that simple in the wild. You may not have any of these gadgets, or they won’t work. You should be able to improvise and start a fire.",
+        "notes": "There are three things needed to start a fire: fuel, oxygen and a spark. You have two of these in abundance in the wild. There is the almost unlimited amount of fuel in the form of twigs, branches, and dry leaves and there is oxygen all around. What you are missing is the spark or heat. So, let’s see what you can do to make that spark or heat happen."
+    },
+    {
+        "id": 4,
+        "title": "Making a Smoke Signal",
+        "description": "Assuming that you have already begun a fire successfully, the next step is to let the potential rescuers know your position. If the woods are thick, it can become impossible to see through the canopy even if the search party is looking for you from a helicopter. To let them know where you are, you need some signal.",
+        "notes": "Find a good location. First things first, find a suitable place for your smoke signal. A high land with less vegetation is ideal. Look for a piece of land that rescuers can see from above. Second Light a fire. Light a fire as in tip#1 and add some firewood to it. Let the fire burn completely, wait till it burns down to embers. Third Make smoke. Gather any leafy green vegetation that you can find and throw it on the embers. Cover them completely. It will create a lot of smoke depending on the greens that you chose. Quick Note, Pine and spruce leaves make thick smoke if you can find some, throw them in as well. A synthetic material such as plastic or rubber also produces dense smoke."
+    },
+    {
+        "id": 5,
+        "title": "How to Start and Sustain a Fire in Wet Weather",
+        "description": "If the weather is wet, it can be incredibly difficult to initiate and maintain a fire. However, certain tips and tricks can help you. The most important thing to remember is that if you get the fire raging, it will probably sustain light rain.",
+        "notes": "Avoid the pit: If the weather is dry, digging a small hole to keep your firewood is a good idea. However, in wet weather, the pit can quickly fill up with rain water. Skip the pit if it is raining. Look for dry pieces of wood: Now, before you say duh, hear me out! It can be difficult to find dry wood if it has been raining for a while. However, you can look for pieces of sticks that are under thick trees, there a good chance that you may find some dry place there. Also, a piece of wood can look wet on the outside when in fact it can be dry inside. If you peel off the bark from a piece of wood, you can find some dry, usable wood. Use pine and needle bearing leaves: These trees exude a sticky substance called pitch. It is a highly flammable substance that you can use to maintain a fire in the light rain and wet conditions. Make small pieces of your firewood: Always remember that if you split the branches into small pieces, they would burn better. Pay attention to the shape of the fire lay: The form of the pyre or the fire lay is critical especially if you are trying to light it in a wet environment. Make sure that the shape of the fire lay is as conical as possible. If your fire lay is flat and scattered, it is going to be put out by the rain quicker."
+    },
+    {
+        "id": 6,
+        "title": "How to Build a Shelter",
+        "description": "A shelter is an important survival tool in the wilderness. It can protect you from the weather elements as well as some wildlife. Making a tent can be quite simple. However, avoid the following mistakes while building one.",
+        "notes": "Never build a shelter on damp ground, ever. Never build a shelter on highlands or top of hills. The wind can get cold at night and with no trees to resist; you run the risk of your shelter blown away by the gusts. Similarly, avoid making a shelter in the bottom of a narrow valley. Cold wind collects there are you will have a tough time during the night."
+    },
+    {
+        "id": 7,
+        "title": "How to Build a Shelter",
+        "description": "A shelter is an important survival tool in the wilderness. It can protect you from the weather elements as well as some wildlife. Making a tent can be quite simple. However, avoid the following mistakes while building one.",
+        "notes": "Never build a shelter on damp ground, ever. Never build a shelter on highlands or top of hills. The wind can get cold at night and with no trees to resist; you run the risk of your shelter blown away by the gusts. Similarly, avoid making a shelter in the bottom of a narrow valley. Cold wind collects there are you will have a tough time during the night. One of the most important tip to making a shelter is making a bed. Never sleep on the bare floor of the woods. You can make a bed of dry leaves by arranging them inside your shelter. The bed will prevent the heat from your body seeping into the cold forest ground."
+    },
+    {
+        "id": 8,
+        "title": "Stay Warm in the Woods",
+        "description": "Staying warm in a cold or freezing wilderness can be a tough challenge. However, there are tips that you can use to make it easier. If you find yourself in a situation where the cold is getting the better of you, remember the following tips.",
+        "notes": "Layering always works: The best way to combat cold is not to allow it to escape from your body. Make sure that you are wearing as many layers as you can. Empty your bladder to stay warm: Now, it may sound crazy, but it is true. When your body stores urine, it needs extra heat to keep that liquid warm. If you empty your bladder, that energy can be used to keep your other body parts warm. Get cozy with your partner: If you are with someone in the wild, cuddling up while sleeping can be helpful. Cover your head: Most amount of body heat is lost through your head. Make sure that you insulate your head correctly. Wear a hat or something."
+    },
+    {
+        "id": 9,
+        "title": "Learn to Make a Water Filter",
+        "description": "Although there may be water all around you in the wilderness, drinking water from a stagnant puddle or a lake is not advisable. Drinking from a flowing stream is always better than drinking from a stagnant pool of water. However, there can be a situation where you may not have any option. In that case, you can construct a portable water filter. Here is how you do it.",
+        "notes": "Find an empty bottle or a container: Any empty container will do. If you can’t find one, you can always make one using birch barks. Poke small holes in the bottom of the container: Make small holes with a pencil or a stick. Now fill the bottle up to an inch or two with following material: Coarse gravel, coarse sand, charcoal and fine sand. You can get the charcoal from your fire that you made in step 2. Just collect the charcoal and crush it up into a fine power. Add water to the top layer of fine sand. As water percolates through the fine sand, then through the charcoal, the coarse sand, and the gravel, it will get filtered. Collect the water coming out through the openings you created."
+    },
+    {
+        "id": 10,
+        "title": "Collect Water",
+        "description": "There is a good possibility that you may not find any water in the wilderness, especially if you are stuck in the drier places. There are quite a few valuable survival tips and techniques in the wilderness, but I suppose this is one of the trickiest one. There are a couple of ways to collect water in the wilderness. One of the simplest ways involves trapping transpired water by the trees.",
+        "notes": "Trees always lose water to the atmosphere by a process called transpiration. You can trap this water efficiently. Look for a thick green tree with a lot of branches. Early in the morning, tie a plastic bag over a branch that has a bunch of leaves. You tie it so that the leaves are completely covered with the plastic bag. You can also weigh down the plastic bag by adding a small rock in the bag. This creates a low point in the bag for water to collect."
+    },
+    {
+        "id": 11,
+        "title": "Stay Cool in a Desert or an Arid Land",
+        "description": "If you are trapped in a desert or dry wilderness, it is critical that you keep your body cool. Although finding shade can be difficult, you can create a makeshift cooling hat using just two things: a rag and your urine.",
+        "notes": "Take a piece of clothing that you can wrap around your head and soak it in your urine. Wrap this damp cloth around your head to stay cool. It may sound a bit gross, but trust me, it will be much comfortable with the pee-rag on your head!"
+    },
+    {
+        "id": 12,
+        "title": "Learn to Treat Animal Bites",
+        "description": "If you are stuck in the wilderness, you are on the turf of the wild animals. There is a real possibility that an animal may bite you! In such cases, it is important to know the best way to tackle this situation.",
+        "notes": "The first step is to tie a ligature around the limb, above the bite to restrict the blood from flowing from the wound into the other parts of your body. Once this is done, the next step is to wash the wound as thoroughly as possible. If you have soap, use soap water to clean the wound. Your job is to prevent any parasites in the animal bite from reaching the blood. Washing thoroughly can get rid of some pests reducing the parasite load. It gives your immune system a better chance to fight the infection. If you have alcohol handy, pour some alcohol on the wound. It will further decrease the number of pathogens. Although to be effective, you must use hard drinks such as whiskey or rum. Drinks like beer have too less alcohol to be of any help in this situation."
+    },
+    {
+        "id": 13,
+        "title": "Learn How to Tell Directions in the Wild",
+        "description": "Many people can’t understand directions when lost. It is important for any survivalist to be able to tell directions even when the sun is not available for reference. There are many little clues in nature that can help you find the North. Here are some great examples.",
+        "notes": "Look for moss on a tree trunk. Mosses usually grow as far away from sunlight and are often found on the north side of the trees and rocks. If the tree or rock is covered in moss, it will be thickest on the north side. Spider webs appear on the south side of the trees. If you happen to find some, it can be a good indication of direction. If the sun is out, put a stick in the ground and mark the end of the shadow of the stick on the ground. Wait for a few minutes; the shadow will move. Now mark the end of the new position of the shadow. The line joining those two points will run east-west. If you are near a body of water, remember that animals breed on the west side of the water reserves."
+    },
+    {
+        "id": 14,
+        "title": "Find the North Star",
+        "description": "What if you want to locate the north during the night? Well, the best way to do it by finding the north star. Locating the north star in a bright cloudless sky is easy.",
+        "notes": "The first thing that you should look for is a constellation called The Big Dipper. It contains seven stars that form a somewhat ‘bowl with a handle’ shape. Once you spot the big dipper, find the two stars that make up the edge of the bowl away from the handle. These are called the pointer stars. Now draw an imaginary line joining these two and extend it to find a bright star. This is the north star. The north star always points to the true north no matter the season. It is always good to look up these constellations when you have time so that in case you need to use them, you know where to look!"
+    },
+    {
+        "id": 15,
+        "title": "Process Your Food as Far Away from Your Shelter as Possible",
+        "description": "Say you are stranded in the wilderness, and you trap a small animal or catch a fish for food. Don’t make the mistake of prepping the animal for cooking near your shelter.",
+        "notes": "Remember: The blood, entrails and other stuff can attract wild animals who can sniff these things out from a distance. If you prepare the animal for cooking away from your shelter, you will be much safer. Also, don’t let uneaten food open in the shelter. Make sure that you clean up all the bones and other half-eaten food from your shelter."
+    },
+    {
+        "id": 16,
+        "title": "Learn to Improvise Cooking Utensils",
+        "description": "If you find yourself in a survival type situation, you most certainly won’t have the utensils to cook your food. In that case, you may have to improvise to make your own. One of the best ways to cook in the wild is to grill. You can design a make-shift grill using metal rods or picks that you can find in your tent or backpacks.",
+        "notes": "Once you have a fire going, you can create a temporary grill using these metal wires and rods to cooks anything from fish to meat. You can also boil water in a make-shift cup that you can fashion from aluminum sheets."
+    },
+    {
+        "id": 17,
+        "title": "Learn to Identify Edible Plants",
+        "description": "One of the keys to surviving the wilderness is to keep yourself fed. All your survival efforts will be useless if you don’t have to energy to execute your plans. Although you can hunt or fish for food, both of them require patience and a degree of skill.",
+        "notes": "One of the best sources of food in the wilderness is plants. If you can find plants that you can eat, you won’t have to look for an animal to kill frantically! However, you must be careful if you decide to consume wild plants, fruits or flowers. Some of these plants can be very dangerous and even poisonous if consumed. There is no definite way of telling whether a plant or fruit is toxic or not just by looking at it. However, many poisonous plants share some common characteristics. You should avoid going anywhere near such plants. The characteristics of poisonous plants are: They have thorns or spikes, Bitter in taste, They have a milky sap; most of the plants with white fluids are highly toxic. Avoid them at any cost. Again, this is in no way meant to be an ultimate taste. Some poisonous plants may not have either of these characteristics. But, if you are in doubt, it is better if you avoid plants with these characteristics"
+    },
+    {
+        "id": 18,
+        "title": "How to Find Water by Reading Nature’s Cues",
+        "description": "If you are stranded in the middle of thick jungle, finding fresh, drinkable water can be a challenge. However, if you are vigilant and look for small clues and signs, you stand a better chance. Just observing what is around you can tell you a lot about the ecosystem of the area. For instance, watch the bird or insect activity or listen to the sounds of the jungle.",
+        "notes": "If you can spot bees, it is always a great sign. It means that not only there is a hive full of honey nearby, but also a water source. Bees are usually found within about 4-5-mile radius of a water body. The presence of birds is also a great indicator of a water body nearby. Birds like finches and wild pigeons are grain eaters who drink lots of water. If you can find these birds, you can be assured that a water body is nearby. Always make sure to boil water before drinking it. You can boil water using a make-shift container made from an aluminum foil."
+    },
+    {
+        "id": 19,
+        "title": "The Rule of Threes",
+        "description": "Although there is no way to precisely judge things like how long can you go without water or how long can you survive cold, there are some good estimates. One of my personal favorites is the “rule of the threes.” It gives you a very broad idea of some calculations that can help you in a survival situation. The rule goes as follows.",
+        "notes": "Rule One: If it is cold outside, you can survive for about three hours before your body shows significant effects of hypothermia. Rule Two: In case, you don’t find any water, you can probably survive for three days. However, you will start feeling the effects of dehydration in a day itself, but you can survive without water for three. Rule Three: Similarly, you can survive for about three weeks without food. Again, that does not mean that you will be up and about throughout the three weeks. It just means that you can ‘survive’ and not die if you don’t eat food for three weeks."
+    },
+    {
+        "id": 20,
+        "title": "Never Travel in the Dark",
+        "description": "It may sound a good idea just to keep traveling even after the sunset if you are not exhausted completely. However, it is one of the most dangerous things that you can do in the wild. Make sure that all your traveling can wait until the break of the dawn. Traveling through the wilderness in the dark is an open invitation to danger.",
+        "notes": "Most of the predatory animals are nocturnal and trust me; they are built for hunting at night. They can see you better than you know even if it is pitch black. Also, the floor of the woods is covered with insects and snakes that also come out during the night. Remember, you are traveling in a land that you have never tread. You can fall off a cliff if you can’t see where you are going."
+    },
+    {
+        "id": 21,
+        "title": "Sleep Above the Ground",
+        "description": "If you are traveling and just need bedding to sleep on for a night, make sure that you are not sleeping on the floor of the forest.",
+        "notes": "One of the best ways to spend the night is by making a make-shift hammock. Find a couple of trees that have tall trunks for your hammock. Trees that have less foliage are best. Make a hammock as high as you can and climb into it to spend the night. It will protect you from wild animals as well as the creeping and crawling insects. Never climb a tree and sleep there. Many people think that it is a good idea to climb a tree to sleep there for a while. There is a greater chance of you falling from the tree in your sleep that you might think."
+    },
+    {
+        "id": 22,
+        "title": "Do Not Use Dirty Water to Clean Wounds",
+        "description": "If you are injured or have a flesh wound, make sure that you are not washing the wound with dirty water that is filled with microbes.",
+        "notes": "Water from many waterbodies may seem clear, but it is filled with microscopic organisms that may cause severe infections. If you must wash the wound, make sure that you use clean water. If you can boil water, then use boiled water to clean the wounds. If you can’t use boiled water, you can use the water collected from tree transpiration. If you have alcohol with you, wash the wounds with high proof alcoholic spirits. Avoid beer and wine, these beverages contain a lot of sugar and not enough alcohol to help in any scenario."
+    },
+    {
+        "id": 23,
+        "title": "Learn the Medicinal Properties of Wild Plants",
+        "description": "There are a ton of plant species in the wilderness. Many of these plants have excellent medicinal properties. Crab apples, for instance, have an astringent effect that can help heal wounds. Pine resin has excellent antiseptic properties. If you can find eucalyptus leaves, you can burn them to get rid of mosquitoes and other bugs around your campsite.",
+        "notes": "Acorns and oak bark have excellent medicinal properties to heal gastrointestinal problems. If you can find some acorns and oak bark, just boil it in water for 5 minutes and drink the concoction. It will help you fight diarrhea and other gastro-intestinal issues. If you are constipated, use rose hip leaves. You can make a decoction by boiling the green fleshy parts of the plant in water. Drink this before you go to bed for relieving constipation. If you are having insect bite problems, dock leaves can be of great help. Just pulverize them and apply directly on the bite. The anti-histamine properties of the leaves can assist in easing the itch and pain. Willow bark contains salicylic acid, which is the active form of aspirin. You can chew on the middle willow barks if you have a fever of a headache to good effect. However, always remember that you should not eat any plant unless you are sure you can identify them correctly."
+    },
+    {
+        "id": 24,
+        "title": "Carry extra pair of socks",
+        "description": "Socks are one of the most versatile pieces of clothing. They can not only help you stay warm and comfortable, but you can also use them for various other purposes. Socks can prevent blisters in the wilderness when you must walk for long distances in sturdy boots.",
+        "notes": "You can also use socks as filters and as hand warmers if you don’t have anything else around. Make sure that you always have dry socks on your feet. Wet feet are more prone to chafing and blisters."
+    },
+    {
+        "id": 25,
+        "title": "Create an Insulated Vest from Dry Leaves",
+        "description": "Staying warm is your priority. Adding insulation to your clothing is always a welcome idea. Dry leaves on the floor of the woods make excellent insulators. All you need to do is stuff them into your jacket. They form an insulating layer between your body and the outside cold air, trapping your body heat.",
+        "notes": "However, make sure that the leaves you are using are completely dry. They should not contain any moisture. If you have newspapers or plastic bags, you can use them as well."
+    },
+    {
+        "id": 26,
+        "title": "Invest in Tools for Your Survival Kit",
+        "description": "Tools are crucial for surviving the wild. If you have the right tools, surviving in the wild can be exponentially easy. Invest in quality tools that perform in rugged weather.",
+        "notes": "Always have waterproof equipment in my survival kit. They may cost you a bit more, but they can save your life in some situations. Invest in the waterproof watch, waterproof matches, a waterproof compass to name a few."
+    },
+    {
+        "id": 27,
+        "title": "Get Boots that are Suitable for the Terrain",
+        "description": "If you are planning to go on hunting, trekking or a camping expedition, make sure that your shoes are suited for the terrain. Shoes are one of the most important pieces of equipment that you will carry in these expeditions.",
+        "notes": "You will be walking a lot, and if your shoes are not comfortable, you will find it tough to cover ground. Proper shoes must have the following characteristics. Light-weight: Heavy and clunky shoes will drain you faster. You want a shoe that is light yet durable. Protection: Providing protection is one of the most important jobs of a shoe. Reinforced rubber sole and high-quality leather or synthetic material are things to look for in the best shoe. Right size: If you are planning to walk a lot, remember that your feet are going to get a bit swollen. In that case, your shoes need to fit correctly. Anticipate the situation and choose your shoe size accordingly."
+    },
+    {
+        "id": 28,
+        "title": "Surround Your Campfire with Rocks",
+        "description": "Surrounding the campfire with rocks is a great way of prolonging the heat from the fire. The rocks will stay warm long after the flames have extinguished. Small hot stones can also be used to boil water.",
+        "notes": "All you need to do is to drop a few hot rocks in your metal water container. The heat from the rocks is enough to bring the water to a boil, making it safe to drink."
+    },
+    {
+        "id": 29,
+        "title": "Use Charcoal to Make Water Palatable",
+        "description": "So, you found some waterbody in the wild and collected some water. You even boiled the water to make it safe to drink. But when you try to drink it, it has a horrible smell or unpleasant taste. It is a common scenario faced by many survivalists.",
+        "notes": "Thankfully, it is easy to remedy this situation. Just add some charcoal while boiling the water. Charcoal is an excellent adsorbent that can get rid of many impurities including foul taste, smell and color. Always collect charcoal from your fire in a tight container."
+    },
+    {
+        "id": 30,
+        "title": "Take Care of the Blisters as Soon as Possible",
+        "description": "When you walk for a long distance, it is common to get blisters on your feet. If you don’t take care of these blisters as soon as possible, they will prevent you from covering distance. If the blister has already been formed, just punctured to relieve the fluid buildup.",
+        "notes": "If you sense that a blister may be forming, use a small piece of duct tape to prevent it."
+    },
+    {
+        "id": 31,
+        "title": "Learn How to Make an SOS Signal",
+        "description": "An SOS signal is the universal call for help. You can cause the signal using the light as well as sound. The message consists of three dots followed by three dashes followed by three dots. If you’re using light, an SOS signal would be three short bursts of light followed by three long bursts followed by three more short bursts.",
+        "notes": "The same logic applies if you are using sound. Make sure that you practice the signal before you need to use it."
+    },
+    {
+        "id": 32,
+        "title": "Carry Two Rescue Mirrors",
+        "description": "Rescue mirrors are an excellent way to grab the attention of rescuers. However, if you just have a single mirror, you will be severely limited.",
+        "notes": "As the sun always travels south, it is impossible to use a single mirror to signal a rescue crew flying in from the north. If you have two mirrors, you can use the reflection from one mirror as a light source and reflect it from the second mirror. This enables you to signal north even if there is no sun present there to reflect light."
+    },
+    {
+        "id": 33,
+        "title": "Learn to Make Rope from Willow Tree Branches",
+        "description": "The rope is a critical resource in the wild. It is essential to tie things, to make shelter, and even in hunting. You can make a robust and sturdy rope from the skins of willow branches. Here is how you can make willow ropes.",
+        "notes": "Skin the willow tree branches with a knife or suitable camping ax. You are looking for that soft layer of the branch that is deeper than the bark of the wood. Strip them in the form of long ribbons. Take a piece of the ribbon and tie it with a knot at the bitter end. Now, twist the skin to create a powerful thread. Use the other piece and wrap it on top of the first string. Repeat with a third-string. Make a few of these mini strings. Braid three strings that you made in step 2, to make a strong rope."
+    },
+    {
+        "id": 34,
+        "title": "Learn to Make a Torch",
+        "description": "A torch is an excellent way to illuminate your path in the dark. You can also use it as a weapon to ward off attacks from wild animals.",
+        "notes": "To make a torch, find a branch of a tree and split it in half. Stick a piece of bark in the fork and light the split end, that’s all! Birch tree branches make great torches."
+    },
+    {
+        "id": 35,
+        "title": "Collect Rain Water",
+        "description": "Rainwater is perhaps the purest form of water available in the wild. You can collect the rainwater and use it to drink with no need to filter. There are many simple ways to collect rainwater.",
+        "notes": "A lot of rainwater is collected on top of large leaves. If you can find a tree with huge leaves, you can often find some water pooled on some of them. Tall grass also has a lot of water droplets all over their blades. If you carefully cut the grass and ring them out, you can collect enough water to quench your thirst. You can also soak up the moisture on the grass with your clothes and ring them out to get some fresh, pure water."
+    },
+    {
+        "id": 36,
+        "title": "Make Sure You Have Water Purifying Tablets in Your Survival Kit",
+        "description": "Water purifying tablets are a must in your survival kit. These small tablets can help you clean water in the absence of any heat of other means of purification. Although tablets may not last forever and it is not good to survive entirely on them, they can be a good emergency backup.",
+        "notes": "For the long term, boiling or filtering water is the best option."
+    },
+    {
+        "id": 37,
+        "title": "Add Aluminum Foil to Your Survival Kit",
+        "description": "Aluminum foil is a versatile tool that is a must carry in a survival kit. You can use aluminum foil for all sorts of things including making utensils, heat reflectors, and a dry surface to start a fire.",
+        "notes": "Always carry a few pieces of foil in my survival kit. You don’t need to add the whole roll; just a few folded-up pieces should be good enough."
+    },
+    {
+        "id": 38,
+        "title": "Don’t Make a Shelter Downwind to Your Campfire",
+        "description": "It is quite a tempting thought to make a shelter downwind to your campfire. The logical explanation that you can think of is that as the wind blows, the heat will be carried to the shelter.",
+        "notes": "If you sleep downwind to the campfire, your whole shelter will soon start smelling like smoke and fire, and you don’t want that. Also, there is a chance that if the gusts are strong, a burning piece firewood can fly right into your shelter while you are asleep."
+    },
+    {
+        "id": 39,
+        "title": "Learn to Predict the Incoming Rain or Storms by Looking at the Sun or the Moon",
+        "description": "There is no Weather Channel to tell you how the weather is going to be in the wild. You need to read the signs in nature to predict rain or snow. One of the best ways to predict weather changes is to look at the sun or the moon.",
+        "notes": "If there is a halo around the sun or the moon, it usually indicates that low pressure is approaching. You can safely predict that there will be some precipitation, either rain or snow, in the next 24-36 hours. The halo is caused by refraction of light by ice crystals in the cirrus clouds. If the halo is broken, the broken side points to the direction of the incoming storm."
+    },
+    {
+        "id": 40,
+        "title": "Make Your Tools Visible if You Drop Them on the Ground",
+        "description": "This tip may sound silly, but trust me, it helped me a lot on camps. I have a small knife that I always keep in my survival pack. Unfortunately, the knife is brown and black in color. If I drop it accidentally on the floor of the jungle, I waste valuable minutes finding it.",
+        "notes": "To prevent this from happening, I painted the handle of the knife bright orange. That way, even if it is somewhat dark outside, I can spot my knife easily on the ground."
+    },
+    {
+        "id": 41,
+        "title": "Coconuts Can Save Your Life",
+        "description": "Coconut water contains vital nutrients and sugar that can keep you fed and alive for long. If you can find coconut trees, make sure that you use the water as food.",
+        "notes": "However, remember that if you drink too much coconut water, it can give you the runs! In that case, just eat some powdered charcoal. It can help you ease your stomach woes."
+    },
+    {
+        "id": 42,
+        "title": "Catch More Fish by Facing into the Wind",
+        "description": "If you are fishing for food in the wild, you can catch more fish if you cast your bait while facing into the wind. It is a known fact that 99% fish swim toward the wind.",
+        "notes": "Fishing into the wind will allow you to cast a bait in front of the fish rather than behind."
+    },
+    {
+        "id": 43,
+        "title": "Don’t Attempt to Cross a Rapid, Fast Moving River or Stream",
+        "description": "If you come across a fast-moving stream, it is better not to try crossing it. You may think that you can manage the flow of the current, but there is no accurate measure of the speed. You can be quickly swept away by a seemingly manageable current.",
+        "notes": "Its suggested that crossing streams or rivers only if it is necessary."
+    },
+    {
+        "id": 44,
+        "title": "Never Underestimate Flash Floods",
+        "description": "Flash floods can be a nightmare in the wild. If you are not careful, they can wash away your shelter in no time. Keep an eye out for the warning signs of rain or thunder.",
+        "notes": "Always camp on high grounds. Make sure that you are not in the path of a current in case it starts to flood. Never make the mistake of trying to outrun a flash flood. You will be caught and swept away before you realize. If you see a flash flood coming, immediately go to high ground and stay the heck away from it."
+    },
+    {
+        "id": 45,
+        "title": "Anticipate and Be Prepared",
+        "description": "The most important survival tip is to anticipate survival situations and prepare yourself. If you don’t expect and prepare for a situation, you will never be able to perform when the time comes.",
+        "notes": "It is crucial that you expand your knowledge and anticipate situations and design strategies. Remember, when the time comes, the better prepared you are, the better chance you have!"
     }
 ]

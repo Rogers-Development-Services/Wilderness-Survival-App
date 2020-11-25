@@ -24,7 +24,7 @@ module.exports = function (app) {
     const user = body;
     console.log(body);
 
-    db.Note.create({ /* userID: bode.userID */ title: body.title, body: body.body})
+    db.Note.create({ userID: bode.userID, title: body.title, body: body.body})
       .then(dbNote => {
         console.log(dbNote);
       })
@@ -35,7 +35,7 @@ module.exports = function (app) {
 
   // Retrieve all notes
   app.get("/notes", (req, res) => {
-    db.Note.find({})
+    db.Note.find({ userID: req.params })
       .then(dbNote => {
         console.log(dbNote);
         res.json(dbNote);

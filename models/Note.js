@@ -3,7 +3,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const NoteSchema = new Schema({
-    // Schema for the notes collections of the db
+    userID: {
+        type: String,
+        trim: false
+    },
+
     title: {
         type: String,
         trim: false,

@@ -4,6 +4,10 @@ const Schema = mongoose.Schema;
 
 const TipSchema = new Schema({
     // Schema for the survival tips collections of the db
+    id: {
+        type: Number
+    },
+
     title: {
         type: String,
         trim: false,

@@ -8,14 +8,6 @@ mongoose.connect("mongodb://localhost/survivaldb", {
 
 let tipJSON = require('../client/src/json/tips.json');
 
-// tipSeed = tipJSON.map(data => [
-//     {
-//         title: data.title,
-//         description: data.description,
-//         notes: data.notes
-//     }
-// ]);
-
 db.Tip.deleteMany({})
     .then(() => db.Tip.collection.insertMany(tipJSON))
     .then(data => {

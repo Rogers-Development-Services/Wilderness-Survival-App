@@ -4,7 +4,7 @@ module.exports = function (app) {
 
   // Routes for Survival ips
 
-  // Retrieve all users in db
+  // Retrieve all tips in db
   app.get("/tips", (req, res) => {
     db.Tip.find({})
       .then(dbTip => {
@@ -17,14 +17,29 @@ module.exports = function (app) {
       });
   });
 
+  // Routes for Survival Checklist
+
+  // Retrieve all checklist info from db
+  app.get("/checklist", (req, res) => {
+    db.Checklist.find({})
+      .then(dbChecklist => {
+        console.log(dbChecklist);
+        res.json(dbChecklist);
+      })
+      .catch(error => {
+        console.log(message);
+        res.json(error)
+      });
+  });
+
   // Routes for user notes
 
   // Creates a new user in the db
   app.post("/notes", ({ body }, res) => {
-    const user = body;
+    const note = body;
     console.log(body);
 
-    db.Note.create({ userID: bode.userID, title: body.title, body: body.body})
+    db.Note.create({ userID: note.userID, title: note.title, body: note.body })
       .then(dbNote => {
         console.log(dbNote);
       })
@@ -33,7 +48,7 @@ module.exports = function (app) {
       });
   });
 
-  // Retrieve all notes
+  // Retrieve all notes for specified user
   app.get("/notes", (req, res) => {
     db.Note.find({ userID: req.params })
       .then(dbNote => {
@@ -43,6 +58,20 @@ module.exports = function (app) {
       .catch(error => {
         console.log(message);
         res.json(error)
+      });
+  });
+
+  // Update specified note
+  app.post("/notes", ({ body }, res) => {
+    const note = body;
+    console.log(body);
+
+    db.Note.updateOne({ id: note.id, userID: note.userID })
+      .then(dbNote => {
+        console.log(dbNote);
+      })
+      .catch(({ message }) => {
+        console.log(message);
       });
   });
 

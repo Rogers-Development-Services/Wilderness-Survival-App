@@ -2,34 +2,6 @@ const db = require("../models");
 
 module.exports = function (app) {
 
-  // Routes pertaining to the user accounts
-
-  // Creates a new user in the db
-  app.post("/user", ({ body }, res) => {
-    const user = body;
-
-    db.User.create({ name: body.username, password: body.password, email: body.email })
-      .then(dbUser => {
-        console.log(dbUser);
-      })
-      .catch(({ message }) => {
-        console.log(message);
-      });
-  });
-
-  // Retrieve all users in db
-  app.get("/user", (req, res) => {
-    db.User.find({})
-      .then(dbUser => {
-        console.log(dbUser);
-        res.json(dbUser);
-      })
-      .catch(error => {
-        console.log(message);
-        res.json(error)
-      });
-  });
-
   // Routes for Survival ips
 
   // Retrieve all users in db
@@ -52,7 +24,7 @@ module.exports = function (app) {
     const user = body;
     console.log(body);
 
-    db.Note.create({ title: body.title, body: body.body})
+    db.Note.create({ /* userID: bode.userID */ title: body.title, body: body.body})
       .then(dbNote => {
         console.log(dbNote);
       })

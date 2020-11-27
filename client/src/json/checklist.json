@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "category": "Shelter",
+        "item": "Tent"
+    },
+    {
+        "id": 2,
+        "category": "Shelter",
+        "item": "Ground cloth/tarp"
+    },
+    {
+        "id": 3,
+        "category": "Shelter",
+        "item": "Extra stakes"
+    },
+    {
+        "id": 4,
+        "category": "Shelter",
+        "item": "Shade tarp/poles/rope/stakes"
+    },
+    {
+        "id": 5,
+        "category": "Shelter",
+        "item": "Axe or hammer"
+    },
+    {
+        "id": 6,
+        "category": "Shelter",
+        "item": "Mat for tent entrance"
+    },
+    {
+        "id": 7,
+        "category": "Bedding",
+        "item": "Sleeping bag"
+    },
+    {
+        "id": 8,
+        "category": "Bedding",
+        "item": "Sheets/blankets"
+    },
+    {
+        "id": 9,
+        "category": "Bedding",
+        "item": "Pillow"
+    },
+    {
+        "id": 10,
+        "category": "Bedding",
+        "item": "Air mattress/sleeping pad/cot/tarp"
+    },
+    {
+        "id": 11,
+        "category": "Bedding",
+        "item": "Air pump"
+    },
+    {
+        "id": 12,
+        "category": "Bedding",
+        "item": "Repair kit for air mattress"
+    },
+    {
+        "id": 13,
+        "category": "Cooking",
+        "item": "Large water jug & water bucket"
+    },
+    {
+        "id": 14,
+        "category": "Cooking",
+        "item": "Stove with fuel/propane"
+    },
+    {
+        "id": 15,
+        "category": "Cooking",
+        "item": "Matches/lighter"
+    },
+    {
+        "id": 16,
+        "category": "Cooking",
+        "item": "Can opener/bottle opener"
+    },
+    {
+        "id": 17,
+        "category": "Cooking",
+        "item": "Pots and frying pans with lids"
+    },
+    {
+        "id": 18,
+        "category": "Cooking",
+        "item": "Cook utensils-spatula, knife, spoon"
+    },
+    {
+        "id": 19,
+        "category": "Clothes",
+        "item": "Socks/extra socks"
+    },
+    {
+        "id": 20,
+        "category": "Clothes",
+        "item": "Rain gear"
+    },
+    {
+        "id": 21,
+        "category": "Clothes",
+        "item": "Swim suit/towel"
+    },
+    {
+        "id": 22,
+        "category": "Clothes",
+        "item": "Shoes/boots"
+    },
+    {
+        "id": 23,
+        "category": "Clothes",
+        "item": "Underwear"
+    },
+    {
+        "id": 24,
+        "category": "Clothes",
+        "item": "Bandana"
+    },
+    {
+        "id": 25,
+        "category": "Personal",
+        "item": "Tooth brush/tooth paste"
+    },
+    {
+        "id": 26,
+        "category": "Personal",
+        "item": "Toilet paper"
+    },
+    {
+        "id": 27,
+        "category": "Personal",
+        "item": "Deodorant"
+    },
+    {
+        "id": 28,
+        "category": "Personal",
+        "item": "Soap in plastic case/shampoo"
+    },
+    {
+        "id": 29,
+        "category": "Personal",
+        "item": "Personal medications - take extra"
+    },
+    {
+        "id": 30,
+        "category": "Personal",
+        "item": "Feminine products"
+    },
+    {
+        "id": 31,
+        "category": "Miscellaneous",
+        "item": "Flash Light"
+    },
+    {
+        "id": 32,
+        "category": "Miscellaneous",
+        "item": "Whistle"
+    },
+    {
+        "id": 33,
+        "category": "Miscellaneous",
+        "item": "Compass/GPS"
+    },
+    {
+        "id": 34,
+        "category": "Miscellaneous",
+        "item": "Extra batteries/bulbs"
+    },
+    {
+        "id": 35,
+        "category": "Miscellaneous",
+        "item": "Saw/axe"
+    },
+    {
+        "id": 36,
+        "category": "Miscellaneous",
+        "item": "Duct tape/electrical tape"
+    },
+    {
+        "id": 37,
+        "category": "Basic First Aid Kit",
+        "item": "Bug repellant"
+    },
+    {
+        "id": 38,
+        "category": "Basic First Aid Kit",
+        "item": "Antibiotic cream"
+    },
+    {
+        "id": 39,
+        "category": "Basic First Aid Kit",
+        "item": "Misc. Band Aides/bandages"
+    },
+    {
+        "id": 40,
+        "category": "Basic First Aid Kit",
+        "item": "Aspirin/Ibuprofen/Tylenol/Naproxin"
+    },
+    {
+        "id": 41,
+        "category": "Basic First Aid Kit",
+        "item": "Snake bite kit"
+    },
+    {
+        "id": 42,
+        "category": "Basic First Aid Kit",
+        "item": "Hydrogen Peroxide"
+    }
+]

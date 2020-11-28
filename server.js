@@ -17,8 +17,7 @@ if (process.env.NODE_ENV === "production") {
 // PLANTS
 const axios = require('axios');
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@survivaldb.vrgce.mongodb.net/survivaldb?retryWrites=true&w=majority`,
-//process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://localhost/survivaldb",
+mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://localhost/survivaldb",
   {
       useNewUrlParser: true,
       useUnifiedTopology: true,

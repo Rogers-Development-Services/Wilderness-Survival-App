@@ -1,146 +1,163 @@
 [
     {
+        "id": 0,
         "name": "White-Tailed Deer",
         "description": "The white-tailed deer, also known as the whitetail or Virginia deer, is a medium-sized deer native to North America, Central America, Ecuador, and South America as far south as Peru and Bolivia.",
-        "image": "./assets/animalPictures/whiteTailedDeer/image.png",
-        "footprint": "./assets/animalPictures/whiteTailedDeer/footprint.png",
-        "map": "./assets/animalPictures/whiteTailedDeer/map.png",
-        "status": "./assets/animalPictures/whiteTailedDeer/status.png"
+        "image": "./assets/images/whiteTailedDeer/image.jpg",
+        "footprint": "./assets/images/whiteTailedDeer/footprint.png",
+        "map": "./assets/images/whiteTailedDeer/map.png",
+        "status": "./assets/images/whiteTailedDeer/status.png"
     },
     {
+        "id": 1,
         "name": "Moose",
         "description": "The moose or elk, Alces alces, is a member of the New World deer subfamily and is the largest and heaviest extant species in the deer family. Most adult male moose have distinctive broad, palmate antlers; most other members of the deer family have antlers with a dendritic configuration.",
-        "image": "./assets/animalPictures/moose/image.jpg",
-        "footprint": "./assets/animalPictures/moose/footprint.png",
-        "map": "./assets/animalPictures/moose/map.png",
-        "status": "./assets/animalPictures/moose/status.png"
+        "image": "./assets/images/Moose/image.jpg",
+        "footprint": "./assets/images/Moose/footprint.png",
+        "map": "./assets/images/Moose/map.png",
+        "status": "./assets/images/Moose/status.png"
     },
     {
+        "id": 2,
         "name": "Cayote",
         "description": "The coyote is a species of canine native to North America. It is smaller than its close relative, the wolf, and slightly smaller than the closely related eastern wolf and red wolf. It fills much of the same ecological niche as the golden jackal does in Eurasia.",
-        "image": "./assets/animalPictures/cayote/image.jpg",
-        "footprint": "./assets/animalPictures/cayote/footprint.jpg",
-        "map": "./assets/animalPictures/cayote/map.png",
-        "status": "./assets/animalPictures/cayote/status.png"
+        "image": "./assets/images/cayote/image.jpg",
+        "footprint": "./assets/images/cayote/footprint.png",
+        "map": "./assets/images/cayote/map.png",
+        "status": "./assets/images/cayote/status.png"
     },
     {
+        "id": 3,
         "name": "Red Fox",
         "description": "The red fox is the largest of the true foxes and one of the most widely distributed members of the order Carnivora, being present across the entire Northern Hemisphere including most of North America, Europe and Asia, plus parts of North Africa. It is listed as least concern by the IUCN.",
-        "image": "./assets/animalPictures/redfox/image.jpg",
-        "footprint": "./assets/animalPictures/redfox/footprint.png",
-        "map": "./assets/animalPictures/redfox/map.png",
-        "status": "./assets/animalPictures/redfox/status.png"
+        "image": "./assets/images/redfox/image.jpg",
+        "footprint": "./assets/images/redfox/footprint.png",
+        "map": "./assets/images/redfox/map.png",
+        "status": "./assets/images/redfox/status.png"
     },
     {
+        "id": 4,
         "name": "Gray Fox",
         "description": "The gray fox, or grey fox, is an omnivorous mammal of the family Canidae, widespread throughout North America and Central America.",
-        "image": "./assets/animalPictures/grayfox/image.jpg",
-        "footprint": "./assets/animalPictures/grayfox/footprint.png",
-        "map": "./assets/animalPictures/grayfox/map.png",
-        "status": "./assets/animalPictures/grayfox/status.png"
+        "image": "./assets/images/grayfox/image.jpeg",
+        "footprint": "./assets/images/grayfox/footprint.jpg",
+        "map": "./assets/images/grayfox/map.jpeg",
+        "status": "./assets/images/grayfox/status.png"
     },
     {
+        "id": 5,
         "name": "Bob Cat",
         "description": "The bobcat, also known as the red lynx, is a medium-sized cat native to North America from southern Canada, most of the contiguous United States to Oaxaca in Mexico. It is listed as Least Concern on the IUCN Red List since 2002, because it is widely distributed and abundant.",
-        "image": "./assets/animalPictures/bobcat/image.jpg",
-        "footprint": "./assets/animalPictures/bobcat/footprint.png",
-        "map": "./assets/animalPictures/bobcat/map.jpg",
-        "status": "./assets/animalPictures/bobcat/status.png"
+        "image": "./assets/images/bobcat/image.jpg",
+        "footprint": "./assets/images/bobcat/footprint.png",
+        "map": "./assets/images/bobcat/map.jpg",
+        "status": "./assets/images/bobcat/status.png"
     },
     {
+        "id": 6,
         "name": "Fisher",
         "description": "The fisher is a small, carnivorous mammal native to North America. It is a member of the mustelid family, and is in the monospecific genus Pekania. The fisher is closely related to, but larger than, the American marten.",
-        "image": "./assets/animalPictures/fisher/image.png",
-        "footprint": "./assets/animalPictures/fisher/footprint.jpg",
-        "map": "./assets/animalPictures/fisher/map.png",
-        "status": "./assets/animalPictures/fisher/status.png"
+        "image": "./assets/images/fisher/image.png",
+        "footprint": "./assets/images/fisher/footprint.jpg",
+        "map": "./assets/images/fisher/map.png",
+        "status": "./assets/images/fisher/status.png"
     },
     {
+        "id": 7,
         "name": "Weasel",
         "description": "A weasel is a mammal of the genus Mustela of the family Mustelidae. The genus Mustela includes the least weasels, polecats, stoats, ferrets and mink. Members of this genus are small, active predators, with long and slender bodies and short legs.",
-        "image": "./assets/animalPictures/weasel/image.jpg",
-        "footprint": "./assets/animalPictures/weasel/footprint.png",
-        "map": "./assets/animalPictures/weasel/map.png",
-        "status": "./assets/animalPictures/weasel/status.png"
+        "image": "./assets/images/weasel/image.jpg",
+        "footprint": "./assets/images/weasel/footprint.png",
+        "map": "./assets/images/weasel/map.png",
+        "status": "./assets/images/weasel/status.png"
     },
     {
+        "id": 8,
         "name": "Racoon",
         "description": "The raccoon is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm and a body weight of 5 to 26 kg. Its grayish coat mostly consists of dense underfur which insulates it against cold weather.",
-        "image": "./assets/animalPictures/racoon/image.jpg",
-        "footprint": "./assets/animalPictures/racoon/footprint.jpg",
-        "map": "./assets/animalPictures/racoon/map.png",
-        "status": "./assets/animalPictures/racoon/status.png"
+        "image": "./assets/images/racoon/image.jpg",
+        "footprint": "./assets/images/racoon/footprint.jpg",
+        "map": "./assets/images/racoon/map.png",
+        "status": "./assets/images/racoon/status.png"
     },
     {
+        "id": 9,
         "name": "Striped Skunk",
         "description": "The striped skunk is a skunk of the genus Mephitis that occurs across most of North America, including southern Canada, the United States, and northern Mexico. It is currently listed as least concern by the IUCN on account of its wide range and ability to adapt to human-modified environments.",
-        "image": "./assets/animalPictures/stripedskunk/image.jpg",
-        "footprint": "./assets/animalPictures/stripedskunk/footprint.jpg",
-        "map": "./assets/animalPictures/stripedskunk/map.png",
-        "status": "./assets/animalPictures/stripedskunk/status.png"
+        "image": "./assets/images/stripedskunk/image.jpg",
+        "footprint": "./assets/images/stripedskunk/footprint.jpg",
+        "map": "./assets/images/stripedskunk/map.png",
+        "status": "./assets/images/stripedskunk/status.png"
     },
     {
+        "id": 10,
         "name": "Beaver",
         "description": "Beavers are large, semiaquatic rodents of the temperate Northern Hemisphere. There are two extant species in the genus Castor, the North American beaver and the Eurasian beaver. Beavers are the second largest living rodents after the capybaras.",
-        "image": "./assets/animalPictures/beaver/image.jpg",
-        "footprint": "./assets/animalPictures/beaver/footprint.jpg",
-        "map": "./assets/animalPictures/beaver/map.png",
-        "status": "./assets/animalPictures/beaver/status.png"
+        "image": "./assets/images/beaver/image.jpg",
+        "footprint": "./assets/images/beaver/footprint.png",
+        "map": "./assets/images/beaver/map.png",
+        "status": "./assets/images/beaver/status.png"
     },
     {
+        "id": 11,
         "name": "Black Bear",
         "description": "The American black bear is a medium-sized bear native to North America. It is the continent's smallest and most widely distributed bear species. American black bears are omnivores, with their diets varying greatly depending on season and location.",
-        "image": "./assets/animalPictures/blackbear/image.png",
-        "footprint": "./assets/animalPictures/blackbear/footprint.jpg",
-        "map": "./assets/animalPictures/blackbear/map.png",
-        "status": "./assets/animalPictures/blackbear/status.png"
+        "image": "./assets/images/blackbear/image.jpg",
+        "footprint": "./assets/images/blackbear/footprint.jpg",
+        "map": "./assets/images/blackbear/map.png",
+        "status": "./assets/images/blackbear/status.png"
     },
     {
         "name": "Woodchuck",
         "description": "The groundhog, also known as a woodchuck, is a rodent of the family Sciuridae, belonging to the group of large ground squirrels known as marmots. The groundhog is a lowland creature of North America; it is found through much of the eastern United States, across Canada and into Alaska.",
-        "image": "./assets/animalPictures/woodchuck/image.jpg",
-        "footprint": "./assets/animalPictures/woodchuck/footprint.jpg",
-        "map": "./assets/animalPictures/woodchuck/map.png",
-        "status": "./assets/animalPictures/woodchuck/status.png"
+        "image": "./assets/images/woodchuck/image.jpg",
+        "footprint": "./assets/images/woodchuck/footprint.jpg",
+        "map": "./assets/images/woodchuck/map.png",
+        "status": "./assets/images/woodchuck/status.png"
     },
     {
+        "id": 12,
         "name": "Muskrat",
         "description": "The muskrat, the only species in genus Ondatra and tribe ondatrini, is a medium-sized semiaquatic rodent native to North America and an introduced species in parts of Europe, Asia, and South America. The muskrat is found in wetlands over a wide range of climates and habitats.",
-        "image": "./assets/animalPictures/muskrat/image.jpeg",
-        "footprint": "./assets/animalPictures/muskrat/footprint.jpg",
-        "map": "./assets/animalPictures/muskrat/map.jpg",
-        "status": "./assets/animalPictures/muskrat/status.png"
+        "image": "./assets/images/muskrat/image.jpg",
+        "footprint": "./assets/images/muskrat/footprint.png",
+        "map": "./assets/images/muskrat/map.png",
+        "status": "./assets/images/muskrat/status.png"
     },
     {
+        "id": 13,
         "name": "Eastern Cottontail Rabbit",
         "description": "Cottontail rabbits are among the 20 lagomorph species in the genus Sylvilagus, found in the Americas. Most Sylvilagus species have stub tails with white undersides that show when they retreat, giving them their characteristic name. However, this feature is not present in all cottontails nor is it unique to the genus",
-        "image": "./assets/animalPictures/easterncottontailrabbit/image.jpg",
-        "footprint": "./assets/animalPictures/easterncottontailrabbit/footprint.png",
-        "map": "./assets/animalPictures/easterncottontailrabbit/map.png",
-        "status": "./assets/animalPictures/easterncottontailrabbit/status.png"
+        "image": "./assets/images/easterncottontailrabbit/image.jpg",
+        "footprint": "./assets/images/easterncottontailrabbit/footprint.png",
+        "map": "./assets/images/easterncottontailrabbit/map.png",
+        "status": "./assets/images/easterncottontailrabbit/status.png"
     },
-    {
+    {   
+        "id": 14,
         "name": "Gray Squirrel",
         "description": "The eastern gray squirrel, also known as the grey squirrel depending on region, is a tree squirrel in the genus Sciurus. It is native to eastern North America, where it is the most prodigious and ecologically essential natural forest regenerator.",
-        "image": "./assets/animalPictures/graysquirrel/image.png",
-        "footprint": "./assets/animalPictures/graysquirrel/footprint.png",
-        "map": "./assets/animalPictures/graysquirrel/map.png",
-        "status": "./assets/animalPictures/graysquirrel/status.png"
+        "image": "./assets/images/graysquirrel/image.jpg",
+        "footprint": "./assets/images/graysquirrel/footprint.png",
+        "map": "./assets/images/graysquirrel/map.png",
+        "status": "./assets/images/graysquirrel/status.png"
     },
     {
+        "id": 15,
         "name": "White-Footed Mouse",
         "description": "The white-footed mouse is a rodent native to North America from Ontario, Quebec, Labrador, and the Maritime Provinces to the southwest United States and Mexico. In the Maritimes, its only location is a disjunct population in southern Nova Scotia. It is also known as the woodmouse, particularly in Texas.",
-        "image": "./assets/animalPictures/whitefootedmouse/image.jpg",
-        "footprint": "./assets/animalPictures/whitefootedmouse/footprint.jpg",
-        "map": "./assets/animalPictures/whitefootedmouse/map.png",
-        "status": "./assets/animalPictures/whitefootedmouse/status.png"
+        "image": "./assets/images/whitefootedmouse/image.jpg",
+        "footprint": "./assets/images/whitefootedmouse/footprint.png",
+        "map": "./assets/images/whitefootedmouse/map.png",
+        "status": "./assets/images/whitefootedmouse/status.png"
     },
     {
+        "id": 16,
         "name": "Grizzely Bear",
         "description": "The brown bear is a large bear species found across Eurasia and North America. In North America, the populations of brown bears are called grizzly bears.",
-        "image": "./assets/animalPictures/grizzelybear/image.png",
-        "footprint": "./assets/animalPictures/grizzelybear/footprint.png",
-        "map": "./assets/animalPictures/grizzelybear/map.png",
-        "status": "./assets/animalPictures/grizzelybear/status.png"
+        "image": "./assets/images/grizzelybear/image.jpg",
+        "footprint": "./assets/images/grizzelybear/footprint.png",
+        "map": "./assets/images/grizzelybear/map.png",
+        "status": "./assets/images/grizzelybear/status.png"
     }
 ]

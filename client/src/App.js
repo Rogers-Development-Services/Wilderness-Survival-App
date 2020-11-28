@@ -4,9 +4,6 @@ import Location from "./pages/Location";
 import Notes from "./pages/Notes";
 import Tools from "./pages/Tools";
 import "materialize-css";
-// import SideNav from "./components/SideNav";
-// import Footer from "./components/Footer";
-// import Wrapper from "./components/Wrapper";
 
 import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon } from 'react-materialize';
 // import logo from "./logo.svg";

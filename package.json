@@ -12,7 +12,8 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "watch": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +30,6 @@
     "mongojs": "^3.1.0",
     "mongoose": "^5.10.15",
     "react-materialize": "^3.9.3",
-    "upup": "^1.1.0"
+    "mongodb": "^3.2.3"
   }
 }

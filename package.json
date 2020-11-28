@@ -24,12 +24,13 @@
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.13.3",
     "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "materialize-css": "^1.0.0-rc.2",
+    "mongodb": "^3.2.3",
     "mongojs": "^3.1.0",
     "mongoose": "^5.10.15",
-    "react-materialize": "^3.9.3",
-    "mongodb": "^3.2.3"
+    "react-materialize": "^3.9.3"
   }
 }

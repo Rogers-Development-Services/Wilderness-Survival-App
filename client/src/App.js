@@ -12,17 +12,6 @@ import "./App.css";
 import API from "./utils/API";
 
 function App() {
-
-  const [plantSearch, setPlantSearch] = useState([]);
-
-  useEffect(function() {
-    API.getPlantList()
-    .then(response => {
-      setPlantSearch(response);
-    })
-    .catch(error => console.log(error));
-  }, []);
-
   return (
     <Router>
       <div>

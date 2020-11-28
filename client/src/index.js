@@ -8,6 +8,7 @@ import 'materialize-css/dist/js/materialize.min.js';
 import 'materialize-css';
 import { Button, Card, Row, Col } from 'react-materialize';
 import {Auth0Provider} from '@auth0/auth0-react';
+import createAuth0Client from '@auth0/auth0-spa-js';
 
 ReactDOM.render(
 <Auth0Provider

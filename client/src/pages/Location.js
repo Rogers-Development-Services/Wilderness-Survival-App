@@ -2,10 +2,10 @@ import React from "react";
 import Login from "../components/Login"
 import loginButton from "../components/Login";
 
-function Home() {
+function Location() {
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>Location</h1>
       <p>
         { loginButton }
       </p>
@@ -13,4 +13,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Location;

@@ -28,6 +28,7 @@
     "materialize-css": "^1.0.0-rc.2",
     "mongojs": "^3.1.0",
     "mongoose": "^5.10.15",
-    "react-materialize": "^3.9.3"
+    "react-materialize": "^3.9.3",
+    "upup": "^1.1.0"
   }
 }

@@ -39,7 +39,7 @@ module.exports = function (app) {
     const note = body;
     console.log(body);
 
-    db.Note.create({ userID: note.userID, title: note.title, body: note.body })
+    db.Note.create({ userID: note.userID, title: note.title, note: note.note })
       .then(dbNote => {
         console.log(dbNote);
         res.json(dbNote).code(201);
@@ -51,14 +51,14 @@ module.exports = function (app) {
 
   // Retrieve all notes for specified user
   app.get("/notes", (req, res) => {
-    db.Note.find({ userID: req.params })
+    db.Note.find({ /* userID: req.params */ })
       .then(dbNote => {
         console.log(dbNote);
-        res.json(dbNote).code(302);
+        res.json(dbNote);
       })
       .catch(error => {
-        console.log(message);
-        res.json(error).code
+        console.log(error);
+        res.json(error).code(404);
       });
   });
 
@@ -67,7 +67,7 @@ module.exports = function (app) {
     const note = body;
     console.log(body);
 
-    db.Note.updateOne({ id: note.id, userID: note.userID }, { title: note.title, body: note.body })
+    db.Note.updateOne({ id: note.id, userID: note.userID }, { title: note.title, note: note.note })
       .then(dbNote => {
         console.log(dbNote);
         res.json(dbNote).code(202);

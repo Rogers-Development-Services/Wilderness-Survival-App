@@ -1,9 +1,33 @@
 import axios from "axios";
-const BASEURL = "  https://trefle.io/api/v1/plants?token=";
-const APIKEY = "6lH5U_fPdvbEZPvKRPNAGxm0Rrzgdq9s1NFQYjmkD0c";
 
-export default {
-    getPlantList: function () {
-      return axios.get(BASEURL + APIKEY + "&page=2");
+export default{
+    saveNote: function (record){
+        console.log (record);
+        return axios.post("/update/notes", record).then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+
+    createNote: function (record){
+        return axios.post("/create/notes", record).then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+
+    getNote: function (record){
+        return axios.get("/notes").then(function(response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+        
     }
-  };
+}
+ 

@@ -4,7 +4,8 @@ import Location from "./pages/Location";
 import Notes from "./pages/Notes";
 import Tools from "./pages/Tools";
 import "materialize-css";
-import { NavItem, Navbar, Icon } from 'react-materialize';
+
+import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon } from 'react-materialize';
 // import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";

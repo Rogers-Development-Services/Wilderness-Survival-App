@@ -1,0 +1,10 @@
+h1, h2 {
+    display: flex;
+    justify-content: center;
+}
+
+/* Hiding Buttons */
+div#root > div > div > div#Carousel-2.carousel > button {
+    height: 0px;
+    min-height: fit-content;
+};

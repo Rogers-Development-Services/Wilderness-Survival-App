@@ -5,7 +5,7 @@ import loginButton from "../components/Login";
 function Home() {
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>Location Page</h1>
       <p>
         { loginButton }
       </p>

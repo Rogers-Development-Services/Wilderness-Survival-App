@@ -1,19 +1,27 @@
-import React, { Component } from "react";
+import React, { component, useEffect, useState } from "react";
 import Homepage from "./pages/Homepage";
 import Location from "./pages/Location";
 import Notes from "./pages/Notes";
 import Tools from "./pages/Tools";
 import "materialize-css";
-// import SideNav from "./components/SideNav";
-// import Footer from "./components/Footer";
-// import Wrapper from "./components/Wrapper";
-
-import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon } from 'react-materialize';
+import { NavItem, Navbar, Icon } from 'react-materialize';
 // import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import API from "./utils/API";
 
 function App() {
+
+  const [plantSearch, setPlantSearch] = useState([]);
+
+  useEffect(function() {
+    API.getPlantList()
+    .then(response => {
+      setPlantSearch(response);
+    })
+    .catch(error => console.log(error));
+  }, []);
+
   return (
     <Router>
       <div>
@@ -49,15 +57,14 @@ function App() {
           </NavItem>
         </Navbar>
 
-        {/* <Wrapper> */}
-        <Route exact path="/" component={Homepage} />
-        <Route exact path="/Location" component={Location} />
-        <Route exact path="/Notes" component={Notes} />
-        <Route exact path="/Tools" component={Tools} />
-        {/* </Wrapper>
-        <Footer /> */}
+        <Switch>
+          <Route exact path="/" component={Homepage}/>
+          <Route exact path="/Location" component={Location} />
+          <Route exact path="/Notes" component={Notes} />
+          <Route exact path="/Tools" component={Tools}  />
+        </Switch>
       </div>
-    </Router >
+    </Router>
   );
 }
 

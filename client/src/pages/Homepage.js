@@ -1,7 +1,6 @@
 import React from "react";
 import Login from "../components/Login"
 import LoginButton from "../components/Login";
-import auth0Client from "../components/Offline"
 
 function Home() {
   return (

@@ -6,7 +6,6 @@ module.exports = function (app) {
   app.get("/tips", (req, res) => {
     db.Tip.find({})
       .then(dbTip => {
-        console.log(dbTip);
         res.json(dbTip).code(302);
       })
       .catch(error => {
@@ -19,7 +18,6 @@ module.exports = function (app) {
   app.get("/plants", (req, res) => {
     db.Plant.find({})
       .then(dbPlant => {
-        console.log(dbPlant);
         res.json(dbPlant).code(302);
       })
       .catch(error => {

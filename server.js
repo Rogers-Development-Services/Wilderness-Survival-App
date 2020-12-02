@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
@@ -16,14 +17,14 @@ if (process.env.NODE_ENV === "production") {
 // PLANTS
 const axios = require('axios');
 
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/survivaldb",
+mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://localhost/survivaldb",
   {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
       useFindAndModify: false
-  }
+  },
+  console.log('DB Connected Successfully')
 );
  
 // Make a request for a user with a given ID

@@ -3,6 +3,8 @@ h1, h2 {
     justify-content: center;
 }
 
+
+
 /* Hiding Buttons */
 div#root > div > div > div#Carousel-2.carousel > button {
     height: 0px;

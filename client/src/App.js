@@ -3,6 +3,7 @@ import Homepage from "./pages/Homepage";
 import Location from "./pages/Location";
 import Notes from "./pages/Notes";
 import Tools from "./pages/Tools";
+import Checklist from "./pages/Checklistpage";
 import "materialize-css";
 
 import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon } from 'react-materialize';
@@ -10,6 +11,7 @@ import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon } from 'rea
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import API from "./utils/API";
+
 
 function App() {
   return (
@@ -36,7 +38,7 @@ function App() {
             Homepage
   </NavItem>
           <NavItem href="/Location">
-            Location
+            Location  
   </NavItem>
           <NavItem href="/Notes">
             Notes
@@ -45,6 +47,9 @@ function App() {
             Tools
           {/* This is where custom styling and extra tabs would be added to appear within the sidenav */}
           </NavItem>
+          <NavItem href="/Checklist">
+            Checklist
+  </NavItem>
         </Navbar>
 
         <Switch>
@@ -52,6 +57,7 @@ function App() {
           <Route exact path="/Location" component={Location} />
           <Route exact path="/Notes" component={Notes} />
           <Route exact path="/Tools" component={Tools}  />
+          <Route exact path="/Checklist" component={Checklist}  />
         </Switch>
       </div>
     </Router>

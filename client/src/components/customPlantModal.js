@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Card, Row, Col, Icon, CardTitle, Button, MediaBox, Img } from 'react-materialize';
+import { Modal, Row, Col, Button } from 'react-materialize';
 
 const styles = {
     modalStyle: {
@@ -17,7 +17,7 @@ const styles = {
     }
 };
 
-function customModal(props) {
+function customPlantModal(props) {
 
     return (
         <Modal
@@ -26,7 +26,7 @@ function customModal(props) {
             ]}
             bottomSheet={false}
             fixedFooter={false}
-            id="Modal-0"
+            id="Modal-1"
             open={false}
             options={{
                 dismissible: true,
@@ -45,49 +45,34 @@ function customModal(props) {
             <Row className="container">
                 <Row style={styles.rowStyle}>
                     <Col>
-                        <h2>{props.modalAltText}</h2>
+                        <h2>{props.modalName}</h2>
                     </Col>
                 </Row>
 
                 <Row>
                     <Col>
                         <img
-                            alt={props.modalAltText}
-                            src={props.modalImage}
+                            alt={props.modalName}
+                            src={props.modalPlantImage}
                             style={styles.imageStyle}></img>
                     </Col>
                 </Row>
 
                 <Row >
                     <Col>
-                        <p>{props.modalDescription}</p>
+                        <p>{props.modalInfo}</p>
                     </Col>
                 </Row>
 
                 <Row>
                     <Col>
-                        <img
-                            alt="Location of White Tailed Deer"
-                            src={props.modalMap}
-                            style={styles.imageStyle}></img>
+                        <p>{props.modalUsefullness}</p>
                     </Col>
                 </Row>
 
-                <Row style={styles.rowStyle}>
+                <Row>
                     <Col>
-                        <img
-                            alt="Footprint of White Tailed Deer"
-                            src={props.modalFootprint}
-                            style={styles.imageStyle}></img>
-                    </Col>
-                </Row>
-
-                <Row style={styles.rowStyle}>
-                    <Col>
-                        <img
-                            alt="Endangered Status of White Tailed Deer"
-                            src={props.modalStatus}
-                            style={styles.imageStyle}></img>
+                        <p>{props.modalCaution}</p>
                     </Col>
                 </Row>
             </Row>
@@ -95,4 +80,4 @@ function customModal(props) {
     );
 };
 
-export default customModal;
+export default customPlantModal;

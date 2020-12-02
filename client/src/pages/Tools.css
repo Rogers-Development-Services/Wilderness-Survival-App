@@ -3,6 +3,18 @@ h1, h2 {
     justify-content: center;
 }
 
+/* How can I make all the images the same size without changing their aspect ratios */
+div#root > div > div > div#Carousel-2.carousel .carousel-item>img{
+    /* height: 360px;
+    width: 640px; */
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; */
+    /* max-width: 640px;
+    max-height: 360px; */
+};
+
 /* Hiding Buttons */
 div#root > div > div > div#Carousel-2.carousel > button {
     height: 0px;

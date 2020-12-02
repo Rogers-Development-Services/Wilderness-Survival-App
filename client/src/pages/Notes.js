@@ -17,7 +17,7 @@ class Notes extends React.Component {
         let record={
             title: this.state.title, 
             note: this.state.note,
-            // user_ID: this.state.user_ID
+            user_ID: this.state.user_ID
         }
         console.log (record);
 
@@ -29,7 +29,8 @@ class Notes extends React.Component {
     render(){
         return(
             <div id="user-input" className="container">
-            <p>Title</p>
+            <h1>Notes</h1>
+            <p>Note Title</p>
              <input onChange={this.userInput} type="text" value={this.state.title} name="title" />
             <br />
             <p>Note</p>

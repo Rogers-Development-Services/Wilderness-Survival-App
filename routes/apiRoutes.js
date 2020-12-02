@@ -28,7 +28,7 @@ module.exports = function (app) {
  
   // Retrieve all animals in db
   app.get("/animals", (req, res) => {
-    db.Animals.find({})
+    db.Animal.find({})
       .then(dbAnimals => {
         res.json(dbAnimals).code(302);
       })

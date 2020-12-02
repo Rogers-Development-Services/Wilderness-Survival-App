@@ -2,22 +2,41 @@ const db = require("../models");
 
 module.exports = function (app) {
 
-  // Routes for Survival ips
-
   // Retrieve all tips in db
   app.get("/tips", (req, res) => {
     db.Tip.find({})
       .then(dbTip => {
-        console.log(dbTip);
         res.json(dbTip).code(302);
       })
       .catch(error => {
-        console.log(message);
+        console.log(error);
         res.json(error)
       });
   });
-
-  // Routes for Survival Checklist
+  
+  // Retrieve all plants in db
+  app.get("/plants", (req, res) => {
+    db.Plant.find({})
+      .then(dbPlant => {
+        res.json(dbPlant).code(302);
+      })
+      .catch(error => {
+        console.log(error);
+        res.json(error)
+      });
+  });
+ 
+  // Retrieve all animals in db
+  app.get("/animals", (req, res) => {
+    db.Animal.find({})
+      .then(dbAnimals => {
+        res.json(dbAnimals).code(302);
+      })
+      .catch(error => {
+        console.log(error);
+        res.json(error)
+      });
+  });
 
   // Retrieve all checklist info from db
   app.get("/checklist", (req, res) => {
@@ -27,12 +46,10 @@ module.exports = function (app) {
         res.json(dbChecklist);
       })
       .catch(error => {
-        console.log(message);
+        console.log(error);
         res.json(error)
       });
   });
-
-  // Routes for user notes
 
   // Creates a new user in the db
   app.post("/create/notes", ({ body }, res) => {

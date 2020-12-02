@@ -3,4 +3,6 @@
 module.exports = {
     Tip: require("./Tip"),
     Note: require("./Note"),
+    Plant: require("./Plant"),
+    Animal: require("./Animal")
 };

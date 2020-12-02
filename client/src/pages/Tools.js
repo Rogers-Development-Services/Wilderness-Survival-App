@@ -30,7 +30,6 @@ function Home() {
       <h1>Tools</h1>
       <h2>Animals</h2>
       <Carousel
-      // className="valign-wrapper"
 
         // -------------------
         // WORKING ASSUMPTION 
@@ -45,10 +44,12 @@ function Home() {
               <Button
                 href="#Modal-0"
                 node="button"
-                className="modal-trigger"
-                style={{ padding: "0" }}
+                className="modal-trigger animal-carousel-button"
+                style={{ background: `url(${data.image})`, flex: "none" }}
+
+              // padding: "0", backgroundSize: "contain", backgroundRepeat: "no-repeat", maxHeight: "100%", flex: "none" 
               >
-                <img
+                {/* <img
                   id={data.id}
                   onClick={(event) => {
                     onClickFunction(event, "animal")
@@ -56,7 +57,7 @@ function Home() {
                   src={data.image}
                   alt={data.name}
                   style={{ borderRadius: "8px" }}
-                />
+                /> */}
               </Button>
             )]}
         carouselId="Carousel-2"
@@ -70,13 +71,11 @@ function Home() {
           onCycleTo: null,
           padding: 0,
           shift: 0,
-          // centerImages: true
         }}
       />
 
       <h2>Plants</h2>
       <Carousel
-      // className="valign-wrapper"
         children={
           [
             plantJSON.map(data =>
@@ -107,7 +106,6 @@ function Home() {
           onCycleTo: null,
           padding: 0,
           shift: 0
-          // centerImages: true
         }}
       />
 

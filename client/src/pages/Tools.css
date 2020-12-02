@@ -4,19 +4,27 @@ h1, h2 {
 }
 
 /* How can I make all the images the same size without changing their aspect ratios */
-div#root > div > div > div#Carousel-2.carousel .carousel-item>img{
-    /* height: 360px;
-    width: 640px; */
+div#root > div > div.container > div#Carousel-2.carousel.carousel-slider{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     /* display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%; */
     /* max-width: 640px;
     max-height: 360px; */
+
 };
 
 /* Hiding Buttons */
-div#root > div > div > div#Carousel-2.carousel > button {
-    height: 0px;
-    min-height: fit-content;
+div#root > div > div > div#Carousel-2.carousel > button.animal-carousel-button {
+    padding: "0";
+    background-size: "contain";
+    background-repeat: "no-repeat";
+    max-width: "100%";
+    flex: none;
 };
+

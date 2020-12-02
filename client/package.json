@@ -12,7 +12,8 @@
     "react-dom": "^16.6.3",
     "react-materialize": "^3.9.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^2.1.1"
+    "react-scripts": "^2.1.1",
+    "upup": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

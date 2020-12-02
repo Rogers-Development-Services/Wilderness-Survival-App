@@ -14,11 +14,23 @@ module.exports = function (app) {
       });
   });
   
-  // Retrieve all tips in db
+  // Retrieve all plants in db
   app.get("/plants", (req, res) => {
     db.Plant.find({})
       .then(dbPlant => {
         res.json(dbPlant).code(302);
+      })
+      .catch(error => {
+        console.log(error);
+        res.json(error)
+      });
+  });
+ 
+  // Retrieve all animals in db
+  app.get("/animals", (req, res) => {
+    db.Animals.find({})
+      .then(dbAnimals => {
+        res.json(dbAnimals).code(302);
       })
       .catch(error => {
         console.log(error);

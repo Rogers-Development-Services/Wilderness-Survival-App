@@ -6,6 +6,7 @@ const app = express();
 const mongoose = require("mongoose");
 const jwt = require('express-jwt');
 const jwks = require('jwks-rsa');
+const axios = require('axios');
 
 
 var jwtCheck = jwt({
@@ -33,12 +34,6 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-
-
-
-// Define API routes here
-// PLANTS
-const axios = require('axios');
 
 var options = {
   method: 'POST',

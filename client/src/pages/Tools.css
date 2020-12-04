@@ -1,6 +1,7 @@
 h1, h2 {
     display: flex;
     justify-content: center;
+    color: white;
 }
 
 /* How can I make all the images the same size without changing their aspect ratios */
@@ -28,3 +29,6 @@ div#root > div > div > div#Carousel-2.carousel > button.animal-carousel-button {
     flex: none;
 };
 
+div#root > div > div.container > div.input-field.col > div.select-wrapper {
+    background-color: white;
+};

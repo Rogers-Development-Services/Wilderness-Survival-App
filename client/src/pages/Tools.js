@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Tools.css";
-import { Carousel, Button, Icon, Collapsible, CollapsibleItem } from 'react-materialize';
+import { Carousel, Button, Icon, Collapsible, CollapsibleItem, Select } from 'react-materialize';
 import CustomAnimalModal from "../components/customAnimalModal";
 import CustomPlantModal from "../components/customPlantModal";
 
@@ -8,22 +8,40 @@ let animalJSON = require('../json/animals.json');
 let plantJSON = require('../json/plants.json');
 let guideJSON = require('../json/tips.json');
 
+// let mapArr = guideJSON.map(data => console.log(data));
+// console.log(typeof(mapArr));
+
+
 function Home() {
 
   const [animalModal, setAnimalModal] = useState({});
   const [plantModal, setPlantModal] = useState({});
+  const [accordian, setAccordian] = useState('foo');
+
+  function safteyCategory(guide) {
+    console.log(guide);
+    console.log(accordian);
+    if (guide.category === accordian) {
+      return guide;
+    }
+  };
+  let filterArr = [];
 
   // event.target.id so the <img> can take in all of the JSON information for each plant
   function onClickFunction(event, organism) {
-    console.log(event.target);
-
-    console.log(organism);
     if (organism == "animal") {
       setAnimalModal(animalJSON[event.target.id]);
     } else if (organism == "plant") {
       setPlantModal(plantJSON[event.target.id]);
     }
   }
+
+  function showFunction(event) {
+    setAccordian(event.target.value);
+    console.log(accordian);
+    filterArr = guideJSON.filter(safteyCategory);
+    console.log(filterArr);
+  };
 
   return (
     <div className="container">
@@ -45,11 +63,11 @@ function Home() {
                 href="#Modal-0"
                 node="button"
                 className="modal-trigger animal-carousel-button"
-                style={{ background: `url(${data.image})`, flex: "none" }}
+              // style={{ background: `url(${data.image})`, flex: "none" }}
 
               // padding: "0", backgroundSize: "contain", backgroundRepeat: "no-repeat", maxHeight: "100%", flex: "none" 
               >
-                {/* <img
+                <img
                   id={data.id}
                   onClick={(event) => {
                     onClickFunction(event, "animal")
@@ -57,7 +75,7 @@ function Home() {
                   src={data.image}
                   alt={data.name}
                   style={{ borderRadius: "8px" }}
-                /> */}
+                />
               </Button>
             )]}
         carouselId="Carousel-2"
@@ -110,12 +128,163 @@ function Home() {
       />
 
       <h2>Guides</h2>
+
+      <Select
+        id="Select-9"
+        multiple={false}
+        onChange={showFunction} //The change event will have the information from the option tag I want to target
+        options={{
+          classes: 'white',
+          dropdownOptions: {
+            alignment: 'left',
+            autoTrigger: true,
+            closeOnClick: true,
+            constrainWidth: true,
+            coverTrigger: true,
+            hover: false,
+            inDuration: 150,
+            onCloseEnd: null,
+            onCloseStart: null,
+            onOpenEnd: null,
+            onOpenStart: null,
+            outDuration: 250
+          }
+        }}
+        value=""
+      >
+        <option
+          disabled
+          value=""
+        >Choose your Guide</option>
+        <option value="Sustinance">Sustinance</option>
+        <option value="Shelter">Shelter</option>
+        <option value="Saftey">Saftey</option>
+        <option value="First-Aid">First-Aid</option>
+      </Select>
+
+      {
+        // Make a switch stamement to render each component rather than a turnary
+        // add or remove component depending on state
+        accordian === "1"
+          ? <Collapsible
+            accordion
+            className="white"
+          >
+            <CollapsibleItem
+              expanded={false}
+              header="Better safe than sorry. That's my motto."
+              icon={<Icon>filter_drama</Icon>}
+              node="div"
+            >Better safe than sorry. That's my motto.
+          </CollapsibleItem>
+            <CollapsibleItem
+              expanded={false}
+              header="Yeah, you do seem to have a little 'shit creek' action going."
+              icon={<Icon>place</Icon>}
+              node="div"
+            >Yeah, you do seem to have a little 'shit creek' action going.
+          </CollapsibleItem>
+            <CollapsibleItem
+              expanded={false}
+              header="You know, FYI, you can buy a paddle. Did you not plan for this contingency?"
+              icon={<Icon>whatshot</Icon>}
+              node="div"
+            >You know, FYI, you can buy a paddle. Did you not plan for this contingency?
+        </CollapsibleItem>
+          </Collapsible>
+          : null
+      }
+
+      {accordian === "2" ? <Collapsible
+        accordion
+        className="white"
+      >
+        <CollapsibleItem
+          expanded={false}
+          header="Test 2"
+          icon={<Icon>filter_drama</Icon>}
+          node="div"
+        >Test 2
+          </CollapsibleItem>
+        <CollapsibleItem
+          expanded={false}
+          header="Yeah, you do seem to have a little 'shit creek' action going."
+          icon={<Icon>place</Icon>}
+          node="div"
+        >Yeah, you do seem to have a little 'shit creek' action going.
+          </CollapsibleItem>
+        <CollapsibleItem
+          expanded={false}
+          header="You know, FYI, you can buy a paddle. Did you not plan for this contingency?"
+          icon={<Icon>whatshot</Icon>}
+          node="div"
+        >You know, FYI, you can buy a paddle. Did you not plan for this contingency?
+        </CollapsibleItem>
+      </Collapsible>
+        : null}
+
+      {accordian === "3" ? <Collapsible
+        accordion
+        className="white"
+      >
+        <CollapsibleItem
+          expanded={false}
+          header="Test 3"
+          icon={<Icon>filter_drama</Icon>}
+          node="div"
+        >Test 3
+          </CollapsibleItem>
+        <CollapsibleItem
+          expanded={false}
+          header="Yeah, you do seem to have a little 'shit creek' action going."
+          icon={<Icon>place</Icon>}
+          node="div"
+        >Yeah, you do seem to have a little 'shit creek' action going.
+          </CollapsibleItem>
+        <CollapsibleItem
+          expanded={false}
+          header="You know, FYI, you can buy a paddle. Did you not plan for this contingency?"
+          icon={<Icon>whatshot</Icon>}
+          node="div"
+        >You know, FYI, you can buy a paddle. Did you not plan for this contingency?
+        </CollapsibleItem>
+      </Collapsible>
+        : null}
+
+      {accordian === "4" ? <Collapsible
+        accordion
+        className="white"
+      >
+        <CollapsibleItem
+          expanded={false}
+          header="Test 4"
+          icon={<Icon>filter_drama</Icon>}
+          node="div"
+        >Test 4
+          </CollapsibleItem>
+        <CollapsibleItem
+          expanded={false}
+          header="Yeah, you do seem to have a little 'shit creek' action going."
+          icon={<Icon>place</Icon>}
+          node="div"
+        >Yeah, you do seem to have a little 'shit creek' action going.
+          </CollapsibleItem>
+        <CollapsibleItem
+          expanded={false}
+          header="You know, FYI, you can buy a paddle. Did you not plan for this contingency?"
+          icon={<Icon>whatshot</Icon>}
+          node="div"
+        >You know, FYI, you can buy a paddle. Did you not plan for this contingency?
+        </CollapsibleItem>
+      </Collapsible>
+        : null}
+
       <Collapsible
         accordion
         popout
         children={
           [
-            guideJSON.map(data =>
+            filterArr.map(data => (
               <CollapsibleItem
                 expanded={false}
                 header={data.title}
@@ -125,6 +294,7 @@ function Home() {
                 <p>{data.description}</p>
                 <p>{data.notes}</p>
               </CollapsibleItem>
+            )
             )
           ]
         }
@@ -148,7 +318,7 @@ function Home() {
         modalCaution={plantModal.caution}
       />
 
-    </div>
+    </div >
   );
 }
 

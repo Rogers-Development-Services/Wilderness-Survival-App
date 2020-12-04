@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Checkbox, Collapsible, Icon, CollapsibleItem } from 'react-materialize';
 import 'materialize-css';
+import "./Checklistpage.css";
 
 // import Checklist from "../json/checklist.json";
 
@@ -47,12 +48,14 @@ function ChecklistItems(props) {
               <CollapsibleItem
                 expanded={false}
                 header={data.category}
-                icon={<Icon>list</Icon>}
+                // icon={<Icon>list</Icon>}
                 node="div"
+          
+  
               >
                 {data.item.map(description => <div> <Checkbox
-                  checked
-                  filledIn
+                  // checked
+                  // filledIn
                   // id="Checkbox_3"
                   label={description}
                   value={description}
@@ -61,6 +64,7 @@ function ChecklistItems(props) {
               </CollapsibleItem>
             )
           ]
+          
         }
       >
       </Collapsible>

@@ -1,6 +1,10 @@
 import React from "react";
 import Login from "../components/Login"
 import loginButton from "../components/Login";
+import MapContainer from "../components/MapContainer.js"
+
+
+
 
 function Location() {
   return (
@@ -9,8 +13,11 @@ function Location() {
       <p>
         { loginButton }
       </p>
+      <MapContainer></MapContainer>
     </div>
   );
 }
+
+
 
 export default Location;

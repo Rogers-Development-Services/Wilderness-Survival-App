@@ -6,9 +6,10 @@ import "./Checklistpage.css";
 // import Checklist from "../json/checklist.json";
 
 function ChecklistItems(props) {
-  console.log("checkbox!");
+  console.log("checkbox!")
 
-  const [checklist, setChecklist] = useState([]);
+  const [checklist, setChecklist] = useState([])
+
   const dataupload = () => {
     fetch("checklist.json", {
       headers: {
@@ -30,14 +31,15 @@ function ChecklistItems(props) {
 
   function onClickFunction(event) {
     console.log(event.target);
-    setChecklist(checklist[event.target.id]);
+    setChecklist(checklist[event.target.id])
 
   }
 
   return (
-    <div className="container">;
+    <div className="container">
       <h1>Wilderness Checklist</h1>
-      {props.children};
+      {props.children}
+
 
       <Collapsible
         accordion
@@ -50,21 +52,23 @@ function ChecklistItems(props) {
                 header={data.category}
                 // icon={<Icon>list</Icon>}
                 node="div"
-          
-  
+
+
               >
                 {data.item.map(description => <div> <Checkbox
                   // checked
                   // filledIn
-                  // id="Checkbox_3"
+                  id="Checkbox_3"
+                  type="checkbox"
                   label={description}
                   value={description}
+         
                 /> </div>)}
 
               </CollapsibleItem>
             )
           ]
-          
+
         }
       >
       </Collapsible>

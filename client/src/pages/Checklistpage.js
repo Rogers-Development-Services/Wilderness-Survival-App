@@ -55,10 +55,10 @@ function ChecklistItems(props) {
 
 
               >
-                {data.item.map(description => <div> <Checkbox
+                {data.item.map((description, index) => <div> <Checkbox
                   // checked
                   // filledIn
-                  id="Checkbox_3"
+                  id={data.category + "Checkbox" + index}
                   type="checkbox"
                   label={description}
                   value={description}

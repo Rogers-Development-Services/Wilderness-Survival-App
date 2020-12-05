@@ -11,7 +11,7 @@ import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon } from 'rea
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import API from "./utils/API";
-// import nomadLogo from "./nomad.jpg"
+
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
       <div>
         <Navbar
           alignLinks="right"
-          brand={<img class="responsive-img" src="/assets/logoNomad.jpg"/>}
+          brand={<img class="responsive-img" src="/assets/mountain.svg"/>}
           id="mobile-nav"
           menuIcon={<Icon>menu</Icon>}
           options={{

@@ -37,8 +37,9 @@ div#root  div  div  nav{
   margin: 0px 15px 15px 0px;
 }
 
-/* 
-nav {
-  background-color: #2E7D32;
-} */
+img {
+  box-sizing: border-box;
+}
 
+ 
+ 

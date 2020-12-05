@@ -45,7 +45,7 @@ function customPlantModal(props) {
             <Row className="container">
                 <Row style={styles.rowStyle}>
                     <Col>
-                        <h2>{props.modalName}</h2>
+                        <h2 style={{color: "black"}}className="modal-header">{props.modalName}</h2>
                     </Col>
                 </Row>
 
@@ -54,24 +54,10 @@ function customPlantModal(props) {
                         <img
                             alt={props.modalName}
                             src={props.modalPlantImage}
-                            style={styles.imageStyle}></img>
-                    </Col>
-                </Row>
-
-                <Row >
-                    <Col>
+                            style={styles.imageStyle}>
+                        </img>
                         <p>{props.modalInfo}</p>
-                    </Col>
-                </Row>
-
-                <Row>
-                    <Col>
                         <p>{props.modalUsefullness}</p>
-                    </Col>
-                </Row>
-
-                <Row>
-                    <Col>
                         <p>{props.modalCaution}</p>
                     </Col>
                 </Row>

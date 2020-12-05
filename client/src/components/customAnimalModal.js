@@ -45,7 +45,7 @@ function customAnimalModal(props) {
             <Row className="container">
                 <Row style={styles.rowStyle}>
                     <Col>
-                        <h2>{props.modalAltText}</h2>
+                        <h2 style={{color: "black"}} className="modal-header">{props.modalAltText}</h2>
                     </Col>
                 </Row>
 

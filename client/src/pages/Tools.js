@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Tools.css";
 import { Carousel, Button, Icon, Collapsible, CollapsibleItem, Select } from 'react-materialize';
 import CustomAnimalModal from "../components/customAnimalModal";
@@ -16,16 +16,14 @@ function Home() {
 
   const [animalModal, setAnimalModal] = useState({});
   const [plantModal, setPlantModal] = useState({});
-  const [accordian, setAccordian] = useState('foo');
+  const [filterArr, setFilterArr] = useState([]);
+  const [accordian, setAccordian] = useState('');
 
   function safteyCategory(guide) {
-    console.log(guide);
-    console.log(accordian);
     if (guide.category === accordian) {
       return guide;
     }
   };
-  let filterArr = [];
 
   // event.target.id so the <img> can take in all of the JSON information for each plant
   function onClickFunction(event, organism) {
@@ -34,14 +32,19 @@ function Home() {
     } else if (organism == "plant") {
       setPlantModal(plantJSON[event.target.id]);
     }
-  }
+  };
 
   function showFunction(event) {
     setAccordian(event.target.value);
-    console.log(accordian);
-    filterArr = guideJSON.filter(safteyCategory);
-    console.log(filterArr);
   };
+
+  // When accordian re renders this filter will run
+  useEffect(
+    function () {
+      setFilterArr(guideJSON.filter(safteyCategory));
+    },
+    [accordian]
+  );
 
   return (
     <div className="container">
@@ -63,11 +66,20 @@ function Home() {
                 href="#Modal-0"
                 node="button"
                 className="modal-trigger animal-carousel-button"
-              // style={{ background: `url(${data.image})`, flex: "none" }}
-
-              // padding: "0", backgroundSize: "contain", backgroundRepeat: "no-repeat", maxHeight: "100%", flex: "none" 
+                id={data.id}
+                onClick={(event) => {
+                  onClickFunction(event, "animal")
+                }}
+                style={{
+                  background: `url(${data.image})`, padding: "0",
+                  background: `url(${data.image})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  borderRadius: "8px"
+                }}
               >
-                <img
+                {/* <img
                   id={data.id}
                   onClick={(event) => {
                     onClickFunction(event, "animal")
@@ -75,14 +87,14 @@ function Home() {
                   src={data.image}
                   alt={data.name}
                   style={{ borderRadius: "8px" }}
-                />
+                /> */}
               </Button>
             )]}
         carouselId="Carousel-2"
         options={{
           dist: -100,
           duration: 200,
-          fullWidth: true,
+          fullWidth: false,
           indicators: false,
           noWrap: false,
           numVisible: 5,
@@ -98,18 +110,30 @@ function Home() {
           [
             plantJSON.map(data =>
               <Button
+                id={data.id}
                 href="#Modal-1"
                 node="button"
                 className="modal-trigger"
-                style={{ padding: "0" }}>
-                <img
+                onClick={(event) => {
+                  onClickFunction(event, "plant")
+                }}
+                style={{
+                  padding: "0",
+                  background: `url(${data.image})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  borderRadius: "8px"
+                }}
+              >
+                {/* Might need below for high contrast */}
+                {/* <img
                   id={data.id}
                   onClick={(event) => {
                     onClickFunction(event, "plant")
                   }}
                   src={data.image}
                   alt={data.name}
-                  style={{ borderRadius: "8px" }} />
+                  style={{ borderRadius: "8px" }} /> */}
               </Button>)
           ]
         }
@@ -125,6 +149,7 @@ function Home() {
           padding: 0,
           shift: 0
         }}
+        style={{width: "100px"}}
       />
 
       <h2>Guides</h2>
@@ -161,123 +186,6 @@ function Home() {
         <option value="Saftey">Saftey</option>
         <option value="First-Aid">First-Aid</option>
       </Select>
-
-      {
-        // Make a switch stamement to render each component rather than a turnary
-        // add or remove component depending on state
-        accordian === "1"
-          ? <Collapsible
-            accordion
-            className="white"
-          >
-            <CollapsibleItem
-              expanded={false}
-              header="Better safe than sorry. That's my motto."
-              icon={<Icon>filter_drama</Icon>}
-              node="div"
-            >Better safe than sorry. That's my motto.
-          </CollapsibleItem>
-            <CollapsibleItem
-              expanded={false}
-              header="Yeah, you do seem to have a little 'shit creek' action going."
-              icon={<Icon>place</Icon>}
-              node="div"
-            >Yeah, you do seem to have a little 'shit creek' action going.
-          </CollapsibleItem>
-            <CollapsibleItem
-              expanded={false}
-              header="You know, FYI, you can buy a paddle. Did you not plan for this contingency?"
-              icon={<Icon>whatshot</Icon>}
-              node="div"
-            >You know, FYI, you can buy a paddle. Did you not plan for this contingency?
-        </CollapsibleItem>
-          </Collapsible>
-          : null
-      }
-
-      {accordian === "2" ? <Collapsible
-        accordion
-        className="white"
-      >
-        <CollapsibleItem
-          expanded={false}
-          header="Test 2"
-          icon={<Icon>filter_drama</Icon>}
-          node="div"
-        >Test 2
-          </CollapsibleItem>
-        <CollapsibleItem
-          expanded={false}
-          header="Yeah, you do seem to have a little 'shit creek' action going."
-          icon={<Icon>place</Icon>}
-          node="div"
-        >Yeah, you do seem to have a little 'shit creek' action going.
-          </CollapsibleItem>
-        <CollapsibleItem
-          expanded={false}
-          header="You know, FYI, you can buy a paddle. Did you not plan for this contingency?"
-          icon={<Icon>whatshot</Icon>}
-          node="div"
-        >You know, FYI, you can buy a paddle. Did you not plan for this contingency?
-        </CollapsibleItem>
-      </Collapsible>
-        : null}
-
-      {accordian === "3" ? <Collapsible
-        accordion
-        className="white"
-      >
-        <CollapsibleItem
-          expanded={false}
-          header="Test 3"
-          icon={<Icon>filter_drama</Icon>}
-          node="div"
-        >Test 3
-          </CollapsibleItem>
-        <CollapsibleItem
-          expanded={false}
-          header="Yeah, you do seem to have a little 'shit creek' action going."
-          icon={<Icon>place</Icon>}
-          node="div"
-        >Yeah, you do seem to have a little 'shit creek' action going.
-          </CollapsibleItem>
-        <CollapsibleItem
-          expanded={false}
-          header="You know, FYI, you can buy a paddle. Did you not plan for this contingency?"
-          icon={<Icon>whatshot</Icon>}
-          node="div"
-        >You know, FYI, you can buy a paddle. Did you not plan for this contingency?
-        </CollapsibleItem>
-      </Collapsible>
-        : null}
-
-      {accordian === "4" ? <Collapsible
-        accordion
-        className="white"
-      >
-        <CollapsibleItem
-          expanded={false}
-          header="Test 4"
-          icon={<Icon>filter_drama</Icon>}
-          node="div"
-        >Test 4
-          </CollapsibleItem>
-        <CollapsibleItem
-          expanded={false}
-          header="Yeah, you do seem to have a little 'shit creek' action going."
-          icon={<Icon>place</Icon>}
-          node="div"
-        >Yeah, you do seem to have a little 'shit creek' action going.
-          </CollapsibleItem>
-        <CollapsibleItem
-          expanded={false}
-          header="You know, FYI, you can buy a paddle. Did you not plan for this contingency?"
-          icon={<Icon>whatshot</Icon>}
-          node="div"
-        >You know, FYI, you can buy a paddle. Did you not plan for this contingency?
-        </CollapsibleItem>
-      </Collapsible>
-        : null}
 
       <Collapsible
         accordion

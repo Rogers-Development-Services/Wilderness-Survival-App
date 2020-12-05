@@ -1,8 +1,8 @@
-import localForage from "localforage";
+import * as localForage from "localforage";
 
 const appDiv = document.getElementById('app');
 
-gedDataFromApi().then((response) => {
+getDataFromApi().then((response) => {
     response.json().then((response) => {
         saveDataToDb(response);
     })
@@ -13,7 +13,6 @@ function saveDataToDb (data) {
     localForage.setItem('user', data).then(() => {
         console.log('User has been accessed.');
     });
-
 }
 
 function getDataFromDb (key) {

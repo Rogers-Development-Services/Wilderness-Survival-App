@@ -4,6 +4,10 @@ h1, h2 {
     color: black;
 }
 
+div#root > div > div.container > div.input-field.col > div.select-wrapper.white > input.select-dropdown.dropdown-trigger {
+    margin-bottom: 5rem;
+}
+
 /* How can I make all the images the same size without changing their aspect ratios */
 /* div#root > div > div.container > div#Carousel-2.carousel.carousel-slider{
 

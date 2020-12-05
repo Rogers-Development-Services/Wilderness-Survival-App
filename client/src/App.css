@@ -26,6 +26,9 @@
 /* Navbar renders the <nav> on the actual DOM
  */
 /* direct children need to be styled  */
-div#root > div > nav{
+div#root > div > nav {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; */
   background-color: #2E7D32;
 };

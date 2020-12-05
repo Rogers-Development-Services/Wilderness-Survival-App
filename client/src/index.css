@@ -2,10 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url(./nomad.jpg);
+  background-image: url(./nomad-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   background-position: center;
 }
 

@@ -1,23 +1,52 @@
-import React from "react";
-import Login from "../components/Login"
-import loginButton from "../components/Login";
-import MapContainer from "../components/MapContainer.js"
+import React, { Component } from 'react';
+import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
+//components https://morioh.com/p/8461df41e752#google_vignette
+import CurrentLocation from '../components/currentLocation';
 
+export class MapContainer extends Component {
+  state = {
+    showingInfoWindow: false,
+    activeMarker: {},
+    selectedPlace: {}
+  };
 
+  onMarkerClick = (props, marker, e) =>
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
+    });
 
+  onClose = props => {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      });
+    }
+  };
 
-function Location() {
-  return (
-    <div>
-      <h1>Location</h1>
-      <p>
-        { loginButton }
-      </p>
-      <MapContainer></MapContainer>
-    </div>
-  );
+  render() {
+    return (
+      <CurrentLocation
+        centerAroundCurrentLocation
+        google={this.props.google}
+      >
+        <Marker onClick={this.onMarkerClick} name={'current location'} />
+        <InfoWindow
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}
+          onClose={this.onClose}
+        >
+          <div>
+            <h4>{this.state.selectedPlace.name}</h4>
+          </div>
+        </InfoWindow>
+      </CurrentLocation>
+    );
+  }
 }
 
-
-
-export default Location;
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyDC-tiYyxZ4fmrlc2QD_BnqlbyhQkuEgco'
+})(MapContainer);

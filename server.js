@@ -8,6 +8,9 @@ const jwt = require('express-jwt');
 const jwks = require('jwks-rsa');
 const axios = require('axios');
 var qs = require('qs');
+const passport = require('passport');
+const Auth0Strategy = require('passport-auth0');
+const session = require('express-session');
 
 
 var jwtCheck = jwt({
@@ -35,6 +38,61 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+// ================================== Auth0 Stuff here ========================================
+
+var auth0Strategy = new Auth0Strategy(
+  {
+    domain: process.env.AUTH_DOMAIN,
+    clientID: process.env.AUTH_CLIENT_ID,
+    clientSecret: process.env.AUTH_CLIENT_SECRET,
+    callbackURL: process.env.AUTH_CALLBACK_URL,
+    passReqToCallback: true
+  },
+  function (req, accessToken, refreshToken, extraParams, profile, done) {
+    //
+    // State value is in req.query.state ...
+    console.log(req.query.state);
+    //
+    return done(null, profile);
+  }
+);
+
+router.get(
+  '/auth/callback',
+  function (req, res, next) {
+    //
+    // State value is in req.query.state ...
+    console.log(req.query.state);
+    //
+    passport.authenticate('auth0', function (err, user, info) {
+      // ...
+    })(req, res, next);
+  }
+);
+
+passport.use(auth0Strategy);
+
+app.post('/login', passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login' }));
+
+app.get(
+  '/login',
+  passport.authenticate('auth0', { scope: 'openid email profile' }),
+  function (req, res) {
+    res.redirect('/');
+  }
+);
+
+app.get(
+  '/login',
+  passport.authenticate('auth0', { audience: 'https://dev-qajxs-8o.us.auth0.com/api/v2/' }),
+  function (req, res) {
+    console.log(res);
+    res.redirect('{window.location.origin}');
+  }
+);
+
+// ================================== Auth0 Stuff End ========================================
 
 mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://localhost/survivaldb",
   {

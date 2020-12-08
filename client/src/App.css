@@ -26,9 +26,20 @@
 /* Navbar renders the <nav> on the actual DOM
  */
 /* direct children need to be styled  */
-div#root > div > nav {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; */
+div#root  div  div  nav{
   background-color: #2E7D32;
-};
+}
+
+.brand-logo center {
+  position:absolute;
+  left:10px;
+  top:10px;
+  margin: 0px 15px 15px 0px;
+}
+
+img {
+  box-sizing: border-box;
+}
+
+ 
+ 

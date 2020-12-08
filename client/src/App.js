@@ -7,10 +7,11 @@ import Checklist from "./pages/Checklistpage";
 import "materialize-css";
 
 import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon } from 'react-materialize';
-// import logo from "./logo.svg";
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import API from "./utils/API";
+
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
       <div>
         <Navbar
           alignLinks="right"
-          brand={<a className="brand-logo" href="#"></a>}
+          brand={<img class="responsive-img" src="/assets/mountain.svg"/>}
           id="mobile-nav"
           menuIcon={<Icon>menu</Icon>}
           options={{
@@ -31,8 +32,13 @@ function App() {
             onOpenEnd: null,
             onOpenStart: null,
             outDuration: 200,
-            preventScrolling: true
+            preventScrolling: true,
+            
+        
           }}
+          fixed = {true}
+          centerLogo = {true}
+
         >
           <NavItem href="/">Homepage</NavItem>
           <NavItem href="/Location">Location</NavItem>

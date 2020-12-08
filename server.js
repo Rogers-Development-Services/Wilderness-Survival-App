@@ -10,7 +10,8 @@ const axios = require('axios');
 var qs = require('qs');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
-const session = require('express-session');
+const expressSession = require('express-session');
+const router = express.Router();
 
 
 var jwtCheck = jwt({
@@ -41,12 +42,36 @@ if (process.env.NODE_ENV === "production") {
 
 // ================================== Auth0 Stuff here ========================================
 
-var auth0Strategy = new Auth0Strategy(
+app.use(expressSession(session));
+passport.use(strategy);
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.serializeUser((user, done) => {
+  done(null, user);
+});
+
+passport.deserializeUser((user, done) => {
+  done(null, user);
+});
+
+const session = {
+  secret: process.env.SESSION_SECRET,
+  cookie: {},
+  resave: false,
+  saveUninitialized: false
+};
+if (app.get("env") === "production") {
+  // Serve secure cookies, requires HTTPS
+  session.cookie.secure = true;
+}
+
+var strategy = new Auth0Strategy(
   {
-    domain: process.env.AUTH_DOMAIN,
-    clientID: process.env.AUTH_CLIENT_ID,
-    clientSecret: process.env.AUTH_CLIENT_SECRET,
-    callbackURL: process.env.AUTH_CALLBACK_URL,
+    domain: process.env.AUTH0_DOMAIN,
+    clientID: process.env.AUTH0_CLIENT_ID,
+    clientSecret: process.env.AUTH0_CLIENT_SECRET,
+    callbackURL: process.env.AUTH0_CALLBACK_URL,
     passReqToCallback: true
   },
   function (req, accessToken, refreshToken, extraParams, profile, done) {
@@ -55,40 +80,6 @@ var auth0Strategy = new Auth0Strategy(
     console.log(req.query.state);
     //
     return done(null, profile);
-  }
-);
-
-router.get(
-  '/auth/callback',
-  function (req, res, next) {
-    //
-    // State value is in req.query.state ...
-    console.log(req.query.state);
-    //
-    passport.authenticate('auth0', function (err, user, info) {
-      // ...
-    })(req, res, next);
-  }
-);
-
-passport.use(auth0Strategy);
-
-app.post('/login', passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login' }));
-
-app.get(
-  '/login',
-  passport.authenticate('auth0', { scope: 'openid email profile' }),
-  function (req, res) {
-    res.redirect('/');
-  }
-);
-
-app.get(
-  '/login',
-  passport.authenticate('auth0', { audience: 'https://dev-qajxs-8o.us.auth0.com/api/v2/' }),
-  function (req, res) {
-    console.log(res);
-    res.redirect('{window.location.origin}');
   }
 );
 

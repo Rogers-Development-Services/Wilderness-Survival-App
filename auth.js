@@ -10,6 +10,17 @@ require("dotenv").config();
 /**
  * Routes Definitions
  */
+
+const secured = (req, res, next) => {
+    if (req.user) {
+        return next();
+    }
+    req.session.returnTo = req.originalUrl;
+    res.redirect("/login");
+};
+
+
+
 router.get(
     "/login",
     passport.authenticate("auth0", {
@@ -19,6 +30,8 @@ router.get(
         res.redirect("/");
     }
 );
+
+
 
 router.get("/callback", (req, res, next) => {
     passport.authenticate("auth0", (err, user, info) => {
@@ -39,10 +52,12 @@ router.get("/callback", (req, res, next) => {
     })(req, res, next);
 });
 
+
+
 router.get("/logout", (req, res) => {
     req.logOut();
 
-    let returnTo = req.protocol + "://" + req.hostname;
+    let returnTo = window.location.origin; //req.protocol + "://" + req.hostname;
     const port = req.connection.localPort;
 
     if (port !== undefined && port !== 80 && port !== 443) {
@@ -65,29 +80,42 @@ router.get("/logout", (req, res) => {
     res.redirect(logoutURL);
 });
 
-let returnTo = req.protocol + "://" + req.hostname;
-
-const port = req.connection.localPort;
-
-if (port !== undefined && port !== 80 && port !== 443) {
-    returnTo =
-        process.env.NODE_ENV === "production"
-            ? `${returnTo}/`
-            : `${returnTo}:${port}/`;
-}
-
-const logoutURL = new URL(
-    `https://${process.env.AUTH0_DOMAIN}/v2/logout`
-);
-
-const searchString = querystring.stringify({
-    client_id: process.env.AUTH0_CLIENT_ID,
-    returnTo: returnTo
+router.get("/user", secured, (req, res, next) => {
+    const { _raw, _json, ...userProfile } = req.user;
+    res.render("user", {
+        title: "Profile",
+        userProfile: userProfile
+    });
 });
 
-logoutURL.search = searchString;
+// var returnTo = window.location.origin; // req.protocol + "://" + req.hostname;
 
-res.redirect(logoutURL);
+// let returnTo = null;
+// if (typeof window !== "undefined") {
+//   returnTo = window.location.origin;
+// }
+
+// const port = req.connection.localPort;
+
+// if (port !== undefined && port !== 80 && port !== 443) {
+//     returnTo =
+//         process.env.NODE_ENV === "production"
+//             ? `${returnTo}/`
+//             : `${returnTo}:${port}/`;
+// }
+
+// const logoutURL = new URL(
+//     `https://${process.env.AUTH0_DOMAIN}/v2/logout`
+// );
+
+// const searchString = querystring.stringify({
+//     client_id: process.env.AUTH0_CLIENT_ID,
+//     returnTo: returnTo
+// });
+
+// logoutURL.search = searchString;
+
+// res.redirect(logoutURL);
 
 
 /**

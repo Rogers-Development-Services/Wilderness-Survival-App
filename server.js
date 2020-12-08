@@ -12,8 +12,18 @@ const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const expressSession = require('express-session');
 const router = express.Router();
+const authRouter = require("./auth");
 
+// Define middleware here
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+// ================================== Auth0 Stuff here ========================================
 var jwtCheck = jwt({
   secret: jwks.expressJwtSecret({
     cache: true,
@@ -32,18 +42,8 @@ app.get('/authorized', function (req, res) {
   res.send('Secured Resource');
 });
 
-// Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-
-// ================================== Auth0 Stuff here ========================================
-
-app.use(expressSession(session));
-passport.use(strategy);
+// app.use(expressSession(session));
+// passport.use(strategy);
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -55,6 +55,21 @@ passport.deserializeUser((user, done) => {
   done(null, user);
 });
 
+app.use((req, res, next) => {
+  res.locals.isAuthenticated = req.isAuthenticated();
+  next();
+});
+
+app.use("/", authRouter);
+
+// app.get("/user", secured, (req, res, next) => {
+//   const { _raw, _json, ...userProfile } = req.user;
+//   res.render("user", {
+//     title: "Profile",
+//     userProfile: userProfile
+//   });
+// });
+
 const session = {
   secret: process.env.SESSION_SECRET,
   cookie: {},
@@ -65,6 +80,8 @@ if (app.get("env") === "production") {
   // Serve secure cookies, requires HTTPS
   session.cookie.secure = true;
 }
+
+app.use(expressSession(session));
 
 var strategy = new Auth0Strategy(
   {
@@ -82,6 +99,8 @@ var strategy = new Auth0Strategy(
     return done(null, profile);
   }
 );
+
+passport.use(strategy);
 
 // ================================== Auth0 Stuff End ========================================
 

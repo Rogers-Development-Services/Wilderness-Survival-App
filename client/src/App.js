@@ -40,22 +40,12 @@ function App() {
           centerLogo = {true}
 
         >
-          <NavItem href="/">
-            Homepage
-  </NavItem>
-          <NavItem href="/Location">
-            Location  
-  </NavItem>
-          <NavItem href="/Notes">
-            Notes
-  </NavItem>
-          <NavItem href="/Tools">
-            Tools
-          {/* This is where custom styling and extra tabs would be added to appear within the sidenav */}
-          </NavItem>
-          <NavItem href="/Checklist">
-            Checklist
-  </NavItem>
+          <NavItem href="/">Homepage</NavItem>
+          <NavItem href="/Location">Location</NavItem>
+          <NavItem href="/Notes">Notes</NavItem>
+          <NavItem href="/Tools">Tools
+          {/* This is where custom styling and extra tabs would be added to appear within the sidenav */}</NavItem>
+          <NavItem href="/Checklist">Checklist</NavItem>
         </Navbar>
 
         <Switch>

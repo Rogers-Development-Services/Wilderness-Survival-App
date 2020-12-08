@@ -94,7 +94,7 @@
         "name": "Beaver",
         "description": "Beavers are large, semiaquatic rodents of the temperate Northern Hemisphere. There are two extant species in the genus Castor, the North American beaver and the Eurasian beaver. Beavers are the second largest living rodents after the capybaras.",
         "image": "./assets/images/beaver/image.jpg",
-        "footprint": "./assets/images/beaver/footprint.png",
+        "footprint": "./assets/images/beaver/footprint.jpg",
         "map": "./assets/images/beaver/map.png",
         "status": "./assets/images/beaver/status.png"
     },
@@ -108,6 +108,7 @@
         "status": "./assets/images/blackbear/status.png"
     },
     {
+        "id": 12,
         "name": "Woodchuck",
         "description": "The groundhog, also known as a woodchuck, is a rodent of the family Sciuridae, belonging to the group of large ground squirrels known as marmots. The groundhog is a lowland creature of North America; it is found through much of the eastern United States, across Canada and into Alaska.",
         "image": "./assets/images/woodchuck/image.jpg",
@@ -116,16 +117,16 @@
         "status": "./assets/images/woodchuck/status.png"
     },
     {
-        "id": 12,
+        "id": 13,
         "name": "Muskrat",
         "description": "The muskrat, the only species in genus Ondatra and tribe ondatrini, is a medium-sized semiaquatic rodent native to North America and an introduced species in parts of Europe, Asia, and South America. The muskrat is found in wetlands over a wide range of climates and habitats.",
-        "image": "./assets/images/muskrat/image.jpg",
-        "footprint": "./assets/images/muskrat/footprint.png",
-        "map": "./assets/images/muskrat/map.png",
+        "image": "./assets/images/muskrat/image.jpeg",
+        "footprint": "./assets/images/muskrat/footprint.jpg",
+        "map": "./assets/images/muskrat/map.jpg",
         "status": "./assets/images/muskrat/status.png"
     },
     {
-        "id": 13,
+        "id": 14,
         "name": "Eastern Cottontail Rabbit",
         "description": "Cottontail rabbits are among the 20 lagomorph species in the genus Sylvilagus, found in the Americas. Most Sylvilagus species have stub tails with white undersides that show when they retreat, giving them their characteristic name. However, this feature is not present in all cottontails nor is it unique to the genus",
         "image": "./assets/images/easterncottontailrabbit/image.jpg",
@@ -133,8 +134,8 @@
         "map": "./assets/images/easterncottontailrabbit/map.png",
         "status": "./assets/images/easterncottontailrabbit/status.png"
     },
-    {   
-        "id": 14,
+    {
+        "id": 15,
         "name": "Gray Squirrel",
         "description": "The eastern gray squirrel, also known as the grey squirrel depending on region, is a tree squirrel in the genus Sciurus. It is native to eastern North America, where it is the most prodigious and ecologically essential natural forest regenerator.",
         "image": "./assets/images/graysquirrel/image.jpg",
@@ -143,16 +144,16 @@
         "status": "./assets/images/graysquirrel/status.png"
     },
     {
-        "id": 15,
+        "id": 16,
         "name": "White-Footed Mouse",
         "description": "The white-footed mouse is a rodent native to North America from Ontario, Quebec, Labrador, and the Maritime Provinces to the southwest United States and Mexico. In the Maritimes, its only location is a disjunct population in southern Nova Scotia. It is also known as the woodmouse, particularly in Texas.",
         "image": "./assets/images/whitefootedmouse/image.jpg",
-        "footprint": "./assets/images/whitefootedmouse/footprint.png",
+        "footprint": "./assets/images/whitefootedmouse/footprint.jpg",
         "map": "./assets/images/whitefootedmouse/map.png",
         "status": "./assets/images/whitefootedmouse/status.png"
     },
     {
-        "id": 16,
+        "id": 17,
         "name": "Grizzely Bear",
         "description": "The brown bear is a large bear species found across Eurasia and North America. In North America, the populations of brown bears are called grizzly bears.",
         "image": "./assets/images/grizzelybear/image.jpg",

@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Card, Row, Col, Icon, CardTitle, Button, MediaBox, Img } from 'react-materialize';
+import { Modal, Row, Col, Button } from 'react-materialize';
 
 const styles = {
     modalStyle: {
@@ -17,7 +17,7 @@ const styles = {
     }
 };
 
-function customModal(props) {
+function customAnimalModal(props) {
 
     return (
         <Modal
@@ -45,7 +45,7 @@ function customModal(props) {
             <Row className="container">
                 <Row style={styles.rowStyle}>
                     <Col>
-                        <h2>{props.modalAltText}</h2>
+                        <h2 style={{color: "black"}} className="modal-header">{props.modalAltText}</h2>
                     </Col>
                 </Row>
 
@@ -95,4 +95,4 @@ function customModal(props) {
     );
 };
 
-export default customModal;
+export default customAnimalModal;

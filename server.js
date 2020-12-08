@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const jwt = require('express-jwt');
 const jwks = require('jwks-rsa');
 const axios = require('axios');
+var qs = require('qs');
 
 
 var jwtCheck = jwt({
@@ -15,11 +16,11 @@ var jwtCheck = jwt({
     rateLimit: true,
     jwksRequestsPerMinute: 5,
     jwksUri: 'https://dev-qajxs-8o.us.auth0.com/.well-known/jwks.json'
-}),
-audience: 'nomad',
-issuer: 'https://dev-qajxs-8o.us.auth0.com/',
-algorithms: ['RS256']
-    
+  }),
+  audience: 'nomad',
+  issuer: 'https://dev-qajxs-8o.us.auth0.com/',
+  algorithms: ['RS256']
+
 })
 
 app.use(jwtCheck);
@@ -35,34 +36,16 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-var options = {
-  method: 'POST',
-  url: 'https://dev-qajxs-8o.us.auth0.com/oauth/token',
-  headers : {'content-type': 'application/x-www-form-urlencoded'},
-  data: {
-    grant_type: 'client_credentials',
-    client_id: 'HxkBw2D995h4Okr9JDCjo3uAEEz8BdD0',
-    client_secret: 'YOUR_CLIENT_SECRET',
-    audience: 'https://dev-qajxs-8o.us.auth0.com/api/v2/'
-  }
-};
-
-axios.request(options).then(function (response) {
-  console.log(response.data);
-}).catch(function (error) {
-  console.error(error);
-});
-
 mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://localhost/survivaldb",
   {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
   },
   console.log('DB Connected Successfully')
 );
- 
+
 // Make a request for a user with a given ID
 axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')
   .then(function (response) {

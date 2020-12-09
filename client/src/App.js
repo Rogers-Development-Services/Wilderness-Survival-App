@@ -5,7 +5,7 @@ import Notes from "./pages/Notes";
 import Tools from "./pages/Tools";
 import Checklist from "./pages/Checklistpage";
 import "materialize-css";
-//  import Footer from './components/footer';
+import Footer from './components/footer';
 import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon, Row } from 'react-materialize';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";

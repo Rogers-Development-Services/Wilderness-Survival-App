@@ -12,7 +12,12 @@ export default{
     },
 
     createNote: function (record){
-        return axios.post("/api/create/notes", record) 
+        return axios.post("/api/create/notes", record).then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
         },
 
     getNotes: function (){

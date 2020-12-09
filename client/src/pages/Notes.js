@@ -22,7 +22,7 @@ class Notes extends React.Component {
         let record = {
             title: this.state.title,
             note: this.state.note,
-            user_ID: this.state.user_ID
+            // user_ID: this.state.user_ID
         }
         console.log(record);
 
@@ -37,7 +37,7 @@ class Notes extends React.Component {
         API.getNotes()
             .then(results => {
                 console.log(results.data)
-                this.setState({allNotes:results.data})
+                this.setState({allNotes:[results.data]})
             })
     }
     render() {

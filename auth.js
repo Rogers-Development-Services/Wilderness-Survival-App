@@ -19,8 +19,6 @@ const secured = (req, res, next) => {
     res.redirect("/login");
 };
 
-
-
 router.get(
     "/login",
     passport.authenticate("auth0", {
@@ -30,8 +28,6 @@ router.get(
         res.redirect("/");
     }
 );
-
-
 
 router.get("/callback", (req, res, next) => {
     passport.authenticate("auth0", (err, user, info) => {
@@ -51,8 +47,6 @@ router.get("/callback", (req, res, next) => {
         });
     })(req, res, next);
 });
-
-
 
 router.get("/logout", (req, res) => {
     req.logOut();
@@ -78,7 +72,6 @@ router.get("/logout", (req, res) => {
     });
 
     logoutURL.search = searchString;
-
     res.redirect(logoutURL);
 });
 
@@ -89,7 +82,6 @@ router.get("/user", secured, (req, res, next) => {
         userProfile: userProfile
     });
 });
-
 
 /**
  * Module Exports

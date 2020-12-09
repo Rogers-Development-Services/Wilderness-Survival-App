@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Tools.css";
-import { Carousel, Button, Icon, Collapsible, CollapsibleItem, Select } from 'react-materialize';
+import { Carousel, Button, Icon, Collapsible, CollapsibleItem, Select, Row } from 'react-materialize';
 import CustomAnimalModal from "../components/customAnimalModal";
 import CustomPlantModal from "../components/customPlantModal";
 
@@ -10,7 +10,6 @@ let guideJSON = require('../json/tips.json');
 
 // let mapArr = guideJSON.map(data => console.log(data));
 // console.log(typeof(mapArr));
-
 
 function Home() {
 
@@ -49,37 +48,38 @@ function Home() {
   return (
     <div className="container">
       <h1>Tools</h1>
-      <h2>Animals</h2>
-      <Carousel
+      <Row>
+        <h2>Animals</h2>
+        <Carousel
 
-        // -------------------
-        // WORKING ASSUMPTION 
-        //  ------------------
-        // React-Materialize has a class="modal-trigger" and when a button with that class is triggered, the button refrences href="#Modal-0" (this is known as an anchor tag, not to be confused with <a>) which is the id of the CustomModal and renders the modal inside of the button.
-        // Also, when the user clicks on the button with the class "modal-trigger", materialize changes the <modal>'s attribute "open={false}". This makes the modal visisble to the user.
-        // The <img> is included in the same "children" element to include the acutal picture of the plant or animal we are refrencing. Additionally, when the image in the carosel is clicked, the image of the <img> is translated to the <card> through props and state by using the "onClickFunction" to make the images the same on the button and card.
+          // -------------------
+          // WORKING ASSUMPTION 
+          //  ------------------
+          // React-Materialize has a class="modal-trigger" and when a button with that class is triggered, the button refrences href="#Modal-0" (this is known as an anchor tag, not to be confused with <a>) which is the id of the CustomModal and renders the modal inside of the button.
+          // Also, when the user clicks on the button with the class "modal-trigger", materialize changes the <modal>'s attribute "open={false}". This makes the modal visisble to the user.
+          // The <img> is included in the same "children" element to include the acutal picture of the plant or animal we are refrencing. Additionally, when the image in the carosel is clicked, the image of the <img> is translated to the <card> through props and state by using the "onClickFunction" to make the images the same on the button and card.
 
-        children={
-          [
-            animalJSON.map(data =>
-              <Button
-                href="#Modal-0"
-                node="button"
-                className="modal-trigger animal-carousel-button"
-                id={data.id}
-                onClick={(event) => {
-                  onClickFunction(event, "animal")
-                }}
-                style={{
-                  background: `url(${data.image})`, padding: "0",
-                  background: `url(${data.image})`,
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                  borderRadius: "8px"
-                }}
-              >
-                {/* <img
+          children={
+            [
+              animalJSON.map(data =>
+                <Button
+                  href="#Modal-0"
+                  node="button"
+                  className="modal-trigger animal-carousel-button"
+                  id={data.id}
+                  onClick={(event) => {
+                    onClickFunction(event, "animal")
+                  }}
+                  style={{
+                    background: `url(${data.image})`, padding: "0",
+                    background: `url(${data.image})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    borderRadius: "8px"
+                  }}
+                >
+                  {/* <img
                   id={data.id}
                   onClick={(event) => {
                     onClickFunction(event, "animal")
@@ -88,45 +88,45 @@ function Home() {
                   alt={data.name}
                   style={{ borderRadius: "8px" }}
                 /> */}
-              </Button>
-            )]}
-        carouselId="Carousel-2"
-        options={{
-          dist: -100,
-          duration: 200,
-          fullWidth: false,
-          indicators: false,
-          noWrap: false,
-          numVisible: 5,
-          onCycleTo: null,
-          padding: 0,
-          shift: 0,
-        }}
-      />
+                </Button>
+              )]}
+          carouselId="Carousel-2"
+          options={{
+            dist: -100,
+            duration: 200,
+            fullWidth: false,
+            indicators: false,
+            noWrap: false,
+            numVisible: 5,
+            onCycleTo: null,
+            padding: 0,
+            shift: 0,
+          }}
+        />
 
-      <h2>Plants</h2>
-      <Carousel
-        children={
-          [
-            plantJSON.map(data =>
-              <Button
-                id={data.id}
-                href="#Modal-1"
-                node="button"
-                className="modal-trigger"
-                onClick={(event) => {
-                  onClickFunction(event, "plant")
-                }}
-                style={{
-                  padding: "0",
-                  background: `url(${data.image})`,
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  borderRadius: "8px"
-                }}
-              >
-                {/* Might need below for high contrast */}
-                {/* <img
+        <h2>Plants</h2>
+        <Carousel
+          children={
+            [
+              plantJSON.map(data =>
+                <Button
+                  id={data.id}
+                  href="#Modal-1"
+                  node="button"
+                  className="modal-trigger"
+                  onClick={(event) => {
+                    onClickFunction(event, "plant")
+                  }}
+                  style={{
+                    padding: "0",
+                    background: `url(${data.image})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    borderRadius: "8px"
+                  }}
+                >
+                  {/* Might need below for high contrast */}
+                  {/* <img
                   id={data.id}
                   onClick={(event) => {
                     onClickFunction(event, "plant")
@@ -134,81 +134,82 @@ function Home() {
                   src={data.image}
                   alt={data.name}
                   style={{ borderRadius: "8px" }} /> */}
-              </Button>)
-          ]
-        }
-        carouselId="Carousel-3"
-        options={{
-          dist: -100,
-          duration: 200,
-          fullWidth: false,
-          indicators: false,
-          noWrap: false,
-          numVisible: 5,
-          onCycleTo: null,
-          padding: 0,
-          shift: 0
-        }}
-        style={{width: "100px"}}
-      />
-
-      <h2>Guides</h2>
-
-      <Select
-        id="Select-9"
-        multiple={false}
-        onChange={showFunction} //The change event will have the information from the option tag I want to target
-        options={{
-          classes: 'white',
-          dropdownOptions: {
-            alignment: 'left',
-            autoTrigger: true,
-            closeOnClick: true,
-            constrainWidth: true,
-            coverTrigger: true,
-            hover: false,
-            inDuration: 150,
-            onCloseEnd: null,
-            onCloseStart: null,
-            onOpenEnd: null,
-            onOpenStart: null,
-            outDuration: 250
+                </Button>)
+            ]
           }
-        }}
-        value=""
-        style={{marginBottom: "20px"}}
-      >
-        <option
-          disabled
-          value=""
-        >Choose your Guide</option>
-        <option value="Sustinance">Sustinance</option>
-        <option value="Shelter">Shelter</option>
-        <option value="Saftey">Saftey</option>
-        <option value="First-Aid">First-Aid</option>
-      </Select>
+          carouselId="Carousel-3"
+          options={{
+            dist: -100,
+            duration: 200,
+            fullWidth: false,
+            indicators: false,
+            noWrap: false,
+            numVisible: 5,
+            onCycleTo: null,
+            padding: 0,
+            shift: 0
+          }}
+          style={{ width: "100px" }}
+        />
 
-      <Collapsible
-        accordion
-        popout
-        children={
-          [
-            filterArr.map(data => (
-              <CollapsibleItem
-                expanded={false}
-                header={data.title}
-                icon={<Icon>filter_drama</Icon>}
-                node="div"
-              >
-                <p>{data.description}</p>
-                <p>{data.notes}</p>
-              </CollapsibleItem>
-            )
-            )
-          ]
-        }
-      >
-      </Collapsible>
+        <h2>Guides</h2>
+
+        <Select
+          id="Select-9"
+          multiple={false}
+          onChange={showFunction} //The change event will have the information from the option tag I want to target
+          options={{
+            classes: 'white',
+            dropdownOptions: {
+              alignment: 'left',
+              autoTrigger: true,
+              closeOnClick: true,
+              constrainWidth: true,
+              coverTrigger: true,
+              hover: false,
+              inDuration: 150,
+              onCloseEnd: null,
+              onCloseStart: null,
+              onOpenEnd: null,
+              onOpenStart: null,
+              outDuration: 250
+            }
+          }}
+          value=""
+          style={{ marginBottom: "20px" }}
+        >
+          <option
+            disabled
+            value=""
+          >Choose your Guide</option>
+          <option value="Sustinance">Sustinance</option>
+          <option value="Shelter">Shelter</option>
+          <option value="Saftey">Saftey</option>
+          <option value="First-Aid">First-Aid</option>
+        </Select>
+
+        <Collapsible
+          accordion
+          popout
+          children={
+            [
+              filterArr.map(data => (
+                <CollapsibleItem
+                  expanded={false}
+                  header={data.title}
+                  icon={<Icon>filter_drama</Icon>}
+                  node="div"
+                >
+                  <p>{data.description}</p>
+                  <p>{data.notes}</p>
+                </CollapsibleItem>
+              )
+              )
+            ]
+          }
+        >
+        </Collapsible>
+      </Row>
 
       <CustomAnimalModal
         modalImage={animalModal.image}

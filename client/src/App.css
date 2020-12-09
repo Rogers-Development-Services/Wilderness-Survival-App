@@ -26,7 +26,11 @@
 /* Navbar renders the <nav> on the actual DOM
  */
 /* direct children need to be styled  */
-div#root  div  div  nav{
+div#root  div  div  nav {
+  background-color: #2E7D32;
+}
+
+div#root > div > footer {
   background-color: #2E7D32;
 }
 

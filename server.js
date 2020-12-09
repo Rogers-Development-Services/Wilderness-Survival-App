@@ -4,8 +4,8 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
-const jwt = require('express-jwt');
-const jwks = require('jwks-rsa');
+// const jwt = require('express-jwt');
+// const jwks = require('jwks-rsa');
 const axios = require('axios');
 var qs = require('qs');
 const passport = require('passport');
@@ -72,6 +72,9 @@ if (app.get("env") === "production") {
   // Serve secure cookies, requires HTTPS
   session.cookie.secure = true;
 }
+//Call Notes API routes
+var apiRoutes= require("./routes/apiRoutes");
+app.use(apiRoutes)
 
 app.use(expressSession(session));
 
@@ -96,15 +99,6 @@ passport.use(strategy);
 
 // ================================== Auth0 Stuff End ========================================
 
-mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://localhost/survivaldb",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  },
-  console.log('DB Connected Successfully')
-);
 
 // Make a request for a user with a given ID
 // axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')

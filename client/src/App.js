@@ -28,11 +28,13 @@ function App() {
       redirectUri={window.location.origin}
     >
       <Router>
-        <div className="fullscreen-container">
-          <Row className="not-footer">
+        <div className="fullscreen-container center-align">
+   
+
+
             <Navbar
               alignLinks="right"
-              brand={<img className="responsive-img" src="/assets/mountain.svg" />}
+              // brand={<img class="responsive-img" src="/assets/mountain.svg" />}
               id="mobile-nav"
               menuIcon={<Icon>menu</Icon>}
               options={{
@@ -58,18 +60,22 @@ function App() {
               <NavItem href="/Checklist">Checklist</NavItem>
             </Navbar>
 
-            <Switch>
-              <Route exact path="/" component={Homepage} />
-              <Route exact path="/Location" component={Location} />
-              <Route exact path="/Notes" component={Notes} />
-              <Route exact path="/Tools" component={Tools} />
-              <Route exact path="/Checklist" component={Checklist} />
-              <ProtectedRoute path="/profile" component={Profile} />
-            </Switch>
-          </Row>
-          <Row className="is-footer">
-            <Footer />
-          </Row>
+            <div className="not-footer center-align">
+
+              <Switch>
+                <Route exact path="/" component={Homepage} />
+                <Route exact path="/Location" component={Location} />
+                <Route exact path="/Notes" component={Notes} />
+                <Route exact path="/Tools" component={Tools} />
+                <Route exact path="/Checklist" component={Checklist} />
+                <ProtectedRoute path="/profile" component={Profile} />
+              </Switch>
+            </div>
+            <div className="is-footer">
+              <Footer />
+            </div>
+        
+
         </div>
       </Router>
     </Auth0Provider>

@@ -1,6 +1,6 @@
 const db = require("../models");
+const app = require("express").Router()
 
-module.exports = function (app) {
 
   // Retrieve all tips in db
   app.get("/tips", (req, res) => {
@@ -52,9 +52,9 @@ module.exports = function (app) {
   });
 
   // Creates a new user in the db
-  app.post("/create/notes", ({ body }, res) => {
+  app.post("/api/create/notes", ({ body }, res) => {
     const note = body;
-    console.log(body);
+    console.log(body, "create route");
 
     db.Note.create({ userID: note.userID, title: note.title, note: note.note })
       .then(dbNote => {
@@ -67,7 +67,7 @@ module.exports = function (app) {
   });
 
   // Retrieve all notes for specified user
-  app.get("/notes", (req, res) => {
+  app.get("/api/notes", (req, res) => {
     db.Note.find({ /* userID: req.params */ })
       .then(dbNote => {
         console.log(dbNote);
@@ -80,7 +80,7 @@ module.exports = function (app) {
   });
 
   // Update specified note
-  app.post("/update/notes", ({ body }, res) => {
+  app.put("/api/update/notes", ({ body }, res) => {
     const note = body;
     console.log(body);
 
@@ -95,4 +95,4 @@ module.exports = function (app) {
       });
   });
 
-};
+  module.exports = app

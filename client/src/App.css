@@ -41,9 +41,13 @@ div#root > div > footer {
   margin: 0px 15px 15px 0px;
 }
 
-responsive-img {
-  text-align: center;
+.not-footer {
+  min-height: 100vh;
 }
+.is-footer {
+  margin-bottom: 0px!important;
+}
+
 
  
  

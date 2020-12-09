@@ -1,4 +1,4 @@
-import React, { component, useEffect, useState } from "react";
+import React from "react";
 import Homepage from "./pages/Homepage";
 import Location from "./pages/Location";
 import Notes from "./pages/Notes";
@@ -11,85 +11,79 @@ import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon, Row } from
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import API from "./utils/API";
+
+import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
+import { createBrowserHistory } from 'history';
+import Profile from './components/Profile';
+
+export const history = createBrowserHistory();
+
+const ProtectedRoute = ({ component, ...args }) => (
+  <Route component={withAuthenticationRequired(component)} {...args} />
+);
+
+const onRedirectCallback = (appState) => {
+  // Use the router's history module to replace the url
+  history.replace(appState.returnTo || window.location.pathname);
+};
+
 
 function App() {
   return (
-    <Router>
-      <div className="fullscreen-container">
-        <Row className="not-footer">
-          <Navbar
-            alignLinks="right"
-            brand={<img class="responsive-img" src="/assets/mountain.svg" />}
-            id="mobile-nav"
-            menuIcon={<Icon>menu</Icon>}
-            options={{
-              draggable: true,
-              edge: 'left',
-              inDuration: 250,
-              onCloseEnd: null,
-              onCloseStart: null,
-              onOpenEnd: null,
-              onOpenStart: null,
-              outDuration: 200,
-              preventScrolling: true,
+    <Auth0Provider
+      domain="dev-qajxs-8o.us.auth0.com"
+      clientId="HxkBw2D995h4Okr9JDCjo3uAEEz8BdD0"
+      redirectUri={window.location.origin}
+      onRedirectCallback={onRedirectCallback}
+    >
+      <Router history={history}>
+        <div className="fullscreen-container">
+          <Row className="not-footer">
+            <Navbar
+              alignLinks="right"
+              brand={<img className="responsive-img" src="/assets/mountain.svg" />}
+              id="mobile-nav"
+              menuIcon={<Icon>menu</Icon>}
+              options={{
+                draggable: true,
+                edge: 'left',
+                inDuration: 250,
+                onCloseEnd: null,
+                onCloseStart: null,
+                onOpenEnd: null,
+                onOpenStart: null,
+                outDuration: 200,
+                preventScrolling: true,
 
 
-            }}
-            fixed={true}
-            centerLogo={true}
+              }}
+              fixed={true}
+              centerLogo={true}
 
-          >
-            <NavItem href="/">Homepage</NavItem>
-            <NavItem href="/Location">Location</NavItem>
-            <NavItem href="/Notes">Notes</NavItem>
-            <NavItem href="/Tools">Tools
+            >
+              <NavItem href="/">Homepage</NavItem>
+              <NavItem href="/Location">Location</NavItem>
+              <NavItem href="/Notes">Notes</NavItem>
+              <NavItem href="/Tools">Tools
           {/* This is where custom styling and extra tabs would be added to appear within the sidenav */}</NavItem>
-            <NavItem href="/Checklist">Checklist</NavItem>
-          </Navbar>
+              <NavItem href="/Checklist">Checklist</NavItem>
+            </Navbar>
 
-          <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route exact path="/Location" component={Location} />
-            <Route exact path="/Notes" component={Notes} />
-            <Route exact path="/Tools" component={Tools} />
-            <Route exact path="/Checklist" component={Checklist} />
-          </Switch>
-        </Row>
-        <Row className="is-footer">
-          <Footer />
-        </Row>
-        {/* <StickyFooter
-          styles={{
-            backgroundColor: "green"
-          }}
-          className="page-footer"
-          bottomThreshold={50}
-          normalStyles={{
-            backgroundColor: "#999999",
-            padding: "2rem"
-          }}
-          stickyStyles={{
-            backgroundColor: "green",
-            padding: "2rem"
-          }}
-        >
-          Add any footer markup here
-</StickyFooter> */}
-
-        {/* <Footer
-          className="footer"
-          copyrights="© 2020 Nomad"
-          style={{
-            flexDirection: "column",
-            minHeight: "10vh",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center"
-          }}>
-        </Footer> */}
-      </div>
-    </Router>
+            <Switch>
+              <Route exact path="/" component={Homepage} />
+              <Route exact path="/Location" component={Location} />
+              <Route exact path="/Notes" component={Notes} />
+              <Route exact path="/Tools" component={Tools} />
+              <Route exact path="/Checklist" component={Checklist} />
+              <ProtectedRoute path="/profile" component={Profile} />
+            </Switch>
+          </Row>
+          <Row className="is-footer">
+            <Footer />
+          </Row>
+        </div>
+      </Router>
+    </Auth0Provider>
   );
 }
 

@@ -12,30 +12,23 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
-import { createBrowserHistory } from 'history';
 import Profile from './components/Profile';
 
-export const history = createBrowserHistory();
 
 const ProtectedRoute = ({ component, ...args }) => (
   <Route component={withAuthenticationRequired(component)} {...args} />
 );
-
-const onRedirectCallback = (appState) => {
-  // Use the router's history module to replace the url
-  history.replace(appState.returnTo || window.location.pathname);
-};
 
 
 function App() {
   return (
     <Auth0Provider
       domain="dev-qajxs-8o.us.auth0.com"
+      // clientId="YG74ZPNcrWeh30VknRhK74NFfF6qvnDm"
       clientId="HxkBw2D995h4Okr9JDCjo3uAEEz8BdD0"
       redirectUri={window.location.origin}
-      onRedirectCallback={onRedirectCallback}
     >
-      <Router history={history}>
+      <Router>
         <div className="fullscreen-container">
           <Row className="not-footer">
             <Navbar

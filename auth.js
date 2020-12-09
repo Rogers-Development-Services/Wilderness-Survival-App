@@ -19,8 +19,6 @@ const secured = (req, res, next) => {
     res.redirect("/login");
 };
 
-
-
 router.get(
     "/login",
     passport.authenticate("auth0", {
@@ -30,8 +28,6 @@ router.get(
         res.redirect("/");
     }
 );
-
-
 
 router.get("/callback", (req, res, next) => {
     passport.authenticate("auth0", (err, user, info) => {
@@ -52,14 +48,11 @@ router.get("/callback", (req, res, next) => {
     })(req, res, next);
 });
 
-
-
 router.get("/logout", (req, res) => {
     req.logOut();
 
-    console.log(req);
-
     let returnTo =  req.protocol + "://" + req.hostname;
+
     const port = req.connection.localPort;
 
     if (port !== undefined && port !== 80 && port !== 443) {
@@ -77,8 +70,8 @@ router.get("/logout", (req, res) => {
         client_id: process.env.AUTH0_CLIENT_ID,
         returnTo: returnTo
     });
-    logoutURL.search = searchString;
 
+    logoutURL.search = searchString;
     res.redirect(logoutURL);
 });
 
@@ -89,7 +82,6 @@ router.get("/user", secured, (req, res, next) => {
         userProfile: userProfile
     });
 });
-
 
 /**
  * Module Exports

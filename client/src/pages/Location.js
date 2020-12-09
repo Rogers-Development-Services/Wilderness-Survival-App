@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-//components https://morioh.com/p/8461df41e752#google_vignette
+//current location component
 import CurrentLocation from '../components/currentLocation';
 
 export class MapContainer extends Component {
@@ -9,7 +9,6 @@ export class MapContainer extends Component {
     activeMarker: {},
     selectedPlace: {}
   };
-
   onMarkerClick = (props, marker, e) =>
     this.setState({
       selectedPlace: props,
@@ -48,5 +47,6 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
+  //google maps javascript api key
   apiKey: 'AIzaSyDC-tiYyxZ4fmrlc2QD_BnqlbyhQkuEgco'
 })(MapContainer);

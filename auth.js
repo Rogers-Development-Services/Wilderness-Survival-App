@@ -57,8 +57,6 @@ router.get("/callback", (req, res, next) => {
 router.get("/logout", (req, res) => {
     req.logOut();
 
-    console.log(req);
-
     let returnTo =  req.protocol + "://" + req.hostname;
 
     const port = req.connection.localPort;
@@ -70,8 +68,6 @@ router.get("/logout", (req, res) => {
                 : `${returnTo}:${port}/`;
     }
 
-    console.log(returnTo);
-    
     const logoutURL = new URL(
         `https://${process.env.AUTH0_DOMAIN}/v2/logout`
     );
@@ -83,7 +79,7 @@ router.get("/logout", (req, res) => {
 
     logoutURL.search = searchString;
 
-    // res.redirect(logoutURL);
+    res.redirect(logoutURL);
 });
 
 router.get("/user", secured, (req, res, next) => {

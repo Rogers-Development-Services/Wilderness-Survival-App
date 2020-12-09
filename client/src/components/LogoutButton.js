@@ -3,13 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 
 function reqLogout() {
-    axios.get('/logout').then(function(response) {
-        console.log(response);
-    })
-    .catch(function (error) {
-        // handle error
-        console.log(error);
-      });
+    axios.get('/logout');
 }
 
 function LogoutButton() {

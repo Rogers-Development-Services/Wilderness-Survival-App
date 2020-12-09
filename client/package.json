@@ -15,6 +15,7 @@
     "react-materialize": "^3.9.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^2.1.1",
+    "react-sticky-footer": "0.1.0-rc3",
     "upup": "^1.1.0"
   },
   "scripts": {

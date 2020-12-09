@@ -1,19 +1,27 @@
 import React from "react";
+import { Row } from "react-materialize";
 import Login from "../components/Login"
-import LoginButton from "../components/Login";
-import 'materialize-css';
-import "./Checklistpage.css";
+import "../pages/Homepage.css"
 
 
 function Home() {
   return (
-    <div className="container">
-      <img class="responsive-img" alt="mountain" src="/assets/mountain.jpg"></img>
-      <div className="center">
-        <Login />
+    <div>
+      <img className="responsive-img center-align" alt="mountain" src="/assets/mountain.jpg"></img>
+
+      <h1 className="center-align homepage-title">Practical help for the great outdoors.</h1>
+      <Login />
+      <div>
+
+        <div
+          className="background-position: center"
+        >
+
+        </div>
       </div>
+
     </div>
   );
-}
+};
 
 export default Home;

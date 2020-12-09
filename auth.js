@@ -60,6 +60,7 @@ router.get("/logout", (req, res) => {
     console.log(req);
 
     let returnTo =  req.protocol + "://" + req.hostname;
+
     const port = req.connection.localPort;
 
     if (port !== undefined && port !== 80 && port !== 443) {
@@ -69,6 +70,8 @@ router.get("/logout", (req, res) => {
                 : `${returnTo}:${port}/`;
     }
 
+    console.log(returnTo);
+    
     const logoutURL = new URL(
         `https://${process.env.AUTH0_DOMAIN}/v2/logout`
     );
@@ -77,9 +80,10 @@ router.get("/logout", (req, res) => {
         client_id: process.env.AUTH0_CLIENT_ID,
         returnTo: returnTo
     });
+
     logoutURL.search = searchString;
 
-    res.redirect(logoutURL);
+    // res.redirect(logoutURL);
 });
 
 router.get("/user", secured, (req, res, next) => {

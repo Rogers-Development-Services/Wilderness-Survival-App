@@ -62,14 +62,6 @@ app.use((req, res, next) => {
 
 app.use("/", authRouter);
 
-// app.get("/user", secured, (req, res, next) => {
-//   const { _raw, _json, ...userProfile } = req.user;
-//   res.render("user", {
-//     title: "Profile",
-//     userProfile: userProfile
-//   });
-// });
-
 const session = {
   secret: process.env.SESSION_SECRET,
   cookie: {},

@@ -3,7 +3,7 @@ import axios from "axios";
 export default{
     saveNote: function (record){
         console.log (record);
-        return axios.post("/update/notes", record).then(function (response) {
+        return axios.put("/api/update/notes", record).then(function (response) {
             console.log(response);
         })
         .catch(function (error) {
@@ -12,22 +12,11 @@ export default{
     },
 
     createNote: function (record){
-        return axios.post("/create/notes", record).then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    },
+        return axios.post("/api/create/notes", record) 
+        },
 
-    getNote: function (record){
-        return axios.get("/notes").then(function(response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-        
+    getNotes: function (){
+        return axios.get("/api/notes")
     }
 }
  

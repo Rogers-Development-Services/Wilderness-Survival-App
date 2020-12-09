@@ -4,8 +4,8 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
-// const jwt = require('express-jwt');
-// const jwks = require('jwks-rsa');
+const jwt = require('express-jwt');
+const jwks = require('jwks-rsa');
 const axios = require('axios');
 var qs = require('qs');
 const passport = require('passport');
@@ -21,7 +21,10 @@ app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-}
+} 
+// Api routes
+app.use(require("./routes/apiRoutes"))
+
 
 // ================================== Auth0 Stuff here ========================================
 var jwtCheck = jwt({
@@ -73,8 +76,8 @@ if (app.get("env") === "production") {
   session.cookie.secure = true;
 }
 //Call Notes API routes
-var apiRoutes= require("./routes/apiRoutes");
-app.use(apiRoutes)
+// var apiRoutes= require("./routes/apiRoutes");
+// app.use(apiRoutes)
 
 app.use(expressSession(session));
 
@@ -98,7 +101,15 @@ var strategy = new Auth0Strategy(
 passport.use(strategy);
 
 // ================================== Auth0 Stuff End ========================================
-
+mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://localhost/survivaldb",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  },
+  console.log('DB Connected Successfully')
+);
 
 // Make a request for a user with a given ID
 // axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')
@@ -114,8 +125,7 @@ passport.use(strategy);
 //     // always executed
 //   });
 
-// Api routes
-require("./routes/apiRoutes")(app);
+
 
 // Send every other request to the React app
 // Define any API routes before this runs

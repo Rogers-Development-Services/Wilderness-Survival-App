@@ -10,9 +10,10 @@ import Wrapper from "../components/Wrapper";
 function Home() {
   return (
     <div>
+      <br></br>
       <img className="responsive-img center-align" alt="mountain" src="/assets/mountain.jpg"></img>
 
-      <h1 className="center-align homepage-title">Practical help for the great outdoors.</h1>
+      <h2 className="center-align homepage-title">Practical help for the great outdoors.</h2>
       {/* <Wrapper> */}
             <LoginButton />
             <LogoutButton />

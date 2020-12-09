@@ -10,7 +10,6 @@ import { /*Container, Dropdown, Button,*/ NavItem, /*SideNav,*/ Navbar, Icon } f
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-// import API from "./utils/API";
 
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
 import { createBrowserHistory } from 'history';
@@ -34,6 +33,7 @@ function App() {
       domain="dev-qajxs-8o.us.auth0.com"
       clientId="HxkBw2D995h4Okr9JDCjo3uAEEz8BdD0"
       redirectUri={window.location.origin}
+      onRedirectCallback={onRedirectCallback}
     >
       <Router history={history}>
         <div>

@@ -115,18 +115,18 @@ mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://lo
 );
 
 // Make a request for a user with a given ID
-axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')
-  .then(function (response) {
-    // handle success
-    // console.log(response.data);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .then(function () {
-    // always executed
-  });
+// axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')
+//   .then(function (response) {
+//     // handle success
+//     // console.log(response.data);
+//   })
+//   .catch(function (error) {
+//     // handle error
+//     console.log(error);
+//   })
+//   .then(function () {
+//     // always executed
+//   });
 
 // Api routes
 require("./routes/apiRoutes")(app);

@@ -1,19 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+//Styles for the Map
 const mapStyles = {
-  map: {
-    position: 'absolute',
+map: {
+  position: 'absolute',
     width: '100%',
-    height: '500px'
+    height: '100%'
   }
-};
+}
 
+//Creating a class for current location
 export class CurrentLocation extends React.Component {
-
+//Constructor is going to grab the current location using lat and lng
     constructor(props) {
         super(props);
-    
         const { lat, lng } = this.props.initialCenter;
         this.state = {
           currentLocation: {
@@ -22,7 +23,6 @@ export class CurrentLocation extends React.Component {
           }
         };
       }
-
         componentDidUpdate(prevProps, prevState) {
         if (prevProps.google !== this.props.google) {
           this.loadMap();
@@ -31,7 +31,7 @@ export class CurrentLocation extends React.Component {
           this.recenterMap();
         }
       }
-
+      //center map on current location
       recenterMap() {
         const map = this.map;
         const current = this.state.currentLocation;
@@ -44,7 +44,7 @@ export class CurrentLocation extends React.Component {
           map.panTo(center);
         }
       }
-
+      //if centered around geolocation
       componentDidMount() {
         if (this.props.centerAroundCurrentLocation) {
           if (navigator && navigator.geolocation) {
@@ -61,7 +61,7 @@ export class CurrentLocation extends React.Component {
         }
         this.loadMap();
       }
-
+      //load map
       loadMap() {
         if (this.props && this.props.google) {
           // checks if google is available
@@ -118,6 +118,7 @@ export class CurrentLocation extends React.Component {
 }
 export default CurrentLocation;
 
+//setting props for the initial map if no current location
 CurrentLocation.defaultProps = {
   zoom: 14,
   initialCenter: {

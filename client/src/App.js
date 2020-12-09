@@ -25,7 +25,8 @@ function App() {
   return (
     <Auth0Provider
       domain="dev-qajxs-8o.us.auth0.com"
-      clientId="YG74ZPNcrWeh30VknRhK74NFfF6qvnDm"
+      // clientId="YG74ZPNcrWeh30VknRhK74NFfF6qvnDm"
+      clientId="HxkBw2D995h4Okr9JDCjo3uAEEz8BdD0"
       redirectUri={window.location.origin}
     >
       <Router>

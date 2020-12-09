@@ -15,11 +15,9 @@ import "./App.css";
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
 import Profile from './components/Profile';
 
-
 const ProtectedRoute = ({ component, ...args }) => (
   <Route component={withAuthenticationRequired(component)} {...args} />
 );
-
 
 function App() {
   return (
@@ -47,8 +45,6 @@ function App() {
                 onOpenStart: null,
                 outDuration: 200,
                 preventScrolling: true,
-
-
               }}
               fixed={true}
               centerLogo={true}

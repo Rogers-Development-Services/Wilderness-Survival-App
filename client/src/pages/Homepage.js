@@ -1,13 +1,16 @@
 import React from "react";
 import Login from "../components/Login"
 import LoginButton from "../components/Login";
+import 'materialize-css';
+import "./Checklistpage.css";
+
 
 function Home() {
   return (
-    <div>
-      <h1>Nomad</h1>
-      <div className="background-position: center center">
-      <Login />
+    <div className="container">
+      <img class="responsive-img" alt="mountain" src="/assets/mountain.jpg"></img>
+      <div className="center">
+        <Login />
       </div>
     </div>
   );

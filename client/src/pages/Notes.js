@@ -1,16 +1,22 @@
 import React from "react";
-import API from "../utils/API"
+import API from "../utils/API";
 import "./Notes.css";
 import DisplayNote from "../components/displayNote";
+
+
+
+
 class Notes extends React.Component {
     state = {
         title: "",
         note: "",
-        allNotes:[]
+        allNotes: []
     }
+
     componentDidMount = () => {
         this.getSavedNotes()
     }
+
     userInput = (event) => {
         let value = event.target.value
         let name = event.target.name
@@ -18,13 +24,14 @@ class Notes extends React.Component {
             [name]: value
         })
     }
+
     saveNote = () => {
         let record = {
             title: this.state.title,
             note: this.state.note,
             // user_ID: this.state.user_ID
         }
-        console.log(record);
+        console.log("saveNotecall", record);
 
         API.createNote(record)
             .then(results => {
@@ -40,24 +47,27 @@ class Notes extends React.Component {
                 this.setState({allNotes:[results.data]})
             })
     }
+
     render() {
         return (
             <div id="user-input" className="container">
                 <h1>Notes</h1>
-                <p>Note Title</p>
+                
+                
+                <p>Title</p>
                 <input onChange={this.userInput} type="text" value={this.state.title} name="title" />
                 <br />
-                <p>Note</p>
+                <p><i className="small material-icons">edit</i> </p>
                 <textarea name="note" onChange={this.userInput} value={this.state.note}></textarea>
                 <div id="buttons">
                     <div id="action-button">
                         <button onClick={this.saveNote} id="make-new">Submit</button>
                     </div>
                     <br></br>
-                    <button id="clear-all">Delete Note</button>
+                    {/* <button id="clear-all">Delete Note</button> */}
                 </div>
-                {this.state.allNotes.map((note,key)=>
-                  <DisplayNote note={note} key={key} />
+                {this.state.allNotes.map((note, key) =>
+                    <DisplayNote note={note} key={key} />
                 )}
             </div>
         )

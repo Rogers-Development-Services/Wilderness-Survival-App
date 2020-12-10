@@ -2,20 +2,20 @@
     {
         "id": 1,
         "category": "Shelter",
-        "item": ["Tent", "Ground cloth/tarp", "Extra stakes", "Shade tarp/poles/rope/stakes", "Axe or hammer"]
+        "item": ["Tent", "Ground cloth or tarp", "Extra stakes", "Shade tarp/poles/rope/stakes", "Axe or hammer"]
         
     },
 
     {
         "id": 2,
-        "category": "Bedding",
-        "item": ["Sheets/blankets", "Pillow", "Air mattress/sleeping pad/cot/tarp", "Air pump", "Repair kit for air mattress"]
+        "category": "Sleep",
+        "item": ["Blankets", "Pillow", "Air mattress/sleeping pad/cot/tarp", "Air pump", "Repair kit for air mattress"]
     },
 
     {
         "id": 3,
-        "category": "Cooking",
-        "item": ["Large water jug & water bucket","Stove with fuel/propane","Matches/lighter", "Can opener/bottle opener", "Pots and frying pans with lids", "Cook utensils-spatula, knife, spoon"]
+        "category": "Cooking Supplies",
+        "item": ["Large water jug","Stove with fuel/propane","Matches & lighter", "Can opener/bottle opener", "Pots & frying pans with lids", "Utensils"]
     },
 
     {
@@ -26,20 +26,21 @@
 
     {
         "id": 5,
-        "category": "Personal",
-        "item": ["Tooth brush/tooth paste", "Toilet paper", "Deodorant", "Soap in plastic case/shampoo", "Personal medications - take extra", "Feminine products"]
+        "category": "Toiletries",
+        "item": ["Tooth brush & tooth paste", "Toilet paper", "Deodorant", "Soap & shampoo", "Personal medications - take extra", "Feminine products"]
     },
 
     {
         "id": 6,
-        "category": "Miscellaneous",
-        "item": ["Whistle","Compass/GPS", "Extra batteries/bulbs","Saw/axe", "Duct tape/electrical tape"]
+        "category": "First Aid Kit",
+        "item": ["Bug repellant", "Antibiotic cream","Band Aides/bandages", "Aspirin/Ibuprofen/Tylenol/Naproxin", "Snake bite kit", "Hydrogen Peroxide"]
     },
 
     {
         "id": 7,
-        "category": "Basic First Aid Kit",
-        "item": ["Bug repellant", "Antibiotic cream","Band Aides/bandages", "Aspirin/Ibuprofen/Tylenol/Naproxin", "Snake bite kit", "Hydrogen Peroxide"]
+        "category": "Miscellaneous",
+        "item": ["Whistle","Compass/GPS", "Extra batteries/bulbs","Saw/axe", "Duct tape/electrical tape"]
+     
     }
     
     

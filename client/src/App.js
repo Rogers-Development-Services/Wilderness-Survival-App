@@ -7,7 +7,7 @@ import Checklist from "./pages/Checklistpage";
 import "materialize-css";
 // import StickyFooter from 'react-sticky-footer';
 import Footer from './components/footer';
-import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon, Row } from 'react-materialize';
+import { NavItem, Navbar, Icon } from 'react-materialize';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";

@@ -40,11 +40,7 @@ class Notes extends React.Component {
         API.getNotes()
             .then(results => {
                 console.log(results.data)
-<<<<<<< HEAD
-                this.setState({ allNotes: results.data })
-=======
                 this.setState({allNotes:[results.data]})
->>>>>>> cb337fcbcaac575393b9fd0c1da29f069ce40b7c
             })
     }
 

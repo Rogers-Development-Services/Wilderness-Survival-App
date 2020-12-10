@@ -4,7 +4,7 @@ export default {
     saveNote: function (record) {
         console.log(record);
         return axios.put("/api/update/notes", record).then(function (response) {
-            console.log(response);
+            console.log("axios", response);
         })
             .catch(function (error) {
                 console.log(error);
@@ -12,8 +12,9 @@ export default {
     },
 
     createNote: function (record){
+        console.log(record);
         return axios.post("/api/create/notes", record).then(function (response) {
-            console.log(response);
+            console.log("POSTaxios", response);
         })
         .catch(function (error) {
           console.log(error);

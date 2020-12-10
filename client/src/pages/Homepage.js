@@ -10,7 +10,7 @@ function Home() {
     <div>
       <br></br>
       <img className="responsive-img center-align" alt="mountain" src="/assets/mountain.jpg"></img>
-
+      
       <h2 className="center-align homepage-title">Practical help for the great outdoors.</h2>
       <Wrapper>
         <LoginButton />

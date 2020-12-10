@@ -56,7 +56,7 @@ const app = require("express").Router()
     const note = body;
     console.log(body, "create route");
 
-    db.Note.create({ userID: note.userID, title: note.title, note: note.note })
+    db.Note.create({ /*userID: note.userID, */ title: note.title, note: note.note })
       .then(dbNote => {
         console.log(dbNote);
         res.json(dbNote).code(201);

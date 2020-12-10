@@ -4,6 +4,8 @@ import Location from "./pages/Location";
 import Notes from "./pages/Notes";
 import Tools from "./pages/Tools";
 import Checklist from "./pages/Checklistpage";
+import localforage from "localforage";
+import Forage from "react-localforage";
 import "materialize-css";
 // import StickyFooter from 'react-sticky-footer';
 import Footer from './components/footer';
@@ -15,11 +17,28 @@ import "./App.css";
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
 import Profile from './components/Profile';
 
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> c0ba93861335ed65ca4e11c71486b09ad74534d4
 const ProtectedRoute = ({ component, ...args }) => (
   <Route component={withAuthenticationRequired(component)} {...args} />
 );
 
 function App() {
+  localforage.setItem('key', Notes).then(function () {
+    return localforage.getItem('key');
+  }).then(function (Notes) {
+    console.log(Notes);
+    // we got our value
+  }).catch(function (err) {
+    // we got an error
+  });
+  
+
+  
   return (
     <Auth0Provider
       domain="dev-qajxs-8o.us.auth0.com"

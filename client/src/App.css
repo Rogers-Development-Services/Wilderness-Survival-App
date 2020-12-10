@@ -30,11 +30,10 @@ div#root  div  div  nav {
   background-color: #2E7D32;
 }
 
-.brand-logo center {
-  position:center;
-  left:10px;
-  top:10px;
-  margin: 0px 15px 15px 0px;
+.responsive-img {
+  height: -webkit-fill-available !important;
+  width: auto;
+  padding: 1px;
 }
 
 .not-footer {
@@ -43,7 +42,6 @@ div#root  div  div  nav {
 .is-footer {
   margin-bottom: 0px!important;
 }
-
 
  .not-footer {
    min-height: 100vh;
@@ -57,6 +55,4 @@ div#root  div  div  nav {
   padding: 1rem;
   background-color: lightgray;
   border-radius: 10px;
-
 }
- 

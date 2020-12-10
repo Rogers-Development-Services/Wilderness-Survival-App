@@ -30,12 +30,11 @@ function App() {
     >
       <Router>
         <div className="fullscreen-container center-align">
-
-
-
           <Navbar
             alignLinks="right"
-            // brand={<img class="responsive-img" src="/assets/mountain.svg" />}
+            brand={<a className="brand-logo" href="/">
+                    <img className="responsive-img" src="/assets/Nomad-home-button.jpg" alt="brand-home-button"/>
+                  </a>}
             id="mobile-nav"
             menuIcon={<Icon>menu</Icon>}
             options={{
@@ -55,7 +54,6 @@ function App() {
             centerLogo={true}
 
           >
-            <NavItem href="/">Homepage</NavItem>
             <NavItem href="/Location">Location</NavItem>
             <NavItem href="/Notes">Notes</NavItem>
             <NavItem href="/Tools">Tools

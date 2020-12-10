@@ -12,6 +12,7 @@ export default{
     },
 
     createNote: function (record){
+        console.log('POST', record);
         return axios.post("/api/create/notes", record).then(function (response) {
             console.log(response);
         })

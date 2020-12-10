@@ -6,7 +6,11 @@
     justify-content: center;
 }
 
-
 .homepage-title {
       color: whitesmoke;
+}
+
+.homepage-logo {
+    height: auto;
+    width: auto;
 }

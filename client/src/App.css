@@ -42,17 +42,5 @@ div#root  div  div  nav {
 .is-footer {
   margin-bottom: 0px!important;
 }
-
- .not-footer {
-   min-height: 100vh;
- }
-
- .is-footer {
-   margin-bottom: 0px!important;
- }
-
- .container {
-  padding: 1rem;
-  background-color: lightgray;
-  border-radius: 10px;
-}
+ 
+ 

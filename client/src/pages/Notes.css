@@ -1,6 +1,7 @@
 body {
   
     font-weight: bold;
+    font-style: normal;
 }
 
 .container {
@@ -12,7 +13,13 @@ body {
 
 p {
   
-    margin-inline-start: 20px
+    margin-inline-start: 20px;
+    text-align: left
+}
+
+.container {
+  
+    padding-bottom: 25px;
 }
 
  

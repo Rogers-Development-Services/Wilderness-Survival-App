@@ -6,11 +6,13 @@ h1 {
 span {
   
     color: black;
+    
 }
 
 .checkbox_3 {
   
     color: black;
+    text-align: left;
 }
 .container {
   
@@ -18,8 +20,10 @@ span {
     opacity: 0.9;
     margin: 15px 15px 15px 0px;
 }
-
-/* nav {
-    background-color: #2E7D32 !important;
-  } */
-
+  
+.collapsible-body {
+  
+    color: black;
+    text-align: left;
+}  
+    

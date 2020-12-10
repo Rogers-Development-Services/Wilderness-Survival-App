@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Mern Demo",
   "main": "server.js",
+<<<<<<< HEAD
   "private": true,
+=======
+>>>>>>> cb337fcbcaac575393b9fd0c1da29f069ce40b7c
   "proxy": "http://localhost:3000/",
   "secure": false,
   "scripts": {

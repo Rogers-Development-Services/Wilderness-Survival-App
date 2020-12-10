@@ -21,7 +21,10 @@ app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-}
+} 
+// Api routes
+app.use(require("./routes/apiRoutes"))
+
 
 app.use(require('./routes/apiRoutes'));
 
@@ -103,6 +106,34 @@ var strategy = new Auth0Strategy(
 passport.use(strategy);
 
 // ================================== Auth0 Stuff End ========================================
+<<<<<<< HEAD
+=======
+mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://localhost/survivaldb",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  },
+  console.log('DB Connected Successfully')
+);
+
+// Make a request for a user with a given ID
+// axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')
+//   .then(function (response) {
+//     // handle success
+//     // console.log(response.data);
+//   })
+//   .catch(function (error) {
+//     // handle error
+//     console.log(error);
+//   })
+//   .then(function () {
+//     // always executed
+//   });
+
+
+>>>>>>> cb337fcbcaac575393b9fd0c1da29f069ce40b7c
 
 // Send every other request to the React app
 // Define any API routes before this runs

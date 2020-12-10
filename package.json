@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Mern Demo",
   "main": "server.js",
- 
   "secure": false,
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",

@@ -1,49 +1,65 @@
 import React from "react";
 import API from "../utils/API"
 import "./Notes.css";
+import DisplayNote from "../components/displayNote";
 class Notes extends React.Component {
-    state= {
+    state = {
         title: "",
-        note: ""
-    
+        note: "",
+        allNotes:[]
     }
-    userInput=(event)=>{
-        let value=event.target.value
-        let name= event.target.name
+    componentDidMount = () => {
+        this.getSavedNotes()
+    }
+    userInput = (event) => {
+        let value = event.target.value
+        let name = event.target.name
         this.setState({
             [name]: value
         })
     }
-    saveNote=()=>{
-        let record={
-            title: this.state.title, 
+    saveNote = () => {
+        let record = {
+            title: this.state.title,
             note: this.state.note,
-            user_ID: this.state.user_ID
+            // user_ID: this.state.user_ID
         }
-        console.log (record);
+        console.log(record);
 
         API.createNote(record)
-        .then(results=>{
-            console.log("note saved.")
-        })
+            .then(results => {
+                console.log("note saved.", results)
+                this.getSavedNotes()
+            })
     }
-    render(){
-        return(
+
+    getSavedNotes = () => {
+        API.getNotes()
+            .then(results => {
+                console.log(results.data)
+                this.setState({allNotes:[results.data]})
+            })
+    }
+    render() {
+        return (
             <div id="user-input" className="container">
-            <h1>Notes</h1>
-            <p>Note Title</p>
-             <input onChange={this.userInput} type="text" value={this.state.title} name="title" />
-            <br />
-            <p>Note</p>
-            <textarea name="note" onChange={this.userInput} value={this.state.note}></textarea>
-            <div id="buttons">
-              <div id="action-button">
-                <button onClick={this.saveNote} id="make-new">Submit</button>
-              </div>
-              <br></br>
-              <button id="clear-all">Delete Note</button>
+                <h1>Notes</h1>
+                <p>Note Title</p>
+                <input onChange={this.userInput} type="text" value={this.state.title} name="title" />
+                <br />
+                <p>Note</p>
+                <textarea name="note" onChange={this.userInput} value={this.state.note}></textarea>
+                <div id="buttons">
+                    <div id="action-button">
+                        <button onClick={this.saveNote} id="make-new">Submit</button>
+                    </div>
+                    <br></br>
+                    <button id="clear-all">Delete Note</button>
+                </div>
+                {this.state.allNotes.map((note,key)=>
+                  <DisplayNote note={note} key={key} />
+                )}
             </div>
-          </div> 
         )
     }
 }

@@ -10,9 +10,23 @@ const axios = require('axios');
 var qs = require('qs');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
-const session = require('express-session');
+const expressSession = require('express-session');
+const router = express.Router();
+const authRouter = require("./auth");
+
+// Define middleware here
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+} 
+// Api routes
+app.use(require("./routes/apiRoutes"))
 
 
+// ================================== Auth0 Stuff here ========================================
 var jwtCheck = jwt({
   secret: jwks.expressJwtSecret({
     cache: true,
@@ -31,22 +45,48 @@ app.get('/authorized', function (req, res) {
   res.send('Secured Resource');
 });
 
-// Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+// app.use(expressSession(session));
+// passport.use(strategy);
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.serializeUser((user, done) => {
+  done(null, user);
+});
+
+passport.deserializeUser((user, done) => {
+  done(null, user);
+});
+
+app.use((req, res, next) => {
+  res.locals.isAuthenticated = req.isAuthenticated();
+  next();
+});
+
+app.use("/", authRouter);
+
+const session = {
+  secret: process.env.SESSION_SECRET,
+  cookie: {},
+  resave: false,
+  saveUninitialized: false
+};
+if (app.get("env") === "production") {
+  // Serve secure cookies, requires HTTPS
+  session.cookie.secure = true;
 }
+//Call Notes API routes
+// var apiRoutes= require("./routes/apiRoutes");
+// app.use(apiRoutes)
 
-// ================================== Auth0 Stuff here ========================================
+app.use(expressSession(session));
 
-var auth0Strategy = new Auth0Strategy(
+var strategy = new Auth0Strategy(
   {
-    domain: process.env.AUTH_DOMAIN,
-    clientID: process.env.AUTH_CLIENT_ID,
-    clientSecret: process.env.AUTH_CLIENT_SECRET,
-    callbackURL: process.env.AUTH_CALLBACK_URL,
+    domain: process.env.AUTH0_DOMAIN,
+    clientID: process.env.AUTH0_CLIENT_ID,
+    clientSecret: process.env.AUTH0_CLIENT_SECRET,
+    callbackURL: process.env.AUTH0_CALLBACK_URL,
     passReqToCallback: true
   },
   function (req, accessToken, refreshToken, extraParams, profile, done) {
@@ -58,42 +98,9 @@ var auth0Strategy = new Auth0Strategy(
   }
 );
 
-router.get(
-  '/auth/callback',
-  function (req, res, next) {
-    //
-    // State value is in req.query.state ...
-    console.log(req.query.state);
-    //
-    passport.authenticate('auth0', function (err, user, info) {
-      // ...
-    })(req, res, next);
-  }
-);
-
-passport.use(auth0Strategy);
-
-app.post('/login', passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login' }));
-
-app.get(
-  '/login',
-  passport.authenticate('auth0', { scope: 'openid email profile' }),
-  function (req, res) {
-    res.redirect('/');
-  }
-);
-
-app.get(
-  '/login',
-  passport.authenticate('auth0', { audience: 'https://dev-qajxs-8o.us.auth0.com/api/v2/' }),
-  function (req, res) {
-    console.log(res);
-    res.redirect('{window.location.origin}');
-  }
-);
+passport.use(strategy);
 
 // ================================== Auth0 Stuff End ========================================
-
 mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://localhost/survivaldb",
   {
     useNewUrlParser: true,
@@ -105,21 +112,20 @@ mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://lo
 );
 
 // Make a request for a user with a given ID
-axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')
-  .then(function (response) {
-    // handle success
-    // console.log(response.data);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .then(function () {
-    // always executed
-  });
+// axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')
+//   .then(function (response) {
+//     // handle success
+//     // console.log(response.data);
+//   })
+//   .catch(function (error) {
+//     // handle error
+//     console.log(error);
+//   })
+//   .then(function () {
+//     // always executed
+//   });
 
-// Api routes
-require("./routes/apiRoutes")(app);
+
 
 // Send every other request to the React app
 // Define any API routes before this runs

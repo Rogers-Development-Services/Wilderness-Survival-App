@@ -8,9 +8,16 @@ div#root > div > div.container > div.input-field.col > div.select-wrapper.white 
     margin-bottom: 5rem;
 }
 
+<<<<<<< HEAD
 div#root > div.fullscreen-container > div.row.not-footer > div.container > div.row > div.input-field {
     width: 100%;    
+=======
+div#root > div.fullscreen-container > div.not-footer > div.container > div.row > div.input-field {
+    width: 100% !important; 
+>>>>>>> cb337fcbcaac575393b9fd0c1da29f069ce40b7c
 }
+
+
 
 /* How can I make all the images the same size without changing their aspect ratios */
 /* div#root > div > div.container > div#Carousel-2.carousel.carousel-slider{

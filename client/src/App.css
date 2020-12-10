@@ -31,15 +31,19 @@ div#root  div  div  nav {
 }
 
 .brand-logo center {
-  position:absolute;
+  position:center;
   left:10px;
   top:10px;
   margin: 0px 15px 15px 0px;
 }
 
-img {
-  box-sizing: border-box;
+.not-footer {
+  min-height: 100vh;
 }
+.is-footer {
+  margin-bottom: 0px!important;
+}
+
 
  .not-footer {
    min-height: 100vh;

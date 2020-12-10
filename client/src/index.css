@@ -8,12 +8,31 @@ body {
   background-position: center; 
 }
 
+<<<<<<< HEAD
+=======
+/* div#root {
+  min-height: 100vh;
+  height: 100%;
+} */
+
+/* div#root > div.fullscreen-container > div.row.not-footer {
+  min-height: ;
+} */
+
+/* div#root > div.fullscreen-container > div.row.not-footer {
+  position: absolute;
+} */
+
+>>>>>>> cb337fcbcaac575393b9fd0c1da29f069ce40b7c
 .footer {
   margin-top: auto;
   margin-bottom: 0px;
   padding: 1rem;
   background-color: #2e7d32;
+<<<<<<< HEAD
   color: white;
+=======
+>>>>>>> cb337fcbcaac575393b9fd0c1da29f069ce40b7c
   position: relative;
   bottom: 0;
   left: 0;

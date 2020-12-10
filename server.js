@@ -1,17 +1,13 @@
 require('dotenv').config()
 const express = require("express");
-const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
-// const jwt = require('express-jwt');
-// const jwks = require('jwks-rsa');
-const axios = require('axios');
-var qs = require('qs');
+const jwt = require('express-jwt');
+const jwks = require('jwks-rsa');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const expressSession = require('express-session');
-const router = express.Router();
 const authRouter = require("./auth");
 
 // Define middleware here
@@ -23,7 +19,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// ================================== Auth0 Stuff here ========================================
+// Api routes
+app.use(require("./routes/apiRoutes"))
+
+// ================================== Auth0 Configuration ========================================
 var jwtCheck = jwt({
   secret: jwks.expressJwtSecret({
     cache: true,
@@ -42,8 +41,6 @@ app.get('/authorized', function (req, res) {
   res.send('Secured Resource');
 });
 
-// app.use(expressSession(session));
-// passport.use(strategy);
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -72,9 +69,6 @@ if (app.get("env") === "production") {
   // Serve secure cookies, requires HTTPS
   session.cookie.secure = true;
 }
-//Call Notes API routes
-var apiRoutes= require("./routes/apiRoutes");
-app.use(apiRoutes)
 
 app.use(expressSession(session));
 
@@ -87,39 +81,32 @@ var strategy = new Auth0Strategy(
     passReqToCallback: true
   },
   function (req, accessToken, refreshToken, extraParams, profile, done) {
-    //
-    // State value is in req.query.state ...
     console.log(req.query.state);
-    //
+
+    passport.authenticate('auth0', function (err, user, info) {
+      // ...
+    })(req, res, next);
+
     return done(null, profile);
   }
 );
 
 passport.use(strategy);
 
-// ================================== Auth0 Stuff End ========================================
+// ================================== End of Auth0 Config ========================================
 
+// MongoDB connection configuration
+mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://localhost/survivaldb",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  },
+  console.log('DB Connected Successfully')
+);
 
-// Make a request for a user with a given ID
-// axios.get('https://trefle.io/api/v1/plants?token=MujlkXq4t42_hz3sPykcABq3HVQLyIw7Z7Vf7X7Krqk')
-//   .then(function (response) {
-//     // handle success
-//     // console.log(response.data);
-//   })
-//   .catch(function (error) {
-//     // handle error
-//     console.log(error);
-//   })
-//   .then(function () {
-//     // always executed
-//   });
-
-// Api routes
-require("./routes/apiRoutes")(app);
-
-// Send every other request to the React app
-// Define any API routes before this runs
-
+// ========= This is used for deployment =========
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });

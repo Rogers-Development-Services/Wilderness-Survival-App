@@ -6,7 +6,7 @@ import Tools from "./pages/Tools";
 import Checklist from "./pages/Checklistpage";
 import "materialize-css";
 import Footer from './components/footer';
-import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon, Row } from 'react-materialize';
+import { NavItem, Navbar, Icon } from 'react-materialize';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
@@ -14,11 +14,9 @@ import "./App.css";
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
 import Profile from './components/Profile';
 
-
 const ProtectedRoute = ({ component, ...args }) => (
   <Route component={withAuthenticationRequired(component)} {...args} />
 );
-
 
 function App() {
   return (
@@ -48,8 +46,6 @@ function App() {
                 onOpenStart: null,
                 outDuration: 200,
                 preventScrolling: true,
-
-
               }}
               fixed={true}
               centerLogo={true}

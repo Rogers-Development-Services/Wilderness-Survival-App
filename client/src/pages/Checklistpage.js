@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Checkbox, Collapsible, Icon, CollapsibleItem } from 'react-materialize';
+import { Checkbox, Collapsible, CollapsibleItem } from 'react-materialize';
 import 'materialize-css';
 import "./Checklistpage.css";
 
@@ -29,11 +29,17 @@ function ChecklistItems(props) {
     dataupload()
   }, [])
 
-  function onClickFunction(event) {
-    console.log(event.target);
-    setChecklist(checklist[event.target.id])
 
-  }
+  /*
+        |  This function is declared but never used
+        |  commented it out for now to come back to later if needed
+        V
+  */
+  // function onClickFunction(event) {
+  //   console.log(event.target);
+  //   setChecklist(checklist[event.target.id])
+
+  // }
 
   return (
     <div className="container">
@@ -62,7 +68,7 @@ function ChecklistItems(props) {
                   type="checkbox"
                   label={description}
                   value={description}
-         
+
                 /> </div>)}
 
               </CollapsibleItem>

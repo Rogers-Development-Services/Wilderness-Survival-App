@@ -9,9 +9,7 @@ div#root > div > div.container > div.input-field.col > div.select-wrapper.white 
 }
 
 div#root > div.fullscreen-container > div.row.not-footer > div.container > div.row > div.input-field {
-    width: 100%;
-    margin-bottom: 5rem;
-    
+    width: 100%;    
 }
 
 /* How can I make all the images the same size without changing their aspect ratios */

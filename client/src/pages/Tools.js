@@ -155,6 +155,7 @@ function Home() {
         <h2>Guides</h2>
 
         <Select
+          className="bob"
           id="Select-9"
           multiple={false}
           onChange={showFunction} //The change event will have the information from the option tag I want to target
@@ -197,7 +198,7 @@ function Home() {
                 <CollapsibleItem
                   expanded={false}
                   header={data.title}
-                  icon={<Icon>filter_drama</Icon>}
+                  icon={<Icon>{data.icon}</Icon>}
                   node="div"
                 >
                   <p>{data.description}</p>
@@ -227,7 +228,7 @@ function Home() {
         modalUsefullness={plantModal.usefullness}
         modalCaution={plantModal.caution}
       />
-
+      
     </div >
   );
 }

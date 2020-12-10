@@ -3,13 +3,6 @@ body {
     font-weight: bold;
 }
 
-.container {
-  
-    background-color: lightgray;
-    opacity: 0.9;
-
-}
-
 p {
   
     margin-inline-start: 20px

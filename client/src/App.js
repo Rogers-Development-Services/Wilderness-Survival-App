@@ -8,7 +8,6 @@ import "materialize-css";
 import StickyFooter from 'react-sticky-footer';
 import Footer from './components/footer';
 import { Container, Dropdown, Button, NavItem, SideNav, Navbar, Icon, Row } from 'react-materialize';
-
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import API from "./utils/API";
@@ -20,7 +19,7 @@ function App() {
         <Row className="not-footer">
           <Navbar
             alignLinks="right"
-            brand={<img class="responsive-img" src="/assets/mountain.svg" />}
+            brand={<img className="responsive-img" src="/assets/mountain.svg" />}
             id="mobile-nav"
             menuIcon={<Icon>menu</Icon>}
             options={{
@@ -33,8 +32,6 @@ function App() {
               onOpenStart: null,
               outDuration: 200,
               preventScrolling: true,
-
-
             }}
             fixed={true}
             centerLogo={true}
@@ -59,35 +56,6 @@ function App() {
         <Row className="is-footer">
           <Footer />
         </Row>
-        {/* <StickyFooter
-          styles={{
-            backgroundColor: "green"
-          }}
-          className="page-footer"
-          bottomThreshold={50}
-          normalStyles={{
-            backgroundColor: "#999999",
-            padding: "2rem"
-          }}
-          stickyStyles={{
-            backgroundColor: "green",
-            padding: "2rem"
-          }}
-        >
-          Add any footer markup here
-</StickyFooter> */}
-
-        {/* <Footer
-          className="footer"
-          copyrights="© 2020 Nomad"
-          style={{
-            flexDirection: "column",
-            minHeight: "10vh",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center"
-          }}>
-        </Footer> */}
       </div>
     </Router>
   );

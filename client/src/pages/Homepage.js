@@ -1,19 +1,6 @@
 import React from "react";
 import { Row } from "react-materialize";
 import Login from "../components/Login"
-<<<<<<< HEAD
-import LoginButton from "../components/Login";
-import "./Homepage.css";
-
-function Home() {
-  return (
-    <div className="homepage-component">
-      <img className="responsive-img" alt="mountain" src="./assets/mountain.svg"></img>
-      <h1>Nomad</h1>
-      <div className="background-position: center">
-      <Login />
-      </div>
-=======
 import "../pages/Homepage.css"
 
 import LoginButton from "../components/LoginButton";
@@ -32,7 +19,6 @@ function Home() {
             <LogoutButton />
           {/* </Wrapper> */}
       
->>>>>>> cb337fcbcaac575393b9fd0c1da29f069ce40b7c
     </div>
   );
 };

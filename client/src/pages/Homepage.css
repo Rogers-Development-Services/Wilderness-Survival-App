@@ -1,13 +1,12 @@
-<<<<<<< HEAD
 .homepage-component {
     margin-top: 10rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-=======
+}
+
+
 .homepage-title {
       color: whitesmoke;
-    
->>>>>>> cb337fcbcaac575393b9fd0c1da29f069ce40b7c
 }

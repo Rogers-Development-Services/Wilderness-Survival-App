@@ -10,11 +10,13 @@ class Notes extends React.Component {
     state = {
         title: "",
         note: "",
-        allNotes:[]
+        allNotes: []
     }
+
     componentDidMount = () => {
         this.getSavedNotes()
     }
+
     userInput = (event) => {
         let value = event.target.value
         let name = event.target.name
@@ -22,6 +24,7 @@ class Notes extends React.Component {
             [name]: value
         })
     }
+
     saveNote = () => {
         let record = {
             title: this.state.title,
@@ -44,6 +47,7 @@ class Notes extends React.Component {
                 this.setState({allNotes:[results.data]})
             })
     }
+
     render() {
         return (
             <div id="user-input" className="container">
@@ -62,8 +66,8 @@ class Notes extends React.Component {
                     <br></br>
                     {/* <button id="clear-all">Delete Note</button> */}
                 </div>
-                {this.state.allNotes.map((note,key)=>
-                  <DisplayNote note={note} key={key} />
+                {this.state.allNotes.map((note, key) =>
+                    <DisplayNote note={note} key={key} />
                 )}
             </div>
         )

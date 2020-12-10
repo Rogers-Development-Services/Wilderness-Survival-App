@@ -26,9 +26,9 @@ function Home() {
 
   // event.target.id so the <img> can take in all of the JSON information for each plant
   function onClickFunction(event, organism) {
-    if (organism == "animal") {
+    if (organism === "animal") {
       setAnimalModal(animalJSON[event.target.id]);
-    } else if (organism == "plant") {
+    } else if (organism === "plant") {
       setPlantModal(plantJSON[event.target.id]);
     }
   };
@@ -72,7 +72,6 @@ function Home() {
                   }}
                   style={{
                     background: `url(${data.image})`, padding: "0",
-                    background: `url(${data.image})`,
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",

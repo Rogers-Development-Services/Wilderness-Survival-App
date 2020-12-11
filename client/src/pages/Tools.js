@@ -31,7 +31,7 @@ function Home() {
     }
   };
 
-  // When the category is selected the accordian's information will be set in state.
+  // When the category is selected the accordian's information will be set in state via the onclick function "showFunction".
   function showFunction(event) {
     setAccordian(event.target.value);
   };

@@ -11,6 +11,7 @@ const staticFilesToPreCache = [
   "/",
   "/index.html",
   "/app.js",
+  "/index.js",
   "/favicon.ico",
   "/manifest.webmanifest",
   "/public/assets/plantPictures/Acorns.jpg"

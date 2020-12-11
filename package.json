@@ -13,7 +13,8 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "build-and-start": "npm run build && npm run start:prod"
   },
   "author": "",
   "license": "ISC",

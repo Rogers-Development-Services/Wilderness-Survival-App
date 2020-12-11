@@ -3,8 +3,6 @@ import { Checkbox, Collapsible, CollapsibleItem } from 'react-materialize';
 import 'materialize-css';
 import "./Checklistpage.css";
 
-// import Checklist from "../json/checklist.json";
-
 function ChecklistItems(props) {
   console.log("checkbox!")
 
@@ -29,46 +27,30 @@ function ChecklistItems(props) {
     dataupload()
   }, [])
 
-
-  /*
-        |  This function is declared but never used
-        |  commented it out for now to come back to later if needed
-        V
-  */
-  // function onClickFunction(event) {
-  //   console.log(event.target);
-  //   setChecklist(checklist[event.target.id])
-
-  // }
+  
 
   return (
     <div className="container">
       <h1>Wilderness Checklist</h1>
       {props.children}
 
-
       <Collapsible
         accordion
         popout
         children={
           [
-            checklist.map(data =>
+            checklist.map(data => 
               <CollapsibleItem
                 expanded={false}
                 header={data.category}
-                // icon={<Icon>list</Icon>}
                 node="div"
 
-
               >
-                {data.item.map((description, index) => <div> <Checkbox
-                  // checked
-                  // filledIn
+                {data.item.map((description, index) => <div key={index}> <Checkbox
                   id={data.category + "Checkbox" + index}
                   type="checkbox"
                   label={description}
                   value={description}
-
                 /> </div>)}
 
               </CollapsibleItem>

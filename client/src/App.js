@@ -15,12 +15,6 @@ import "./App.css";
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
 import Profile from './components/Profile';
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> c0ba93861335ed65ca4e11c71486b09ad74534d4
 const ProtectedRoute = ({ component, ...args }) => (
   <Route component={withAuthenticationRequired(component)} {...args} />
 );
@@ -49,7 +43,7 @@ function App() {
           <Navbar
             alignLinks="right"
             brand={<a className="brand-logo" href="/">
-                    <img className="responsive-img" src="/assets/Nomad-home-button.jpg" alt="brand-home-button"/>
+                    <img id="header-img" className="responsive-img test" src="/assets/Nomad-home-button.jpg" alt="brand-home-button"/>
                   </a>}
             id="mobile-nav"
             menuIcon={<Icon>menu</Icon>}

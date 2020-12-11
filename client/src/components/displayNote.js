@@ -13,10 +13,10 @@ class DisplayNote extends React.Component{
     render(){
         return(<div>
            <input type="text" value= {this.state.note} onChange={this.handleInputChange}/>
-            {/* {this.state.noteCreated} */}
+            {this.state.noteCreated}
             {this.state.title}
-            {/* {this.state.id}
-            <button>Update Note</button> */}
+            {this.state.id}
+            <button>Update Note</button>
             <button>Delete Note</button>
         </div>)
     }

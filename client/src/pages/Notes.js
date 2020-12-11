@@ -41,9 +41,10 @@ class Notes extends React.Component {
     }
 
     getSavedNotes = () => {
+        console.log('Requesting Notes');
         API.getNotes()
             .then(results => {
-                console.log(results.data)
+                console.log(results);
                 this.setState({allNotes:[results.data]})
             })
     }

@@ -4,6 +4,8 @@ import Location from "./pages/Location";
 import Notes from "./pages/Notes";
 import Tools from "./pages/Tools";
 import Checklist from "./pages/Checklistpage";
+import localforage from "localforage";
+// import Forage from "react-localforage";
 import "materialize-css";
 import Footer from './components/footer';
 import { NavItem, Navbar, Icon } from 'react-materialize';
@@ -19,6 +21,18 @@ const ProtectedRoute = ({ component, ...args }) => (
 );
 
 function App() {
+  localforage.setItem('key', 'value').then(function () {
+    return localforage.getItem('key');
+  }).then(function (value) {
+    console.log(value);
+    // we got our value
+  }).catch(function (err) {
+    // we got an error
+    console.log(err);
+  });
+  
+
+  
   return (
     <Auth0Provider
       domain="dev-qajxs-8o.us.auth0.com"

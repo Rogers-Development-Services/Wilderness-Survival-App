@@ -8,15 +8,17 @@ class DisplayNote extends React.Component{
 
     }
     handleInputChange =(event) =>{
+        // this.state={value: ''};
+        this.handleInputChange = this.handleInputChange(this);
 
     }
     render(){
         return(<div>
            <input type="text" value= {this.state.note} onChange={this.handleInputChange}/>
-            {/* {this.state.noteCreated} */}
+            {this.state.noteCreated}
             {this.state.title}
-            {/* {this.state.id}
-            <button>Update Note</button> */}
+            {this.state.id}
+            <button>Update Note</button>
             <button>Delete Note</button>
         </div>)
     }

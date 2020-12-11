@@ -1,7 +1,6 @@
 const db = require("../models");
 const app = require("express").Router()
 
-
   // Retrieve all tips in db
   app.get("/tips", (req, res) => {
     db.Tip.find({})
@@ -69,8 +68,10 @@ const app = require("express").Router()
 
   // Retrieve all notes for specified user
   app.get("/api/notes", (req, res) => {
+    console.log('A Request is being made for notes!');
     db.Note.find({ /* userID: req.params */ })
       .then(dbNote => {
+        console.log('This is the dbNote');
         console.log(dbNote);
         res.json(dbNote);
       })

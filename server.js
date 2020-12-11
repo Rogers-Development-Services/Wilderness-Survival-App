@@ -8,7 +8,7 @@ const jwks = require('jwks-rsa');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const expressSession = require('express-session');
-const authRouter = require("./auth");
+const authRouter = require("./routes/auth");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

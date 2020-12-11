@@ -9,14 +9,24 @@ function Notes() {
     const [title, setTitle] = useState("");
     const [note, setNote] = useState("");
     const [allNotes, setAllNotes] = useState([]);
+    const [pTag, setPTag] = useState("show");
     const [textArea, setTextArea] = useState(null);
 
+
     useEffect(
-        function() {
+        function () {
             getSavedNotes();
         },
         []
     );
+
+    // when a user logs in with their account this is the page, their saved notes will render on page load
+    const getSavedNotes = () => {
+        API.getNotes()
+            .then(results => {
+                setAllNotes(results.data)
+            })
+    }
 
     const createNewNote = () => {
         let record = {
@@ -32,13 +42,19 @@ function Notes() {
             })
     }
 
-    // when a user logs in with their account this is the page, their saved notes will render on page load
-    const getSavedNotes = () => {
-        API.getNotes()
-            .then(results => {
-                setAllNotes(results.data)
-            })
+    const updateNote = (event) => {
+        setPTag("show");
+        setTextArea(null);
     }
+
+    const deleteNote = () => {
+
+    }
+
+    function displayFunction() {
+        setTextArea("show");
+        setPTag(null);
+    };
 
     return (
         <div id="user-input" className="container">
@@ -79,16 +95,29 @@ function Notes() {
                                 header={data.title}
                                 node="div"
                             >
-                                <p>{data.note}</p>
-                                {/* {textArea
-                                    ? <Textarea defaultValue={data.note}></Textarea>
-                                    : null} */}
+                                { pTag ? (<p>{data.note}</p>) : null}
+                                { textArea ? (
+                                    <Textarea
+                                    defaultValue={data.note}
+                                    // icon={<Icon>save</Icon>}
+                                    iconClassName={"update-note"}>
+                                        <Button
+                                            id="make-new"
+                                            node="button"
+                                            type="submit"
+                                            waves="light"
+                                            onClick={updateNote}
+                                        >
+                                            Save
+                                        <Icon right>save</Icon>
+                                        </Button>
+                                </Textarea>) : null}
                                 <Button
                                     id="make-new"
                                     node="button"
                                     type="submit"
                                     waves="light"
-                                // onClick={saveNote}
+                                // onClick={deleteNote}
                                 >
                                     Delete
                                     <Icon right>delete</Icon>
@@ -99,7 +128,7 @@ function Notes() {
                                     node="button"
                                     type="submit"
                                     waves="light"
-                                    // onClick={setTextArea("show")}
+                                    onClick={displayFunction}
                                 >
                                     Update
                                     <Icon right>create</Icon>

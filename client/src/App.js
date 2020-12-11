@@ -7,7 +7,6 @@ import Checklist from "./pages/Checklistpage";
 import localforage from "localforage";
 // import Forage from "react-localforage";
 import "materialize-css";
-// import StickyFooter from 'react-sticky-footer';
 import Footer from './components/footer';
 import { NavItem, Navbar, Icon } from 'react-materialize';
 

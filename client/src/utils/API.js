@@ -22,7 +22,11 @@ export default {
         },
 
     getNotes: function () {
-        return axios.get("/api/notes")
+        console.log('Request in API.js file');
+        return axios.get("/api/notes")//.then(function(results) {
+        //     console.log('Route Worked');
+        //     console.log(results);
+        // });
     }
 }
 

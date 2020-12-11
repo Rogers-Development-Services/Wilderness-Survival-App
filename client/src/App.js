@@ -17,12 +17,6 @@ import "./App.css";
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
 import Profile from './components/Profile';
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> c0ba93861335ed65ca4e11c71486b09ad74534d4
 const ProtectedRoute = ({ component, ...args }) => (
   <Route component={withAuthenticationRequired(component)} {...args} />
 );

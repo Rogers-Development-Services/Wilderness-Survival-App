@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Mern Demo",
   "private": true,
-  "proxy": "http://localhost:3000/",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@auth0/auth0-react": "^1.2.0",
     "axios": "^0.21.0",

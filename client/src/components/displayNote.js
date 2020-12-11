@@ -8,7 +8,7 @@ class DisplayNote extends React.Component{
 
     }
     handleInputChange =(event) =>{
-        this.state={value: ''};
+        // this.state={value: ''};
         this.handleInputChange = this.handleInputChange(this);
 
     }

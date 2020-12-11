@@ -35,7 +35,7 @@ div#root  div  div  nav {
 } */
 
 #header-img {
-  height: -webkit-fill-available !important;
+  height: -webkit-fill-available!important;
 }
 
 .responsive-img {
@@ -51,5 +51,4 @@ div#root  div  div  nav {
 .is-footer {
   margin-bottom: 0px!important;
 }
- 
- 
+

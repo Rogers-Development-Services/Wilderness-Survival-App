@@ -1,7 +1,8 @@
 import React from "react";
+import FunctionalNotes from "./pages/FunctionalNotes";
 import Homepage from "./pages/Homepage";
 import Location from "./pages/Location";
-import Notes from "./pages/Notes";
+// import Notes from "./pages/Notes";
 import Tools from "./pages/Tools";
 import Checklist from "./pages/Checklistpage";
 import localforage from "localforage";
@@ -29,9 +30,7 @@ function App() {
     // we got an error
     console.log(err);
   });
-  
-
-  
+    
   return (
     <Auth0Provider
       domain="dev-qajxs-8o.us.auth0.com"
@@ -75,7 +74,7 @@ function App() {
             <Switch>
               <Route exact path="/" component={Homepage} />
               <Route exact path="/Location" component={Location} />
-              <Route exact path="/Notes" component={Notes} />
+              <Route exact path="/Notes" component={FunctionalNotes} />
               <Route exact path="/Tools" component={Tools} />
               <Route exact path="/Checklist" component={Checklist} />
               <ProtectedRoute path="/profile" component={Profile} />

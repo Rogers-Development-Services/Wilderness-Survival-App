@@ -41,11 +41,9 @@ class Notes extends React.Component {
     }
 
     getSavedNotes = () => {
-        console.log('Requesting Notes');
         API.getNotes()
             .then(results => {
-                console.log(results);
-                this.setState({allNotes:[results.data]})
+                this.setState({ allNotes: results.data })
             })
     }
 
@@ -53,8 +51,8 @@ class Notes extends React.Component {
         return (
             <div id="user-input" className="container">
                 <h1>Notes</h1>
-                
-                
+
+
                 <p>Title</p>
                 <input onChange={this.userInput} type="text" value={this.state.title} name="title" />
                 <br />
@@ -65,11 +63,16 @@ class Notes extends React.Component {
                         <button onClick={this.saveNote} id="make-new">Submit</button>
                     </div>
                     <br></br>
-                    {/* <button id="clear-all">Delete Note</button> */}
                 </div>
-                {this.state.allNotes.map((note, key) =>
-                    <DisplayNote note={note} key={key} />
-                )}
+                {
+                    this.state.allNotes.map(note => (
+                        <div key={note._id}>
+                            <DisplayNote
+                                note={note}
+                            />
+                        </div>
+                    ))
+                }
             </div>
         )
     }

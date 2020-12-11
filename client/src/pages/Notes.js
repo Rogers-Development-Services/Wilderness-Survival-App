@@ -3,9 +3,6 @@ import API from "../utils/API";
 import "./Notes.css";
 import DisplayNote from "../components/displayNote";
 
-
-
-
 class Notes extends React.Component {
     state = {
         id: "",
@@ -64,12 +61,11 @@ class Notes extends React.Component {
             })
     }
 
+
     render() {
         return (
             <div id="user-input" className="container">
                 <h1>Notes</h1>
-
-
                 <p>Title</p>
                 <input onChange={this.userInput} type="text" value={this.state.title} name="title" />
                 <br />
@@ -95,5 +91,5 @@ class Notes extends React.Component {
         )
     }
 }
-export default Notes;
 
+export default Notes;

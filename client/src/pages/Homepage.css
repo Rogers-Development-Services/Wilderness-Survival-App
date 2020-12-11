@@ -1,3 +1,11 @@
+.homepage-component {
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .homepage-title {
       color: whitesmoke;
     
@@ -7,4 +15,8 @@ h2 {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
- 
+/* .homepage-logo {
+      height: -webkit-fill-available !important;
+      width: auto;
+      padding: 1px;
+} */

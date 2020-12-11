@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 const express = require("express");
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Api routes
-app.use(require("./routes/apiRoutes"))
+app.use(require("./routes/apiRoutes"));
 
 // ================================== Auth0 Configuration ========================================
 var jwtCheck = jwt({

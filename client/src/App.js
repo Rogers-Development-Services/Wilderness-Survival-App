@@ -1,7 +1,8 @@
 import React from "react";
+import FunctionalNotes from "./pages/FunctionalNotes";
 import Homepage from "./pages/Homepage";
 import Location from "./pages/Location";
-import Notes from "./pages/Notes";
+// import Notes from "./pages/Notes";
 import Tools from "./pages/Tools";
 import Checklist from "./pages/Checklistpage";
 import localforage from "localforage";
@@ -9,10 +10,8 @@ import localforage from "localforage";
 import "materialize-css";
 import Footer from './components/footer';
 import { NavItem, Navbar, Icon } from 'react-materialize';
-
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
 import Profile from './components/Profile';
 
@@ -30,9 +29,7 @@ function App() {
     // we got an error
     console.log(err);
   });
-  
-
-  
+    
   return (
     <Auth0Provider
       domain="dev-qajxs-8o.us.auth0.com"
@@ -42,52 +39,50 @@ function App() {
     >
       <Router>
         <div className="fullscreen-container center-align">
-   
+          <Navbar
+            alignLinks="right"
+            brand={<a className="brand-logo" href="/">
+                    <img id="header-img" className="responsive-img test" src="/assets/Nomad-home-button.jpg" alt="brand-home-button"/>
+                  </a>}
+            id="mobile-nav"
+            menuIcon={<Icon>menu</Icon>}
+            options={{
+              draggable: true,
+              edge: 'left',
+              inDuration: 250,
+              onCloseEnd: null,
+              onCloseStart: null,
+              onOpenEnd: null,
+              onOpenStart: null,
+              outDuration: 200,
+              preventScrolling: true,
+            }}
+            fixed={true}
+            centerLogo={true}
 
-
-            <Navbar
-              alignLinks="right"
-              // brand={<img class="responsive-img" src="/assets/mountain.svg" />}
-              id="mobile-nav"
-              menuIcon={<Icon>menu</Icon>}
-              options={{
-                draggable: true,
-                edge: 'left',
-                inDuration: 250,
-                onCloseEnd: null,
-                onCloseStart: null,
-                onOpenEnd: null,
-                onOpenStart: null,
-                outDuration: 200,
-                preventScrolling: true,
-              }}
-              fixed={true}
-              centerLogo={true}
-
-            >
-              <NavItem href="/">Homepage</NavItem>
-              <NavItem href="/Location">Location</NavItem>
-              <NavItem href="/Notes">Notes</NavItem>
-              <NavItem href="/Tools">Tools
+          >
+            <NavItem href="/Location">Location</NavItem>
+            <NavItem href="/Notes">Notes</NavItem>
+            <NavItem href="/Tools">Tools
           {/* This is where custom styling and extra tabs would be added to appear within the sidenav */}</NavItem>
-              <NavItem href="/Checklist">Checklist</NavItem>
-            </Navbar>
+            <NavItem href="/Checklist">Checklist</NavItem>
+          </Navbar>
 
-            <div className="not-footer center-align">
+          <div className="not-footer center-align">
 
-              <Switch>
-                <Route exact path="/" component={Homepage} />
-                <Route exact path="/Location" component={Location} />
-                <Route exact path="/Notes" component={Notes} />
-                <Route exact path="/Tools" component={Tools} />
-                <Route exact path="/Checklist" component={Checklist} />
-                <ProtectedRoute path="/profile" component={Profile} />
-              </Switch>
-            </div>
-            <div className="is-footer">
-              <Footer />
-            </div>
-        
+            <Switch>
+              <Route exact path="/" component={Homepage} />
+              <Route exact path="/Location" component={Location} />
+              <Route exact path="/Notes" component={FunctionalNotes} />
+              <Route exact path="/Tools" component={Tools} />
+              <Route exact path="/Checklist" component={Checklist} />
+              <ProtectedRoute path="/profile" component={Profile} />
+            </Switch>
+          </div>
+          <div className="is-footer">
+            <Footer />
+          </div>
+
 
         </div>
       </Router>

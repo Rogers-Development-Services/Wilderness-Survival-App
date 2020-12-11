@@ -1,6 +1,7 @@
 {
   "start_url": "./index.html",
   "display": "standalone",
+  "scope": "/",
 
   "name": "Notetaker",
   "short_name": "Notetaker",

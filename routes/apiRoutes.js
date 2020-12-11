@@ -77,6 +77,18 @@ const app = require("express").Router()
       });
   });
 
+  // Delete note with specified id
+  app.delete("/api/notes", (req, res) => {
+    db.Note.findOneAndDelete({ _id: req.body })
+      .then(dbNote => {
+        res.json(dbNote);
+      })
+      .catch(error => {
+        console.log(error);
+        res.json(error).code(404);
+      });
+  });
+
   // Update specified note
   app.put("/api/update/notes", ({ body }, res) => {
     const note = body;

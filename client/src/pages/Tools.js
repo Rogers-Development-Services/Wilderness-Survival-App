@@ -8,9 +8,6 @@ let animalJSON = require('../json/animals.json');
 let plantJSON = require('../json/plants.json');
 let guideJSON = require('../json/tips.json');
 
-// let mapArr = guideJSON.map(data => console.log(data));
-// console.log(typeof(mapArr));
-
 function Home() {
 
   const [animalModal, setAnimalModal] = useState({});
@@ -18,6 +15,7 @@ function Home() {
   const [filterArr, setFilterArr] = useState([]);
   const [accordian, setAccordian] = useState('');
 
+  // This filters the specific guides to be rendered by category as accordians, gettin the info from state
   function safteyCategory(guide) {
     if (guide.category === accordian) {
       return guide;
@@ -33,6 +31,7 @@ function Home() {
     }
   };
 
+  // When the category is selected the accordian's information will be set in state.
   function showFunction(event) {
     setAccordian(event.target.value);
   };
@@ -78,15 +77,6 @@ function Home() {
                     borderRadius: "8px"
                   }}
                 >
-                  {/* <img
-                  id={data.id}
-                  onClick={(event) => {
-                    onClickFunction(event, "animal")
-                  }}
-                  src={data.image}
-                  alt={data.name}
-                  style={{ borderRadius: "8px" }}
-                /> */}
                 </Button>
               )]}
           carouselId="Carousel-2"
@@ -124,15 +114,6 @@ function Home() {
                     borderRadius: "8px"
                   }}
                 >
-                  {/* Might need below for high contrast */}
-                  {/* <img
-                  id={data.id}
-                  onClick={(event) => {
-                    onClickFunction(event, "plant")
-                  }}
-                  src={data.image}
-                  alt={data.name}
-                  style={{ borderRadius: "8px" }} /> */}
                 </Button>)
             ]
           }
@@ -154,6 +135,7 @@ function Home() {
         <h2>Guides</h2>
 
         <Select
+          className="bob"
           id="Select-9"
           multiple={false}
           onChange={showFunction} //The change event will have the information from the option tag I want to target
@@ -176,7 +158,7 @@ function Home() {
           }}
           value=""
           style={{ marginBottom: "20px" }}
-        
+
         >
           <option
             disabled
@@ -197,7 +179,7 @@ function Home() {
                 <CollapsibleItem
                   expanded={false}
                   header={data.title}
-                  icon={<Icon>filter_drama</Icon>}
+                  icon={<Icon>{data.icon}</Icon>}
                   node="div"
                 >
                   <p>{data.description}</p>

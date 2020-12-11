@@ -30,22 +30,25 @@ div#root  div  div  nav {
   background-color: #2E7D32;
 }
 
-div#root > div > footer {
-  background-color: #2E7D32;
+/* div#root > div.fullscreen-container.center-align > div.not-footer.center-align > div > img.test {
+  height: 40px;
+} */
+
+#header-img {
+  height: -webkit-fill-available!important;
 }
 
-.brand-logo center {
-  position:center;
-  left:10px;
-  top:10px;
-  margin: 0px 15px 15px 0px;
+.responsive-img {
+  /* height: -webkit-fill-available !important; */
+  width: auto;
+  padding: 1px;
 }
 
 .not-footer {
   min-height: 100vh;
 }
+
 .is-footer {
   margin-bottom: 0px!important;
 }
- 
- 
+

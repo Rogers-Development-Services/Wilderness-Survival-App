@@ -1,8 +1,9 @@
 import React from "react";
 
 const Footer = () => (
-  <div className="footer">
-    <p>This is some content in sticky footer</p>
+  <div className="footer center-align">
+    <p>© Nomand 2020</p>
+    <p>Made by Tim, Elliot, Aaron, Jeneth, {"&"} Matthew</p>
   </div>
 );
 

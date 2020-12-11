@@ -1,7 +1,6 @@
 const db = require("../models");
 const app = require("express").Router()
 
-
   // Retrieve all tips in db
   app.get("/tips", (req, res) => {
     db.Tip.find({})
@@ -59,7 +58,6 @@ const app = require("express").Router()
 
     db.Note.create({ /*userID: note.userID, */ title: note.title, note: note.note })
       .then(dbNote => {
-        console.log(dbNote);
         res.json(dbNote).code(201);
       })
       .catch(({ message }) => {
@@ -71,7 +69,6 @@ const app = require("express").Router()
   app.get("/api/notes", (req, res) => {
     db.Note.find({ /* userID: req.params */ })
       .then(dbNote => {
-        console.log(dbNote);
         res.json(dbNote);
       })
       .catch(error => {
@@ -87,7 +84,6 @@ const app = require("express").Router()
 
     db.Note.updateOne({ id: note.id, userID: note.userID }, { title: note.title, note: note.note })
       .then(dbNote => {
-        console.log(dbNote);
         res.json(dbNote).code(202);
       })
       .catch(({ message }) => {

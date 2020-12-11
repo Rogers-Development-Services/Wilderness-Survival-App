@@ -58,7 +58,6 @@ const app = require("express").Router()
 
     db.Note.create({ /*userID: note.userID, */ title: note.title, note: note.note })
       .then(dbNote => {
-        console.log(dbNote);
         res.json(dbNote).code(201);
       })
       .catch(({ message }) => {
@@ -68,11 +67,8 @@ const app = require("express").Router()
 
   // Retrieve all notes for specified user
   app.get("/api/notes", (req, res) => {
-    console.log('A Request is being made for notes!');
     db.Note.find({ /* userID: req.params */ })
       .then(dbNote => {
-        console.log('This is the dbNote');
-        console.log(dbNote);
         res.json(dbNote);
       })
       .catch(error => {
@@ -88,7 +84,6 @@ const app = require("express").Router()
 
     db.Note.updateOne({ id: note.id, userID: note.userID }, { title: note.title, note: note.note })
       .then(dbNote => {
-        console.log(dbNote);
         res.json(dbNote).code(202);
       })
       .catch(({ message }) => {

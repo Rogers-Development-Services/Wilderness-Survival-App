@@ -3,11 +3,11 @@ import { TextInput, Textarea, Button, Icon, Collapsible, CollapsibleItem } from 
 import { useAuth0 } from '@auth0/auth0-react';
 import API from "../utils/API";
 import "./Notes.css";
-import { render } from "react-dom";
+import * as localforage from 'localforage'
+
 // import DisplayNote from "../components/displayNote";
 
 function Notes() {
-    console.log('render');
 
     const [title, setTitle] = useState("");
     const [note, setNote] = useState("");
@@ -71,6 +71,23 @@ function Notes() {
         setTextArea("show");
         setPTag(null);
     };
+    
+    function localstuff() {
+        //local forage
+        localforage.setItem("userNotes", allNotes, function (err) {
+            // console.log(localforage)
+            console.log("data: " + allNotes)
+            
+            // if err is non-null, we got an error
+            localforage.getItem("userNotes", function (err, allNotes) {
+                // console.log(localforage)
+              // if err is non-null, we got an error. otherwise, value is the value
+            });
+          });
+    }
+
+    localstuff();
+    
 
     return (
         <div id="user-input" className="container">

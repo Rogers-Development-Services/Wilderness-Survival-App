@@ -8,7 +8,7 @@ const jwks = require('jwks-rsa');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const expressSession = require('express-session');
-const authRouter = require("./auth");
+const authRouter = require("./routes/auth");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -85,7 +85,11 @@ var strategy = new Auth0Strategy(
 
     passport.authenticate('auth0', function (err, user, info) {
       // ...
+      console.log(user);
+      console.log(info);
     })(req, res, next);
+
+    console.log(profile);
 
     return done(null, profile);
   }

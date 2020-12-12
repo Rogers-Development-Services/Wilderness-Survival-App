@@ -3,9 +3,11 @@ import { TextInput, Textarea, Button, Icon, Collapsible, CollapsibleItem } from 
 import { useAuth0 } from '@auth0/auth0-react';
 import API from "../utils/API";
 import "./Notes.css";
+import { render } from "react-dom";
 // import DisplayNote from "../components/displayNote";
 
 function Notes() {
+    console.log('render');
 
     const [title, setTitle] = useState("");
     const [note, setNote] = useState("");
@@ -32,12 +34,6 @@ function Notes() {
         },
         [loading, isAuthenticated]
     );
-
-    const trimUDI = () => {
-        var uid = user.sub;
-        const trimmedUID = uid.slice(6);
-        return trimmedUID;
-    }
 
     // when a user logs in with their account this is the page, their saved notes will render on page load
     const getSavedNotes = () => {

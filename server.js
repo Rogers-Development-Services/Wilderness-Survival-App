@@ -85,7 +85,11 @@ var strategy = new Auth0Strategy(
 
     passport.authenticate('auth0', function (err, user, info) {
       // ...
+      console.log(user);
+      console.log(info);
     })(req, res, next);
+
+    console.log(profile);
 
     return done(null, profile);
   }

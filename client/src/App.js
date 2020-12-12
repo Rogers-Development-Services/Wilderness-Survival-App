@@ -73,7 +73,7 @@ function App() {
             <Switch>
               <Route exact path="/" component={Homepage} />
               <Route exact path="/Location" component={Location} />
-              <Route exact path="/Notes" component={FunctionalNotes} />
+              <ProtectedRoute exact path="/Notes" component={FunctionalNotes} />
               <Route exact path="/Tools" component={Tools} />
               <Route exact path="/Checklist" component={Checklist} />
               <ProtectedRoute path="/profile" component={Profile} />

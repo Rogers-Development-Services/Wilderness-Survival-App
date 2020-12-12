@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { TextInput, Textarea, Button, Icon, Collapsible, CollapsibleItem } from 'react-materialize';
 import API from "../utils/API";
 import "./Notes.css";
+import * as localforage from 'localforage'
+
 // import DisplayNote from "../components/displayNote";
 
 function Notes() {
@@ -55,6 +57,23 @@ function Notes() {
         setTextArea("show");
         setPTag(null);
     };
+    
+    function localstuff() {
+        //local forage
+        localforage.setItem("userNotes", allNotes, function (err) {
+            // console.log(localforage)
+            console.log("data: " + allNotes)
+            
+            // if err is non-null, we got an error
+            localforage.getItem("userNotes", function (err, allNotes) {
+                // console.log(localforage)
+              // if err is non-null, we got an error. otherwise, value is the value
+            });
+          });
+    }
+
+    localstuff();
+    
 
     return (
         <div id="user-input" className="container">

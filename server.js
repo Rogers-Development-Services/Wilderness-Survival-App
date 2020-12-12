@@ -37,6 +37,7 @@ var jwtCheck = jwt({
 })
 
 app.use(jwtCheck);
+
 app.get('/authorized', function (req, res) {
   res.send('Secured Resource');
 });
@@ -100,7 +101,7 @@ passport.use(strategy);
 // ================================== End of Auth0 Config ========================================
 
 // MongoDB connection configuration
-mongoose.connect(process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://localhost/survivaldb",
+mongoose.connect(  process.env.MONGODB_URI || process.env.DB_HOST || "mongodb://localhost/survivaldb",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

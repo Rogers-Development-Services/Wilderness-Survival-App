@@ -20,10 +20,10 @@ const ProtectedRoute = ({ component, ...args }) => (
 );
 
 function App() {
-  localforage.setItem('key', 'value').then(function () {
-    return localforage.getItem('key');
-  }).then(function (value) {
-    console.log(value);
+  localforage.setItem('notes', 'users').then(function () {
+    return localforage.getItem('notes');
+  }).then(function (users) {
+    console.log(users);
     // we got our value
   }).catch(function (err) {
     // we got an error

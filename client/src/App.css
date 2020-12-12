@@ -30,6 +30,10 @@ div#root  div  div  nav {
   background-color: #2E7D32;
 }
 
+h1, h2 {
+  font-family: 'PT Sans', sans-serif;
+}
+
 /* div#root > div.fullscreen-container.center-align > div.not-footer.center-align > div > img.test {
   height: 40px;
 } */

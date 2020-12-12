@@ -15,9 +15,6 @@ export default {
     createNote: function (record) {
         console.log(record);
         return axios.post("/api/create/notes", record)
-            .then(function (response) {
-                console.log("POST Axios", response);
-            })
             .catch(function (error) {
                 console.log(error);
             });

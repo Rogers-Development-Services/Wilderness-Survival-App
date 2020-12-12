@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { TextInput, Textarea, Button, Icon, Collapsible, CollapsibleItem } from 'react-materialize';
+import * as localforage from "localforage";
 import { useAuth0 } from '@auth0/auth0-react';
 import API from "../utils/API";
 import "./Notes.css";
-import Toasts from "../components/Toasts";
+import Toasts from "../components/FunctionalToast";
 // import DisplayNote from "../components/displayNote";
 
 function FunctionalNotes() {
@@ -11,6 +12,7 @@ function FunctionalNotes() {
 
     const [title, setTitle] = useState("");
     const [note, setNote] = useState("");
+    const [noteIndex, setNoteIndex] = useState(-1);
     const [allNotes, setAllNotes] = useState([]);
     const [pTag, setPTag] = useState("show");
     const [textArea, setTextArea] = useState(null);
@@ -60,7 +62,7 @@ function FunctionalNotes() {
 
     const updateNote = () => {
         setPTag("show");
-        setTextArea(null);
+        setTextArea(null);  //how do I get this to fire using the functionaltoast event 
     }
 
     // const deleteNote = () => {
@@ -71,24 +73,31 @@ function FunctionalNotes() {
         setTextArea("show");
         setPTag(null);
     };
-    
+
     function localstuff() {
         //local forage
         localforage.setItem("userNotes", allNotes, function (err) {
             // console.log(localforage)
             // console.log("data: " + allNotes)
-            
+
             // if err is non-null, we got an error
             localforage.getItem("userNotes", function (err, allNotes) {
                 // console.log(localforage)
-              // if err is non-null, we got an error. otherwise, value is the value
+                // if err is non-null, we got an error. otherwise, value is the value
             });
-          });
+        });
     }
 
     function test() {
         console.log("work");
     }
+
+    function getThisUpdatedNote (data) {
+        const thisUpdatedNote = allNotes.find(element => element._id === data._id);
+        console.log("THIS UPDATED NOTE", thisUpdatedNote);
+        return thisUpdatedNote.note;
+
+    };
 
     return (
         <div id="user-input" className="container">
@@ -109,7 +118,7 @@ function FunctionalNotes() {
             </Textarea>
 
             <Button
-                id="make-new"
+                id="create-new-note"
                 node="button"
                 type="submit"
                 waves="light"
@@ -135,38 +144,36 @@ function FunctionalNotes() {
                                     <Textarea
                                         defaultValue={data.note}
                                         iconClassName={"update-note"}
-                                        >
+                                        onChange={
+                                            (event) => {
+                                                let n = allNotes;
+                                                const index = n.findIndex((element) => element.id === data.id);
+                                                n[index].note = event.target.value;
+                                                setAllNotes(n);
+                                                setNoteIndex(index);
+                                            }
+                                        }
+                                    >
                                         <Toasts
-                                            noteId = {data._id}
-                                            noteTitle = {data.title}
-                                            noteMessage = {data.note}
-                                            // updateNoteFunction = {updateNote}
-                                            // getSavedNotesFunction = {getSavedNotes}
+                                            noteId={data._id}
+                                            noteTitle={data.title}
+                                            noteMessage={getThisUpdatedNote(data)}
                                         />
-                                        {/* <Button
-                                            id="make-new"
-                                            node="button"
-                                            type="submit"
-                                            waves="light"
-                                            onClick={updateNote}
-                                        >
-                                            Save
-                                            <Icon right>save</Icon>
-                                        </Button> */}
+
                                     </Textarea>) : null}
                                 <Button
-                                    id="make-new"
+                                    id="delete-note"
                                     node="button"
                                     type="submit"
                                     waves="light"
-                                    onClick={deleteNote}
+                                // onClick={deleteNote}
                                 >
                                     Delete
                                     <Icon right>delete</Icon>
                                 </Button>
 
                                 <Button
-                                    id="make-new"
+                                    id="update-note"
                                     node="button"
                                     type="submit"
                                     waves="light"

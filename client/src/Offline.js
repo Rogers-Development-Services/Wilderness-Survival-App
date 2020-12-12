@@ -1,24 +1,15 @@
 import React, { useState } from "react";
-import localforage from "localforage";
+import localforage, { key } from "localforage";
+import Notes from "./pages/Notes"
 
-function App() {
-    const [state, setState] = useState(0);
-    localforage.setItem("test", state).then(() => {
-      console.log("used localForage");
-    });
-  
-    localforage.getItem("test").then(val => {
-      console.log("got: ", val);
-    });
-    return (
-      <button
-        onClick={() => {
-          setState(Math.floor(Math.random() * 10));
-        }}
-      >
-        {state}
-      </button>
-    );
+class forage extends React.Component {
+    state
+}
+
+function forage() {
+    localforage.getItem({ Notes }).then(function (value) {
+      console.log(value)
+    })
   }
   
-  export default App;
+  export default forage;

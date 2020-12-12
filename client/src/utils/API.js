@@ -23,7 +23,6 @@ export default {
             });
     },
 
-<<<<<<< HEAD
     deleteNote: function (record) {
         console.log(record);
         return axios.delete("/api/notes", record)
@@ -42,10 +41,6 @@ export default {
                 id: userID
             }
         })
-=======
-    getNotes: function () {
-        return axios.get("/api/notes")
->>>>>>> 0c115c193c4b9651ad09e1df794ebfbafe6c3ab1
     }
 }
 

@@ -27,7 +27,6 @@ function ChecklistItems(props) {
     dataupload()
   }, [])
 
-  
 
   return (
     <div className="container">

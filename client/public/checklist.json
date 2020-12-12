@@ -1,45 +1,51 @@
 [
     {
         "id": 1,
-        "category": "Shelter",
-        "item": ["Tent", "Ground cloth or tarp", "Extra stakes", "Shade tarp/poles/rope/stakes", "Axe or hammer"]
-        
+        "category": "Clothing",
+        "item": ["Bandana", "Jacket", "Rain gear", "Shoes/boots", "Socks/extra socks","Swim suit/towel", "Underwear"]
+
     },
 
     {
         "id": 2,
-        "category": "Sleep",
-        "item": ["Blankets", "Pillow", "Air mattress/sleeping pad/cot/tarp", "Air pump", "Repair kit for air mattress"]
+        "category": "Cooking Supplies",
+        "item": ["Can opener/bottle opener", "Large water jug", "Matches & lighter", "Pots & frying pans with lids", "Stove with fuel/propane", "Utensils"]
+    
     },
 
     {
         "id": 3,
-        "category": "Cooking Supplies",
-        "item": ["Large water jug","Stove with fuel/propane","Matches & lighter", "Can opener/bottle opener", "Pots & frying pans with lids", "Utensils"]
+        "category": "First Aid Kit",
+        "item": ["Antibiotic cream", "Aspirin/Ibuprofen/Tylenol/Naproxin", "Band Aides/bandages", "Bug repellant", "Hydrogen Peroxide", "Snake bite kit"]
+    
     },
 
     {
         "id": 4,
-        "category": "Clothing",
-        "item": ["Socks/extra socks","Rain gear","Swim suit/towel", "Shoes/boots", "Underwear", "Bandana"]
+        "category": "Shelter",
+        "item": [ "Axe or hammer","Extra stakes","Ground cloth or tarp", "Shade tarp/poles/rope/stakes", "Tent"]
+
     },
 
     {
         "id": 5,
-        "category": "Toiletries",
-        "item": ["Tooth brush & tooth paste", "Toilet paper", "Deodorant", "Soap & shampoo", "Personal medications - take extra", "Feminine products"]
+        "category": "Sleep",
+        "item": ["Air mattress/sleeping pad/cot/tarp", "Air pump", "Blankets", "Pillow", "Repair kit for air mattress"]
+     
     },
 
     {
         "id": 6,
-        "category": "First Aid Kit",
-        "item": ["Bug repellant", "Antibiotic cream","Band Aides/bandages", "Aspirin/Ibuprofen/Tylenol/Naproxin", "Snake bite kit", "Hydrogen Peroxide"]
+        "category": "Toiletries",
+        "item": ["Deodorant", "Feminine products", "Personal medications - take extra", "Soap & shampoo", "Tooth brush & tooth paste", "Toilet paper"]
+
     },
 
     {
         "id": 7,
         "category": "Miscellaneous",
-        "item": ["Whistle","Compass/GPS", "Extra batteries/bulbs","Saw/axe", "Duct tape/electrical tape"]
+        "item": ["Compass/GPS", "Duct tape/Electrical tape", "Extra batteries/bulbs", "Saw/axe", "Whistle"]
+ 
      
     }
     

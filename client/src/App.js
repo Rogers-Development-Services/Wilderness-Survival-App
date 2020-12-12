@@ -20,10 +20,10 @@ const ProtectedRoute = ({ component, ...args }) => (
 );
 
 function App() {
-  localforage.setItem('notes', 'users').then(function () {
-    return localforage.getItem('notes');
-  }).then(function (users) {
-    console.log(users);
+  localforage.setItem('key', 'value').then(function () {
+    return localforage.getItem('key');
+  }).then(function (value) {
+    // console.log(value);
     // we got our value
   }).catch(function (err) {
     // we got an error
@@ -73,7 +73,7 @@ function App() {
             <Switch>
               <Route exact path="/" component={Homepage} />
               <Route exact path="/Location" component={Location} />
-              <Route exact path="/Notes" component={FunctionalNotes} />
+              <ProtectedRoute exact path="/Notes" component={FunctionalNotes} />
               <Route exact path="/Tools" component={Tools} />
               <Route exact path="/Checklist" component={Checklist} />
               <ProtectedRoute path="/profile" component={Profile} />

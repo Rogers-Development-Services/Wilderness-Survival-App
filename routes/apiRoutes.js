@@ -5,7 +5,7 @@ const app = require("express").Router()
   app.get("/tips", (req, res) => {
     db.Tip.find({})
       .then(dbTip => {
-        res.json(dbTip).code(302);
+        res.json(dbTip);
       })
       .catch(error => {
         console.log(error);
@@ -17,7 +17,7 @@ const app = require("express").Router()
   app.get("/plants", (req, res) => {
     db.Plant.find({})
       .then(dbPlant => {
-        res.json(dbPlant).code(302);
+        res.json(dbPlant);
       })
       .catch(error => {
         console.log(error);
@@ -29,7 +29,7 @@ const app = require("express").Router()
   app.get("/animals", (req, res) => {
     db.Animal.find({})
       .then(dbAnimals => {
-        res.json(dbAnimals).code(302);
+        res.json(dbAnimals);
       })
       .catch(error => {
         console.log(error);
@@ -56,9 +56,9 @@ const app = require("express").Router()
     console.log(note);
     console.log(body, "create route");
 
-    db.Note.create({ /*userID: note.userID, */ title: note.title, note: note.note })
+    db.Note.create({ userID: note.userID, title: note.title, note: note.note })
       .then(dbNote => {
-        res.json(dbNote).code(201);
+        res.json(dbNote);
       })
       .catch(({ message }) => {
         console.log(message);
@@ -67,13 +67,25 @@ const app = require("express").Router()
 
   // Retrieve all notes for specified user
   app.get("/api/notes", (req, res) => {
-    db.Note.find({ /* userID: req.params */ })
+    db.Note.find({ userID: req.query.id })
       .then(dbNote => {
         res.json(dbNote);
       })
       .catch(error => {
         console.log(error);
-        res.json(error).code(404);
+        res.json(error);
+      });
+  });
+
+  // Delete note with specified id
+  app.delete("/api/notes", (req, res) => {
+    db.Note.findOneAndDelete({ _id: req.body })
+      .then(dbNote => {
+        res.json(dbNote);
+      })
+      .catch(error => {
+        console.log(error);
+        res.json(error);
       });
   });
 
@@ -84,11 +96,11 @@ const app = require("express").Router()
 
     db.Note.updateOne({ id: note.id, userID: note.userID }, { title: note.title, note: note.note })
       .then(dbNote => {
-        res.json(dbNote).code(202);
+        res.json(dbNote);
       })
       .catch(({ message }) => {
         console.log(message);
-        res.json(message).code(304);
+        res.json(message);
       });
   });
 

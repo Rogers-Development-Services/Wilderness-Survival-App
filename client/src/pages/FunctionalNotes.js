@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { TextInput, Textarea, Button, Icon, Collapsible, CollapsibleItem } from 'react-materialize';
+import { useAuth0 } from '@auth0/auth0-react';
 import API from "../utils/API";
 import "./Notes.css";
 import * as localforage from 'localforage'
@@ -14,17 +15,29 @@ function Notes() {
     const [pTag, setPTag] = useState("show");
     const [textArea, setTextArea] = useState(null);
 
+    const {
+        isAuthenticated,
+        loading,
+        user
+    } = useAuth0();
 
     useEffect(
         function () {
             getSavedNotes();
+            // This function checks whether the user is authenticated on page load
+            const getUserInfo = async () => {
+                console.log(isAuthenticated);
+            };
+            if (!loading) {
+                getUserInfo();
+            }
         },
-        []
+        [loading, isAuthenticated]
     );
 
     // when a user logs in with their account this is the page, their saved notes will render on page load
     const getSavedNotes = () => {
-        API.getNotes()
+        API.getNotes(user.sub)
             .then(results => {
                 setAllNotes(results.data)
             })
@@ -32,6 +45,7 @@ function Notes() {
 
     const createNewNote = () => {
         let record = {
+            userID: user.sub,
             title: title,
             note: note,
         }
@@ -39,7 +53,7 @@ function Notes() {
 
         API.createNote(record)
             .then(results => {
-                console.log("note saved.", results)
+                console.log('Note Saved Succesffuly')
                 getSavedNotes()
             })
     }
@@ -49,9 +63,9 @@ function Notes() {
         setTextArea(null);
     }
 
-    const deleteNote = () => {
+    // const deleteNote = () => {
 
-    }
+    // }
 
     function displayFunction() {
         setTextArea("show");
@@ -117,9 +131,9 @@ function Notes() {
                                 { pTag ? (<p>{data.note}</p>) : null}
                                 { textArea ? (
                                     <Textarea
-                                    defaultValue={data.note}
-                                    // icon={<Icon>save</Icon>}
-                                    iconClassName={"update-note"}>
+                                        defaultValue={data.note}
+                                        // icon={<Icon>save</Icon>}
+                                        iconClassName={"update-note"}>
                                         <Button
                                             id="make-new"
                                             node="button"
@@ -130,7 +144,7 @@ function Notes() {
                                             Save
                                         <Icon right>save</Icon>
                                         </Button>
-                                </Textarea>) : null}
+                                    </Textarea>) : null}
                                 <Button
                                     id="make-new"
                                     node="button"

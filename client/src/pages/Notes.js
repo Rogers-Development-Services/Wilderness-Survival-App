@@ -5,6 +5,7 @@ import DisplayNote from "../components/displayNote";
 
 class Notes extends React.Component {
     state = {
+        id: "",
         title: "",
         note: "",
         allNotes: []
@@ -32,7 +33,23 @@ class Notes extends React.Component {
 
         API.createNote(record)
             .then(results => {
-                console.log("note saved.", results)
+                console.log("Note created: ", results)
+                this.getSavedNotes()
+            })
+    }
+    
+    removeNote = () => {
+        let record = {
+            id: this.state.id,
+            title: this.state.title,
+            note: this.state.note,
+            // user_ID: this.state.user_ID
+        }
+        console.log("Delete Request:\n", record);
+
+        API.deleteNote(record)
+            .then(results => {
+                console.log("Note deleted: ", results)
                 this.getSavedNotes()
             })
     }
@@ -64,6 +81,7 @@ class Notes extends React.Component {
                     this.state.allNotes.map(note => (
                         <div key={note._id}>
                             <DisplayNote
+                                removeNote={this.removeNote}
                                 note={note}
                             />
                         </div>

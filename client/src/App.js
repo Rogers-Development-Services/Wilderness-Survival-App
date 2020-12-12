@@ -23,7 +23,7 @@ function App() {
   localforage.setItem('key', 'value').then(function () {
     return localforage.getItem('key');
   }).then(function (value) {
-    console.log(value);
+    // console.log(value);
     // we got our value
   }).catch(function (err) {
     // we got an error

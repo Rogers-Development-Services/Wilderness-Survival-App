@@ -51,7 +51,7 @@ function Notes() {
 
         API.createNote(record)
             .then(results => {
-                console.log("note saved.", results)
+                console.log('Note Saved Succesffuly')
                 getSavedNotes()
             })
     }
@@ -61,9 +61,9 @@ function Notes() {
         setTextArea(null);
     }
 
-    const deleteNote = () => {
+    // const deleteNote = () => {
 
-    }
+    // }
 
     function displayFunction() {
         setTextArea("show");

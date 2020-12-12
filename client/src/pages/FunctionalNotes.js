@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { TextInput, Textarea, Button, Icon, Collapsible, CollapsibleItem } from 'react-materialize';
+import { TextInput, Textarea, Button, Icon, Collapsible, CollapsibleItem, Toast } from 'react-materialize';
 import API from "../utils/API";
 import "./Notes.css";
-import * as localforage from 'localforage'
-
+import Toasts from "../components/Toasts";
 // import DisplayNote from "../components/displayNote";
 
-function Notes() {
+function FunctionalNotes() {
+    // console.log("rendered");
 
     const [title, setTitle] = useState("");
     const [note, setNote] = useState("");
@@ -44,7 +44,7 @@ function Notes() {
             })
     }
 
-    const updateNote = (event) => {
+    const updateNote = () => {
         setPTag("show");
         setTextArea(null);
     }
@@ -57,23 +57,10 @@ function Notes() {
         setTextArea("show");
         setPTag(null);
     };
-    
-    function localstuff() {
-        //local forage
-        localforage.setItem("userNotes", allNotes, function (err) {
-            // console.log(localforage)
-            console.log("data: " + allNotes)
-            
-            // if err is non-null, we got an error
-            localforage.getItem("userNotes", function (err, allNotes) {
-                // console.log(localforage)
-              // if err is non-null, we got an error. otherwise, value is the value
-            });
-          });
-    }
 
-    localstuff();
-    
+    function test() {
+        console.log("work");
+    }
 
     return (
         <div id="user-input" className="container">
@@ -88,6 +75,7 @@ function Notes() {
             <p>Message</p>
             <Textarea
                 icon={<Icon>note</Icon>}
+                placeholder="Write you new note message here"
                 onChange={e => setNote(e.target.value)}
             >
             </Textarea>
@@ -117,10 +105,17 @@ function Notes() {
                                 { pTag ? (<p>{data.note}</p>) : null}
                                 { textArea ? (
                                     <Textarea
-                                    defaultValue={data.note}
-                                    // icon={<Icon>save</Icon>}
-                                    iconClassName={"update-note"}>
-                                        <Button
+                                        defaultValue={data.note}
+                                        iconClassName={"update-note"}
+                                        >
+                                        <Toasts
+                                            noteId = {data._id}
+                                            noteTitle = {data.title}
+                                            noteMessage = {data.note}
+                                            // updateNoteFunction = {updateNote}
+                                            // getSavedNotesFunction = {getSavedNotes}
+                                        />
+                                        {/* <Button
                                             id="make-new"
                                             node="button"
                                             type="submit"
@@ -128,15 +123,15 @@ function Notes() {
                                             onClick={updateNote}
                                         >
                                             Save
-                                        <Icon right>save</Icon>
-                                        </Button>
-                                </Textarea>) : null}
+                                            <Icon right>save</Icon>
+                                        </Button> */}
+                                    </Textarea>) : null}
                                 <Button
                                     id="make-new"
                                     node="button"
                                     type="submit"
                                     waves="light"
-                                // onClick={deleteNote}
+                                    onClick={deleteNote}
                                 >
                                     Delete
                                     <Icon right>delete</Icon>
@@ -152,6 +147,8 @@ function Notes() {
                                     Update
                                     <Icon right>create</Icon>
                                 </Button>
+
+
                             </CollapsibleItem>
                         )
                         )
@@ -160,8 +157,9 @@ function Notes() {
             >
             </Collapsible>
 
+
         </div>
     );
 }
 
-export default Notes;
+export default FunctionalNotes;

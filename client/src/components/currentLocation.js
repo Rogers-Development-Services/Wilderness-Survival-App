@@ -108,7 +108,7 @@ export class CurrentLocation extends React.Component {
        return (
          <div>
            <div style={style} ref="map">
-             Loading map...
+             Offline Maps Coming Soon...
            </div>
            {this.renderChildren()}
          </div>

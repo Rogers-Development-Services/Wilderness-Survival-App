@@ -33,9 +33,15 @@ function Notes() {
         [loading, isAuthenticated]
     );
 
+    const trimUDI = () => {
+        var uid = user.sub;
+        const trimmedUID = uid.slice(6);
+        return trimmedUID;
+    }
+
     // when a user logs in with their account this is the page, their saved notes will render on page load
     const getSavedNotes = () => {
-        API.getNotes()
+        API.getNotes(user.sub)
             .then(results => {
                 setAllNotes(results.data)
             })

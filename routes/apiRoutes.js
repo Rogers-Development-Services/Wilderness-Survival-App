@@ -67,7 +67,7 @@ const app = require("express").Router()
 
   // Retrieve all notes for specified user
   app.get("/api/notes", (req, res) => {
-    db.Note.find({ /* userID: req.params */ })
+    db.Note.find({ userID: req.query.id })
       .then(dbNote => {
         res.json(dbNote);
       })

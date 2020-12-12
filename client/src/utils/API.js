@@ -31,8 +31,13 @@ export default {
             });
     },
 
-    getNotes: function () {
-        return axios.get("/api/notes")
+    getNotes: function (userID) {
+        const query = '/api/notes';
+        return axios.get(query, {
+            params: {
+                id: userID
+            }
+        })
     }
 }
 

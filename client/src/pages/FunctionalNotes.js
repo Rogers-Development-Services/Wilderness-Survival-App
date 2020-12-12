@@ -76,7 +76,7 @@ function Notes() {
         //local forage
         localforage.setItem("userNotes", allNotes, function (err) {
             // console.log(localforage)
-            console.log("data: " + allNotes)
+            // console.log("data: " + allNotes)
             
             // if err is non-null, we got an error
             localforage.getItem("userNotes", function (err, allNotes) {

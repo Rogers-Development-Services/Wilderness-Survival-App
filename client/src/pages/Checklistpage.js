@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Checkbox, Collapsible, CollapsibleItem } from 'react-materialize';
+import { Checkbox, Icon, Collapsible, CollapsibleItem } from 'react-materialize';
 import 'materialize-css';
 import "./Checklistpage.css";
 
@@ -7,6 +7,7 @@ function ChecklistItems(props) {
   console.log("checkbox!")
 
   const [checklist, setChecklist] = useState([])
+  // const [ description, setDesciption] = useState([])
 
   const dataupload = () => {
     fetch("checklist.json", {
@@ -42,6 +43,7 @@ function ChecklistItems(props) {
               <CollapsibleItem
                 expanded={false}
                 header={data.category}
+                icon={<Icon>{data.icon}</Icon>}
                 node="div"
 
               >

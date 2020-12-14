@@ -20,6 +20,9 @@ span {
     background-color: lightgray;
     opacity: 0.9;
     margin: 15px 15px 15px 0px;
+    align-self: center;
+ 
+ 
 }
   
 .collapsible-body {

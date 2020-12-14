@@ -7,12 +7,12 @@
     {
         "id": 2,
         "category": "Cooking Supplies",
-        "item": ["Can opener/bottle opener", "Large water jug", "Matches & lighter", "Pots & frying pans with lids", "Stove with fuel/propane", "Utensils"]
+        "item": ["Can opener/bottle opener", "Charcoal", "Foil", "Large water jug", "Pots & frying pans with lids", "Stove with fuel/propane", "Utensils", "Water", "Waterproof Matches & lighter"]
     },
     {
         "id": 3,
         "category": "First Aid Kit",
-        "item": ["Antibiotic cream", "Aspirin/Ibuprofen/Tylenol/Naproxin", "Band Aides/bandages", "Bug repellant", "Hydrogen Peroxide", "Snake bite kit"]
+        "item": ["Antibiotic cream", "Aspirin/Ibuprofen/Tylenol/Naproxin", "Band Aides/bandages", "Bug repellant", "Hydrogen Peroxide", "Rubbing Alcohol", "Snake bite kit"]
     },
     {
         "id": 4,
@@ -32,6 +32,6 @@
     {
         "id": 7,
         "category": "Miscellaneous",
-        "item": ["Compass/GPS", "Duct tape/Electrical tape", "Extra batteries/bulbs", "Saw/axe", "Whistle"]
+        "item": ["Compass/GPS", "Duct tape/Electrical tape", "Extra batteries/bulbs", "High proof alcoholic spirits", "Knife", "(2) Rescue Mirrors", "Saw/axe", "Waterproof Compass","Waterproof Watch", "Water Purifying Tablets", "Whistle"]
     }
 ]

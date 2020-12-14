@@ -9,6 +9,7 @@ function FunctionalToast(props) {
   const updateNote = () => {
 
     console.log("update");
+    
     let record = {
       id: props.noteId,
       title: props.noteTitle,

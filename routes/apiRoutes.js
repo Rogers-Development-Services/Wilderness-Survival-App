@@ -1,4 +1,6 @@
+const { func } = require("prop-types");
 const db = require("../models");
+const { deleteOne } = require("../models/Tip");
 const app = require("express").Router()
 
 // Retrieve all tips in db
@@ -78,15 +80,16 @@ app.get("/api/notes", (req, res) => {
 });
 
 // Delete note with specified id
-app.delete("/api/notes", (req, res) => {
-  db.Note.findOneAndDelete({ _id: req.body })
-    .then(dbNote => {
-      res.json(dbNote);
-    })
-    .catch(error => {
+app.delete("/api/notes", ({ body }, res) => {
+  console.log(body.record._id);
+  db.Note.findOneAndDelete({ _id: body.record._id }, function (error, docs) {
+    if (error) {
       console.log(error);
-      res.json(error);
-    });
+    } else {
+      console.log('Deleted Note:\n' + docs);
+      res.json(docs);
+    }
+  });
 });
 
 // Update specified note
@@ -94,7 +97,7 @@ app.put("/api/notes", ({ body }, res) => {
   const note = body;
   console.log(body);
 
-  db.Note.findOneAndUpdate({ _id: body._id }, { title: body.title, note: body.note }, {new: true}, function(error, document) {
+  db.Note.findOneAndUpdate({ _id: body._id }, { title: body.title, note: body.note }, { new: true }, function (error, document) {
     if (error) throw error;
     res.json(document);
     console.log(document);

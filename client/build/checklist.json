@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "category": "Shelter",
+        "item": ["Tent", "Ground cloth or tarp", "Extra stakes", "Shade tarp/poles/rope/stakes", "Axe or hammer"]
+        
+    },
+
+    {
+        "id": 2,
+        "category": "Sleep",
+        "item": ["Blankets", "Pillow", "Air mattress/sleeping pad/cot/tarp", "Air pump", "Repair kit for air mattress"]
+    },
+
+    {
+        "id": 3,
+        "category": "Cooking Supplies",
+        "item": ["Large water jug","Stove with fuel/propane","Matches & lighter", "Can opener/bottle opener", "Pots & frying pans with lids", "Utensils"]
+    },
+
+    {
+        "id": 4,
+        "category": "Clothing",
+        "item": ["Socks/extra socks","Rain gear","Swim suit/towel", "Shoes/boots", "Underwear", "Bandana"]
+    },
+
+    {
+        "id": 5,
+        "category": "Toiletries",
+        "item": ["Tooth brush & tooth paste", "Toilet paper", "Deodorant", "Soap & shampoo", "Personal medications - take extra", "Feminine products"]
+    },
+
+    {
+        "id": 6,
+        "category": "First Aid Kit",
+        "item": ["Bug repellant", "Antibiotic cream","Band Aides/bandages", "Aspirin/Ibuprofen/Tylenol/Naproxin", "Snake bite kit", "Hydrogen Peroxide"]
+    },
+
+    {
+        "id": 7,
+        "category": "Miscellaneous",
+        "item": ["Whistle","Compass/GPS", "Extra batteries/bulbs","Saw/axe", "Duct tape/electrical tape"]
+     
+    }
+    
+    
+
+]

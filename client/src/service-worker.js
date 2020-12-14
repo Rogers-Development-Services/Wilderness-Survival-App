@@ -11,7 +11,7 @@ import { clientsClaim } from 'workbox-core';
 import { ExpirationPlugin } from 'workbox-expiration';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
-import { StaleWhileRevalidate } from 'workbox-strategies';
+import { CacheFirst, StaleWhileRevalidate } from 'workbox-strategies';
 
 clientsClaim();
 
@@ -19,7 +19,16 @@ clientsClaim();
 // Their URLs are injected into the manifest variable below.
 // This variable must be present somewhere in your service worker file,
 // even if you decide not to use precaching. See https://cra.link/PWA
-precacheAndRoute(self.__WB_MANIFEST);
+precacheAndRoute(self.__WB_MANIFEST) 
+precacheAndRoute([
+  { url:'/assets/images/beaver/image.jpg', revision: null}
+], {
+  cleanURLs: false,
+});
+// precacheAndRoute([
+//    {url: 'assets/images/grizzelybear/image.jpg', revision: null}
+// ]);
+
 
 // Set up App Shell-style routing, so that all navigation requests
 // are fulfilled with your index.html shell. Learn more at
@@ -48,15 +57,26 @@ registerRoute(
 
 // An example runtime caching route for requests that aren't handled by the
 // precache, in this case same-origin .png requests like those from in public/
+
 registerRoute(
   // Add in any other file extensions or routing criteria as needed.
-  ({ url }) => url.origin === self.location.origin && url.pathname.endsWith('.png'), // Customize this strategy as needed, e.g., by changing to CacheFirst.
-  new StaleWhileRevalidate({
+  ({ url }) => url.origin === self.location.origin && url.pathname.endsWith('.png', '.jpg'), // Customize this strategy as needed, e.g., by changing to CacheFirst.
+  // ({ url }) => {
+  //   console.log(url); 
+  //   return url.pathname.contains('assets/images') },
+
+  new CacheFirst({
     cacheName: 'images',
     plugins: [
+      new InjectManifest ({
+            
+      }),
       // Ensure that once this runtime cache reaches a maximum size the
       // least-recently used images are removed.
-      new ExpirationPlugin({ maxEntries: 50 }),
+      new ExpirationPlugin({ 
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60, 
+       }),
     ],
   })
 );

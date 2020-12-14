@@ -79,6 +79,7 @@ function Home() {
                 >
                 </Button>
               )]}
+          className="tool-carousel"
           carouselId="Carousel-2"
           options={{
             dist: -100,
@@ -117,6 +118,7 @@ function Home() {
                 </Button>)
             ]
           }
+          className="tool-carousel"
           carouselId="Carousel-3"
           options={{
             dist: -100,

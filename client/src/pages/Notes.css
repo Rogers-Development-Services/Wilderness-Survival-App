@@ -4,23 +4,13 @@ body {
     font-style: normal;
 }
 
-.container {
-    background-color: lightgray;
-    opacity: 0.9;
-
-}
-
 p {
     margin-inline-start: 20px;
     text-align: left
 }
 
-.container {
-    padding-bottom: 25px;
-}
-
 .input {
-    padding: 25 px;
+    padding: 25px;
     font-size: medium;
     font-weight: bold;
 }
@@ -32,7 +22,15 @@ p {
     text-align: left
 }
  
-#make-new {
+#create-new-note {
     margin-bottom: 2rem;
+}
+
+#delete-note {
+    margin: 0 .5rem;
+}
+
+#save-updated-note {
+    margin: 0 .5rem;
 }
  

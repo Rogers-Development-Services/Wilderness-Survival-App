@@ -14,7 +14,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
 import Profile from './components/Profile';
-import Home from "./pages/Homepage";
+// import Home from "./pages/Homepage";
 
 const ProtectedRoute = ({ component, ...args }) => (
   <Route component={withAuthenticationRequired(component)} {...args} />

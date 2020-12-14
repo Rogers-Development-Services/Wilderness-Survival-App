@@ -54,5 +54,13 @@ h1, h2 {
 
 .is-footer {
   margin-bottom: 0px!important;
+  color: whitesmoke;
 }
- 
+
+button {
+  background-color: #77AF9C;
+}
+
+.functional-buttons {
+  background-color: #285943!important;
+}

@@ -55,23 +55,28 @@ function FunctionalNotes() {
 
         API.createNote(record)
             .then(results => {
-                console.log('Note Saved Succesffuly')
+                console.log('Note Saved Succesffuly', results)
                 getSavedNotes()
             })
     }
 
-    const updateNote = () => {
-        setPTag("show");
-        setTextArea(null);  //how do I get this to fire using the functionaltoast event 
+    const deleteNote = (data) => {
+        let n = allNotes;
+        const index = n.findIndex((element) => element.id === data.id);
+        const toRemove = n[index];
+        API.deleteNote(toRemove);
+        getSavedNotes();
     }
 
-    const deleteNote = () => {
-
-    }
+    function getThisUpdatedNote(data) {
+        const thisUpdatedNote = allNotes.find(element => element._id === data._id);
+        console.log("THIS UPDATED NOTE", thisUpdatedNote);
+        return thisUpdatedNote.note;
+    };
 
     function displayFunction() {
         setTextArea("show");
-        setPTag(null);
+        setPTag(null); //how do I get this to fire using the functionaltoast event
     };
 
     function localstuff() {
@@ -87,16 +92,6 @@ function FunctionalNotes() {
             });
         });
     }
-
-    function test() {
-        console.log("work");
-    }
-
-    function getThisUpdatedNote(data) {
-        const thisUpdatedNote = allNotes.find(element => element._id === data._id);
-        // console.log("THIS UPDATED NOTE", thisUpdatedNote);
-        return thisUpdatedNote.note;
-    };
 
     return (
         <div id="user-input" className="container">
@@ -117,6 +112,7 @@ function FunctionalNotes() {
             </Textarea>
 
             <Button
+                className="functional-buttons"
                 id="create-new-note"
                 node="button"
                 type="submit"
@@ -162,25 +158,19 @@ function FunctionalNotes() {
 
                                     </Textarea>) : null}
                                 <Button
+                                    className="functional-buttons"
                                     id="delete-note"
                                     node="button"
                                     type="submit"
                                     waves="light"
-                                    onClick={
-                                        (event) => {
-                                            let n = allNotes;
-                                            const index = n.findIndex((element) => element.id === data.id);
-                                            const toRemove = n[index];
-                                            API.deleteNote(toRemove);
-                                            getSavedNotes();
-                                        }
-                                    }
+                                    onClick={deleteNote}
                                 >
                                     Delete
                                     <Icon right>delete</Icon>
                                 </Button>
 
                                 <Button
+                                    className="functional-buttons"
                                     id="update-note"
                                     node="button"
                                     type="submit"

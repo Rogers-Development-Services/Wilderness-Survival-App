@@ -21,22 +21,7 @@ function FunctionalNotes() {
         isAuthenticated,
         loading,
         user
-    } = useAuth0();
-
-    useEffect(
-        function () {
-            getSavedNotes();
-            // This function checks whether the user is authenticated on page load
-            const getUserInfo = async () => {
-                console.log(isAuthenticated);
-            };
-            if (!loading) {
-                getUserInfo();
-            }
-        },
-        [loading, isAuthenticated]
-    );
-
+    } = useAuth0()
     // when a user logs in with their account this is the page, their saved notes will render on page load
     const getSavedNotes = () => {
         API.getNotes(user.sub)
@@ -56,6 +41,9 @@ function FunctionalNotes() {
         API.createNote(record)
             .then(results => {
                 console.log('Note Saved Succesffuly', results)
+                setTitle(" ")
+                setNote(" ")
+                console.log("this is a verification check.", title, note)
                 getSavedNotes()
             })
     }

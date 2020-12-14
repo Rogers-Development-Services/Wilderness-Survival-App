@@ -24,14 +24,11 @@ export default {
     },
 
     deleteNote: function (record) {
-        console.log(record);
-        return axios.delete("/api/notes", record)
-            .then(function (response) {
-                console.log("DELETE Axios", response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        return axios.delete('/api/notes', {
+            data: {
+                record: record
+            }
+        })
     },
 
     getNotes: function (userID) {

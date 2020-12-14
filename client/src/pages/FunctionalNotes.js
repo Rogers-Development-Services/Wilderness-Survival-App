@@ -65,9 +65,9 @@ function FunctionalNotes() {
         setTextArea(null);  //how do I get this to fire using the functionaltoast event 
     }
 
-    // const deleteNote = () => {
+    const deleteNote = () => {
 
-    // }
+    }
 
     function displayFunction() {
         setTextArea("show");
@@ -92,11 +92,10 @@ function FunctionalNotes() {
         console.log("work");
     }
 
-    function getThisUpdatedNote (data) {
+    function getThisUpdatedNote(data) {
         const thisUpdatedNote = allNotes.find(element => element._id === data._id);
-        console.log("THIS UPDATED NOTE", thisUpdatedNote);
+        // console.log("THIS UPDATED NOTE", thisUpdatedNote);
         return thisUpdatedNote.note;
-
     };
 
     return (
@@ -149,6 +148,7 @@ function FunctionalNotes() {
                                                 let n = allNotes;
                                                 const index = n.findIndex((element) => element.id === data.id);
                                                 n[index].note = event.target.value;
+                                                // console.log(n[index].note);
                                                 setAllNotes(n);
                                                 setNoteIndex(index);
                                             }
@@ -166,7 +166,15 @@ function FunctionalNotes() {
                                     node="button"
                                     type="submit"
                                     waves="light"
-                                // onClick={deleteNote}
+                                    onClick={
+                                        (event) => {
+                                            let n = allNotes;
+                                            const index = n.findIndex((element) => element.id === data.id);
+                                            const toRemove = n[index];
+                                            API.deleteNote(toRemove);
+                                            getSavedNotes();
+                                        }
+                                    }
                                 >
                                     Delete
                                     <Icon right>delete</Icon>

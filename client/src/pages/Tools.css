@@ -1,3 +1,7 @@
+h1 {
+    padding: 1rem;
+}
+
 h1, h2 {
     display: flex;
     justify-content: center;
@@ -15,4 +19,8 @@ div#root > div.fullscreen-container > div.not-footer > div.container > div.row >
 input {
     margin-left: 20px;
     padding-inline-start: 20px;
+}
+
+.tool-carousel {
+    height: 300px;
 }

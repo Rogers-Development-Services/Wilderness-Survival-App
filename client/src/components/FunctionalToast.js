@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 import { Button, Icon } from 'react-materialize';
@@ -8,8 +8,6 @@ function FunctionalToast(props) {
 
   const updateNote = () => {
 
-    console.log("update");
-    
     let record = {
       id: props.noteId,
       title: props.noteTitle,
@@ -48,6 +46,7 @@ function FunctionalToast(props) {
 
   return (
     <Button
+      className="functional-buttons"
       id="save-updated-note"
       node="button"
       type="submit"

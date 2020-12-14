@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
+import { Button, Icon } from 'react-materialize';
 import axios from 'axios';
 
 function reqLogout() {
@@ -13,9 +14,19 @@ function LogoutButton() {
   } = useAuth0();
 
   return isAuthenticated && (
-    <button onClick={() => {
+    <Button
+    className="functional-buttons"
+    id="log-out-button"
+    node="button"
+    type="submit"
+    waves="light"
+    onClick={() => {
       logout({ reqLogout });
-    }}>Log out</button>
+    }}
+    >
+      Log Out
+      <Icon right>person</Icon>
+    </Button>
   );
 }
 

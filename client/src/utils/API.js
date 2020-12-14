@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
     updateNote: function (record) {
         console.log(record);
-        return axios.put("/api/update/notes", record)
+        return axios.put("/api/notes", record)
             .then(function (response) {
                 console.log("UPDATE Axios", response);
             })
@@ -14,7 +14,7 @@ export default {
 
     createNote: function (record) {
         console.log(record);
-        return axios.post("/api/create/notes", record)
+        return axios.post("/api/notes", record)
             .then(function (response) {
                 console.log("POST Axios", response);
             })
@@ -24,14 +24,11 @@ export default {
     },
 
     deleteNote: function (record) {
-        console.log(record);
-        return axios.delete("/api/notes", record)
-            .then(function (response) {
-                console.log("DELETE Axios", response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        return axios.delete('/api/notes', {
+            data: {
+                record: record
+            }
+        })
     },
 
     getNotes: function (userID) {

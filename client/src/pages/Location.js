@@ -9,7 +9,7 @@ export class MapContainer extends Component {
     activeMarker: {},
     selectedPlace: {}
   };
-  onMarkerClick = (props, marker, e) =>
+  onMarkerClick = (props, marker) =>
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
@@ -31,7 +31,7 @@ export class MapContainer extends Component {
         centerAroundCurrentLocation
         google={this.props.google}
       >
-        <Marker onClick={this.onMarkerClick} name={'current location'} />
+        <Marker onClick={this.onMarkerClick} name={'Current Location'} />
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}

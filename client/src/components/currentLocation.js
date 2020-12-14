@@ -13,7 +13,7 @@ map: {
 //Creating a class for current location
 export class CurrentLocation extends React.Component {
 //Constructor is going to grab the current location using lat and lng
-    constructor(props) {
+    constructor(props, state) {
         super(props);
         const { lat, lng } = this.props.initialCenter;
         this.state = {

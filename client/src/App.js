@@ -14,6 +14,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import "./App.css";
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
 import Profile from './components/Profile';
+// import Home from "./pages/Homepage";
 
 const ProtectedRoute = ({ component, ...args }) => (
   <Route component={withAuthenticationRequired(component)} {...args} />
@@ -77,6 +78,7 @@ function App() {
               <Route exact path="/Tools" component={Tools} />
               <Route exact path="/Checklist" component={Checklist} />
               <ProtectedRoute path="/profile" component={Profile} />
+              <Route path="*" component={Homepage}/>
             </Switch>
           </div>
           <div className="is-footer">

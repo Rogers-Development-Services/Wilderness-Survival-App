@@ -148,7 +148,7 @@ function FunctionalNotes() {
                                                 let n = allNotes;
                                                 const index = n.findIndex((element) => element.id === data.id);
                                                 n[index].note = event.target.value;
-                                                // console.log(n[index].note);
+                                                // console.log(n[index]);
                                                 setAllNotes(n);
                                                 setNoteIndex(index);
                                             }
@@ -157,7 +157,7 @@ function FunctionalNotes() {
                                         <Toasts
                                             noteId={data._id}
                                             noteTitle={data.title}
-                                            noteMessage={getThisUpdatedNote(data)}
+                                            noteMessage={getThisUpdatedNote(data)} // <--- This is not passing through the new modified note, it sends the old note body
                                         />
 
                                     </Textarea>) : null}

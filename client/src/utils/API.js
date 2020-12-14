@@ -5,7 +5,7 @@ export default {
         console.log(record);
         return axios.put("/api/notes", record)
             .then(function (response) {
-                console.log("UPDATE Axios", response);
+                // console.log("UPDATE Axios", response);
             })
             .catch(function (error) {
                 console.log(error);

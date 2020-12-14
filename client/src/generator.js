@@ -11,7 +11,7 @@ workbox.generateSW({
     runtimeCaching: [
         {
             urlPattern: /\.(?:html|htm|xml)$/,
-            handler: "staleWhileRevalidate",
+            handler: "CacheFirst",
             options: {
                 cacheName: "markup",
                 expiration: {

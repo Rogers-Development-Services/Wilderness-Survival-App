@@ -9,11 +9,18 @@ function FunctionalToast(props) {
   const updateNote = () => {
 
     console.log("update");
+    
     let record = {
       id: props.noteId,
       title: props.noteTitle,
-      note: props.noteMessage,
+      note: props.noteMessage, // New modified note is not getting passed to this field
     }
+
+    /*  
+        Once the correct data is passed in for the note field of record,
+        then the update note functionality should be working!
+        
+    */
 
     console.log("saveNotecall", record);
 

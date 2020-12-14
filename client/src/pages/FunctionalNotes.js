@@ -108,7 +108,7 @@ function FunctionalNotes() {
                 icon={<Icon>note</Icon>}
                 placeholder="Write you new note message here"
                 onChange={e => setNote(e.target.value)}
-            >
+                      >
             </Textarea>
 
             <Button

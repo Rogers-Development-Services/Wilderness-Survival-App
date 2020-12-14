@@ -10,7 +10,7 @@ import localforage from "localforage";
 import "materialize-css";
 import Footer from './components/footer';
 import { NavItem, Navbar, Icon } from 'react-materialize';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import "./App.css";
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
 import Profile from './components/Profile';
@@ -62,11 +62,11 @@ function App() {
             centerLogo={true}
 
           >
-            <NavItem href="/Location">Location</NavItem>
-            <NavItem href="/Notes">Notes</NavItem>
-            <NavItem href="/Tools">Tools
-          {/* This is where custom styling and extra tabs would be added to appear within the sidenav */}</NavItem>
-            <NavItem href="/Checklist">Checklist</NavItem>
+            <Link to="/Location">Location</Link>
+            <Link to="/Notes">Notes</Link>
+            <Link to="/Tools">Tools
+          {/* This is where custom styling and extra tabs would be added to appear within the sidenav */}</Link>
+            <Link to="/Checklist">Checklist</Link>
           </Navbar>
 
           <div className="not-footer center-align">

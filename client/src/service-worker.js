@@ -11,7 +11,8 @@ import { clientsClaim } from 'workbox-core';
 import { ExpirationPlugin } from 'workbox-expiration';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
-import { StaleWhileRevalidate } from 'workbox-strategies';
+import { CacheFirst, StaleWhileRevalidate } from 'workbox-strategies';
+import { generateSW } from "workbox-build";
 
 clientsClaim();
 
@@ -19,7 +20,16 @@ clientsClaim();
 // Their URLs are injected into the manifest variable below.
 // This variable must be present somewhere in your service worker file,
 // even if you decide not to use precaching. See https://cra.link/PWA
-precacheAndRoute(self.__WB_MANIFEST);
+precacheAndRoute(self.__WB_MANIFEST) 
+// precacheAndRoute([
+//   { url:'/assets/images/beaver/image.jpg', revision: null}
+// ], {
+//   cleanURLs: false,
+// });
+// precacheAndRoute([
+//    {url: 'assets/images/grizzelybear/image.jpg', revision: null}
+// ]);
+
 
 // Set up App Shell-style routing, so that all navigation requests
 // are fulfilled with your index.html shell. Learn more at
@@ -46,20 +56,49 @@ registerRoute(
   createHandlerBoundToURL(process.env.PUBLIC_URL + '/index.html')
 );
 
+
+generateSW ({
+  cacheId: "image_cache",
+  globDirectory: "./",
+  globPatterns: [
+      "**/*.{jpg,png,jpeg}"
+  ],
+  swDest: "./service-worker.js",
+  swSrc: "./service-worker.js",
+  runtimeCaching: [
+      {
+          urlPattern: /\.(?:html|htm|xml)$/,
+          handler: "staleWhileRevalidate",
+          options: {
+              cacheName: "markup",
+              expiration: {
+                  maxAgeSeconds: 30 * 24 * 60 * 60
+              }
+          }
+      }
+  ]
+})
 // An example runtime caching route for requests that aren't handled by the
 // precache, in this case same-origin .png requests like those from in public/
+
+
+
+
 registerRoute(
-  // Add in any other file extensions or routing criteria as needed.
-  ({ url }) => url.origin === self.location.origin && url.pathname.endsWith('.png'), // Customize this strategy as needed, e.g., by changing to CacheFirst.
-  new StaleWhileRevalidate({
+     // Add in any other file extensions or routing criteria as needed.
+  // ({ url }) => url.origin === self.location.origin && url.pathname.endsWith('.png', '.jpg'), // Customize this strategy as needed, e.g., by changing to CacheFirst.
+  // ({ url }) => {
+  //   console.log(url); 
+  //   return url.pathname.contains('assets/images') },
+  /.*.(?:png|jpg|jpeg|svg)$/,
+    new CacheFirst({
     cacheName: 'images',
-    plugins: [
+      
       // Ensure that once this runtime cache reaches a maximum size the
       // least-recently used images are removed.
-      new ExpirationPlugin({ maxEntries: 50 }),
-    ],
-  })
-);
+    }),
+  
+'GET');
 
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})

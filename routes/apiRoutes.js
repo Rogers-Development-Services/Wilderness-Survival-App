@@ -56,7 +56,7 @@ app.get("/checklist", (req, res) => {
 app.post("/api/notes", ({ body }, res) => {
   const note = body;
   console.log(note);
-  console.log(body, "create route");
+  // console.log(body, "create route");
 
   db.Note.create({ userID: note.userID, title: note.title, note: note.note })
     .then(dbNote => {

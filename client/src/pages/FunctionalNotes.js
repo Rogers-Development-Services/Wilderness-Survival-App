@@ -22,6 +22,22 @@ function FunctionalNotes() {
         loading,
         user
     } = useAuth0()
+
+
+    useEffect(
+        function () {
+            getSavedNotes();
+            // This function checks whether the user is authenticated on page load
+            const getUserInfo = async () => {
+                console.log(isAuthenticated);
+            };
+            if (!loading) {
+                getUserInfo();
+            }
+        },
+        [loading, isAuthenticated]
+    );
+    
     // when a user logs in with their account this is the page, their saved notes will render on page load
     const getSavedNotes = () => {
         API.getNotes(user.sub)
@@ -29,6 +45,9 @@ function FunctionalNotes() {
                 setAllNotes(results.data)
             })
     }
+
+    // console.log(isAuthenticated);
+    // getSavedNotes();
 
     const createNewNote = () => {
         let record = {
@@ -58,7 +77,7 @@ function FunctionalNotes() {
 
     function getThisUpdatedNote(data) {
         const thisUpdatedNote = allNotes.find(element => element._id === data._id);
-        console.log("THIS UPDATED NOTE", thisUpdatedNote);
+        // console.log("THIS UPDATED NOTE", thisUpdatedNote);
         return thisUpdatedNote.note;
     };
 
@@ -96,7 +115,7 @@ function FunctionalNotes() {
                 icon={<Icon>note</Icon>}
                 placeholder="Write you new note message here"
                 onChange={e => setNote(e.target.value)}
-                      >
+            >
             </Textarea>
 
             <Button

@@ -24,6 +24,7 @@ export default {
     },
 
     deleteNote: function (record) {
+        console.log(record);
         return axios.delete('/api/notes', {
             data: {
                 record: record

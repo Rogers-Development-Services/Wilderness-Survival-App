@@ -40,7 +40,6 @@
     "passport-auth0": "^1.4.0",
     "prop-types": "^15.7.2",
     "react-materialize": "^3.9.3",
-    "web-vitals": "^1.0.1",
-    "workbox-webpack-plugin": "^6.0.2"
+    "web-vitals": "^1.0.1"
   }
 }

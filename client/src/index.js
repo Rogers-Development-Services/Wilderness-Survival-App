@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import registerServiceWorker from "react-service-worker";
+// import registerServiceWorker from "react-service-worker";
 import reportWebVitals from "./reportWebVitals";
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min.js';
@@ -14,7 +14,7 @@ ReactDOM.render(
   <App />
   </React.StrictMode>,
 document.getElementById("root"));
-registerServiceWorker();
+// registerServiceWorker();
 reportWebVitals();
 
 

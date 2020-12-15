@@ -22,7 +22,8 @@ function FunctionalNotes() {
         isAuthenticated,
         loading,
         user
-    } = useAuth0();
+    } = useAuth0()
+
 
     useEffect(
         function () {
@@ -37,7 +38,7 @@ function FunctionalNotes() {
         },
         [loading, isAuthenticated]
     );
-
+    
     // when a user logs in with their account this is the page, their saved notes will render on page load
     const getSavedNotes = () => {
         API.getNotes(user.sub)
@@ -45,6 +46,9 @@ function FunctionalNotes() {
                 setAllNotes(results.data)
             })
     }
+
+    // console.log(isAuthenticated);
+    // getSavedNotes();
 
     const createNewNote = () => {
         let record = {
@@ -57,6 +61,9 @@ function FunctionalNotes() {
         API.createNote(record)
             .then(results => {
                 console.log('Note Saved Succesffuly', results)
+                setTitle(" ")
+                setNote(" ")
+                console.log("this is a verification check.", title, note)
                 getSavedNotes()
             })
     }
@@ -72,7 +79,7 @@ function FunctionalNotes() {
 
     function getThisUpdatedNote(data) {
         const thisUpdatedNote = allNotes.find(element => element._id === data._id);
-        console.log("THIS UPDATED NOTE", thisUpdatedNote);
+        // console.log("THIS UPDATED NOTE", thisUpdatedNote);
         return thisUpdatedNote.note;
     };
 

@@ -81,7 +81,7 @@ app.get("/api/notes", (req, res) => {
 
 // Delete note with specified id
 app.delete("/api/notes", ({ body }, res) => {
-  console.log(body.record._id);
+  console.log(body.record);
   db.Note.findOneAndDelete({ _id: body.record._id }, function (error, docs) {
     if (error) {
       console.log(error);
@@ -97,10 +97,10 @@ app.put("/api/notes", ({ body }, res) => {
   const note = body;
   console.log(body);
 
-  db.Note.findOneAndUpdate({ _id: body._id }, { title: body.title, note: body.note }, { new: true }, function (error, document) {
+  db.Note.findOneAndUpdate({ _id: body._id }, { title: body.title, note: body.note }, { new: true }, function (error, response) {
     if (error) throw error;
-    res.json(document);
-    console.log(document);
+    res.json(response);
+    console.log(response);
   })
 });
 

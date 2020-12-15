@@ -50,6 +50,8 @@ h1, h2 {
 
 .not-footer {
   min-height: 100vh;
+  margin-bottom: 10rem;
+  margin-top: 5rem;
 }
 
 .is-footer {

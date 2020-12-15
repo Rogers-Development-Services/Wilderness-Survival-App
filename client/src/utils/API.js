@@ -24,11 +24,7 @@ export default {
     },
 
     deleteNote: function (record) {
-<<<<<<< HEAD
-        console.log("This is the record being passed to the DELETE request: \n", record);
-=======
         console.log(record);
->>>>>>> 1114e9b850a1e197b05590da8f9c0d725eb795be
         return axios.delete('/api/notes', {
             data: {
                 record: record

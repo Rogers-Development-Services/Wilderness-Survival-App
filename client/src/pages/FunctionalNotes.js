@@ -63,27 +63,12 @@ function FunctionalNotes() {
             })
     }
 
-<<<<<<< HEAD
-    const deleteNote = (data) => {
-        console.log(data);
-        // console.log(data.id);
-        let n = allNotes;
-        console.log("This is an array of all the current notes: \n", n);
-        console.log("This is the id of the note being deleted: \n", data._id);
-        const index = n.findIndex((element) => element._id === data._id);
-        console.log("This is the index of the note in allNotes being deleted: \n", index);
-        const toRemove = n[index];
-        console.log("This is the note object to be deleted: \n", toRemove);
-        API.deleteNote(toRemove);
-        // getSavedNotes();
-=======
     // On click for delete button
     const handleClick = e => deleteNote(e.target.id);
     // Build record & send API delete request
     const deleteNote = (noteID) => {
         let record = { _id: noteID }
         API.deleteNote(record).then(getSavedNotes());
->>>>>>> 1114e9b850a1e197b05590da8f9c0d725eb795be
     }
 
     function getThisUpdatedNote(data) {

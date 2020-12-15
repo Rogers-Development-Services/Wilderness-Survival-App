@@ -5,7 +5,7 @@
 ![badge: Uses-Express](https://img.shields.io/badge/Uses-Express-red) ![badge: Uses-MongoDB](https://img.shields.io/badge/Uses-MongoDB-red) ![badge: Uses-Mongoose](https://img.shields.io/badge/Uses-Mongoose-red) ![badge: Uses-LocalForage](https://img.shields.io/badge/Uses-LocalForage-orange) ![badge: Uses-Node.JS](https://img.shields.io/badge/Uses-Node.JS-orange)</br>
 ​
 This Heroku hosted Progressive Web App (PWA) aims to provide a simple, user-friendly and straight forward experience to guide users in survival situations. With its capability to run in offline mode, users are able to navigate the app without consistent access to the internet. As most of the PWA is available without network connection, Nomad is a great app for those who may go in and out of connectivity throughout the day or are in wilderness areas where the connection is less reliable. 
-Nomad will assist users in finding edible plants, nearby animals and provide several survival guides. In addition, the user is able to refer to a wilderness checklist as well as document, edit and delete notes during their adventure. 
+Nomad will assist users in finding edible plants, nearby animals and provide several survival guides. In addition, the user is able to refer to a wilderness checklist as well as add, edit and delete notes during their adventure. 
 ​
 ## Table of Contents
 [Deployed Application](https://github.com/Rogers-Development-Services/Wilderness-Survival-App.github.io#deployed-application)</br>
@@ -84,6 +84,7 @@ This application is a work in progress, future updates will include:
 3. Enhancement to the hamburger
 4. Incorporate Toasts to alert users 
 5. Rich text editor for the Collapsibles 
+6. Access to Notes page offline
 
 ## Questions
 ​
@@ -146,3 +147,6 @@ Plants:  https://morningchores.com/edible-wild-plants/, https://www.outdoorlife.
 Animals: https://en.wikipedia.org/wiki 
 Guides: https://www.tacticalogy.com/survival-tips/
 Survival Checklist: http://www.lovetheoutdoors.com/camping/checklists.htm 
+Site logo: https://www.canva.com/
+Background image: https://pixabay.com/photos/water-river-lake-mountains-alpine-3161063/
+

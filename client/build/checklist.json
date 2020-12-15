@@ -2,36 +2,43 @@
     {
         "id": 1,
         "category": "Clothing",
-        "item": ["Bandana", "Jacket", "Rain gear", "Shoes/boots", "Socks/extra socks","Swim suit/towel", "Underwear"]
+        "item": ["Bandana", "Jacket", "Rain gear", "Shoes/boots", "Socks/extra socks","Swim suit/towel", "Underwear"],
+        "icon": "accessibility"
     },
     {
         "id": 2,
         "category": "Cooking Supplies",
-        "item": ["Can opener/bottle opener", "Charcoal", "Foil", "Large water jug", "Pots & frying pans with lids", "Stove with fuel/propane", "Utensils", "Water", "Waterproof Matches & lighter"]
+        "item": ["Can opener/bottle opener", "Charcoal", "Foil", "Large water jug", "Pots & frying pans with lids", "Stove with fuel/propane", "Utensils", "Water", "Waterproof Matches & lighter"],
+        "icon": "whatshot"
     },
     {
         "id": 3,
         "category": "First Aid Kit",
-        "item": ["Antibiotic cream", "Aspirin/Ibuprofen/Tylenol/Naproxin", "Band Aides/bandages", "Bug repellant", "Hydrogen Peroxide", "Rubbing Alcohol", "Snake bite kit"]
+        "item": ["Antibiotic cream", "Aspirin/Ibuprofen/Tylenol/Naproxin", "Band Aides/bandages", "Bug repellant", "Hydrogen Peroxide", "Rubbing Alcohol", "Snake bite kit"],
+        "icon": "local_hospital"
     },
     {
         "id": 4,
         "category": "Shelter",
-        "item": [ "Axe or hammer","Extra stakes","Ground cloth or tarp", "Shade tarp/poles/rope/stakes", "Tent"]
+        "item": [ "Axe or hammer","Extra stakes","Ground cloth or tarp", "Shade tarp/poles/rope/stakes", "Tent"],
+        "icon": "home"
     },
     {
         "id": 5,
         "category": "Sleep",
-        "item": ["Air mattress/sleeping pad/cot/tarp", "Air pump", "Blankets", "Pillow", "Repair kit for air mattress"]
+        "item": ["Air mattress/sleeping pad/cot/tarp", "Air pump", "Blankets", "Pillow", "Repair kit for air mattress"],
+        "icon": "hotel"
     },
     {
         "id": 6,
         "category": "Toiletries",
-        "item": ["Deodorant", "Feminine products", "Personal medications - take extra", "Soap & shampoo", "Tooth brush & tooth paste", "Toilet paper"]
+        "item": ["Deodorant", "Feminine products", "Personal medications - take extra", "Soap & shampoo", "Tooth brush & tooth paste", "Toilet paper"],
+        "icon": "spa"
     },
     {
         "id": 7,
         "category": "Miscellaneous",
-        "item": ["Compass/GPS", "Duct tape/Electrical tape", "Extra batteries/bulbs", "High proof alcoholic spirits", "Knife", "(2) Rescue Mirrors", "Saw/axe", "Waterproof Compass","Waterproof Watch", "Water Purifying Tablets", "Whistle"]
+        "item": ["Compass/GPS", "Duct tape/Electrical tape", "Extra batteries/bulbs", "High proof alcoholic spirits", "Knife", "(2) Rescue Mirrors", "Saw/axe", "Waterproof Compass","Waterproof Watch", "Water Purifying Tablets", "Whistle"],
+        "icon": "photo"
     }
 ]

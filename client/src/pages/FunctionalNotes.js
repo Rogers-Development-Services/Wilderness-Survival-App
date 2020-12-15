@@ -8,7 +8,6 @@ import Toasts from "../components/FunctionalToast";
 // import DisplayNote from "../components/displayNote";
 
 function FunctionalNotes() {
-    // console.log("rendered");
 
     const [title, setTitle] = useState("");
     const [note, setNote] = useState("");
@@ -74,7 +73,7 @@ function FunctionalNotes() {
 
     function getThisUpdatedNote(data) {
         const thisUpdatedNote = allNotes.find(element => element._id === data._id);
-        // console.log("THIS UPDATED NOTE", thisUpdatedNote);
+        console.log("THIS UPDATED NOTE", thisUpdatedNote);
         return thisUpdatedNote.note;
     };
 
@@ -145,10 +144,15 @@ function FunctionalNotes() {
                                         iconClassName={"update-note"}
                                         onChange={
                                             (event) => {
+                                                console.log(data);
                                                 let n = allNotes;
-                                                const index = n.findIndex((element) => element.id === data.id);
+                                                console.log("This is the note being updated: \n", data._id);
+
+                                                const index = n.findIndex((element) => element._id === data._id);
+                                                console.log("Index of note in allNotes state being change in Text Area: \n", index);
+
                                                 n[index].note = event.target.value;
-                                                // console.log(n[index]);
+                                                console.log("The current object of the n'th object in allNotes with a modified note: \n", n[index]);
                                                 setAllNotes(n);
                                                 setNoteIndex(index);
                                             }

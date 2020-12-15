@@ -19,8 +19,8 @@ function FunctionalToast(props) {
         then the update note functionality should be working!
         
     */
-
-    console.log("saveNotecall", record);
+    console.log("record-message: ", record.note);
+    // console.log("saveNotecall", record);
 
     API.updateNote(record)
       .then(results => {

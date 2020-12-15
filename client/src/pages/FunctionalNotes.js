@@ -11,6 +11,7 @@ function FunctionalNotes() {
     // console.log("rendered");
 
     const [title, setTitle] = useState("");
+    const [titlePlaceholder, setTitlePlaceholder] = useState("")
     const [note, setNote] = useState("");
     const [noteIndex, setNoteIndex] = useState(-1);
     const [allNotes, setAllNotes] = useState([]);
@@ -61,8 +62,9 @@ function FunctionalNotes() {
     }
 
     const deleteNote = (data) => {
+        console.log(data);
         let n = allNotes;
-        const index = n.findIndex((element) => element.id === data.id);
+        const index = n.findIndex((element) => element._id === data._id);
         const toRemove = n[index];
         API.deleteNote(toRemove);
         getSavedNotes();
@@ -108,7 +110,7 @@ function FunctionalNotes() {
                 icon={<Icon>note</Icon>}
                 placeholder="Write you new note message here"
                 onChange={e => setNote(e.target.value)}
-                      >
+            >
             </Textarea>
 
             <Button
@@ -142,9 +144,13 @@ function FunctionalNotes() {
                                         onChange={
                                             (event) => {
                                                 let n = allNotes;
-                                                const index = n.findIndex((element) => element.id === data.id);
+                                                console.log("This is the note being updated: \n", data._id);
+
+                                                const index = n.findIndex((element) => element._id === data._id);
+                                                console.log("Index of note in allNotes state being change in Text Area: \n", index);
+
                                                 n[index].note = event.target.value;
-                                                // console.log(n[index]);
+                                                console.log("The current object of the n'th object in allNotes with a modified note: \n", n[index]);
                                                 setAllNotes(n);
                                                 setNoteIndex(index);
                                             }

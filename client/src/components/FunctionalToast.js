@@ -9,7 +9,7 @@ function FunctionalToast(props) {
   const updateNote = () => {
 
     let record = {
-      id: props.noteId,
+      _id: props.noteId,
       title: props.noteTitle,
       note: props.noteMessage, // New modified note is not getting passed to this field
     }
@@ -22,11 +22,7 @@ function FunctionalToast(props) {
     console.log("record-message: ", record.note);
     // console.log("saveNotecall", record);
 
-    API.updateNote(record)
-      .then(results => {
-        console.log("note saved.", results)
-        // getSavedNotes()
-      });
+    API.updateNote(record);
   };
 
   const test = () => {

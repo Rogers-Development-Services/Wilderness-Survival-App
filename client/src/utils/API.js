@@ -24,6 +24,7 @@ export default {
     },
 
     deleteNote: function (record) {
+        console.log("This is the record being passed to the DELETE request: \n", record);
         return axios.delete('/api/notes', {
             data: {
                 record: record

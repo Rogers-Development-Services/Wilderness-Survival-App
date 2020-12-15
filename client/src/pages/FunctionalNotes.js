@@ -8,10 +8,8 @@ import Toasts from "../components/FunctionalToast";
 // import DisplayNote from "../components/displayNote";
 
 function FunctionalNotes() {
-    // console.log("rendered");
 
     const [title, setTitle] = useState("");
-    const [titlePlaceholder, setTitlePlaceholder] = useState("")
     const [note, setNote] = useState("");
     const [noteIndex, setNoteIndex] = useState(-1);
     const [allNotes, setAllNotes] = useState([]);
@@ -70,16 +68,21 @@ function FunctionalNotes() {
 
     const deleteNote = (data) => {
         console.log(data);
+        // console.log(data.id);
         let n = allNotes;
+        console.log("This is an array of all the current notes: \n", n);
+        console.log("This is the id of the note being deleted: \n", data._id);
         const index = n.findIndex((element) => element._id === data._id);
+        console.log("This is the index of the note in allNotes being deleted: \n", index);
         const toRemove = n[index];
+        console.log("This is the note object to be deleted: \n", toRemove);
         API.deleteNote(toRemove);
-        getSavedNotes();
+        // getSavedNotes();
     }
 
     function getThisUpdatedNote(data) {
         const thisUpdatedNote = allNotes.find(element => element._id === data._id);
-        // console.log("THIS UPDATED NOTE", thisUpdatedNote);
+        console.log("THIS UPDATED NOTE", thisUpdatedNote);
         return thisUpdatedNote.note;
     };
 
@@ -150,6 +153,7 @@ function FunctionalNotes() {
                                         iconClassName={"update-note"}
                                         onChange={
                                             (event) => {
+                                                console.log(data);
                                                 let n = allNotes;
                                                 console.log("This is the note being updated: \n", data._id);
 

@@ -36,7 +36,7 @@ function FunctionalNotes() {
         },
         [loading, isAuthenticated]
     );
-    
+
     // when a user logs in with their account this is the page, their saved notes will render on page load
     const getSavedNotes = () => {
         API.getNotes(user.sub)
@@ -44,9 +44,6 @@ function FunctionalNotes() {
                 setAllNotes(results.data)
             })
     }
-
-    // console.log(isAuthenticated);
-    // getSavedNotes();
 
     const createNewNote = () => {
         let record = {
@@ -66,6 +63,7 @@ function FunctionalNotes() {
             })
     }
 
+<<<<<<< HEAD
     const deleteNote = (data) => {
         console.log(data);
         // console.log(data.id);
@@ -78,6 +76,14 @@ function FunctionalNotes() {
         console.log("This is the note object to be deleted: \n", toRemove);
         API.deleteNote(toRemove);
         // getSavedNotes();
+=======
+    // On click for delete button
+    const handleClick = e => deleteNote(e.target.id);
+    // Build record & send API delete request
+    const deleteNote = (noteID) => {
+        let record = { _id: noteID }
+        API.deleteNote(record).then(getSavedNotes());
+>>>>>>> 1114e9b850a1e197b05590da8f9c0d725eb795be
     }
 
     function getThisUpdatedNote(data) {
@@ -146,7 +152,7 @@ function FunctionalNotes() {
                                 header={data.title}
                                 node="div"
                             >
-                                { pTag ? (<p>{data.note}</p>) : null}
+                                { pTag ? (<p id={data._id}>{data.note}</p>) : null}
                                 { textArea ? (
                                     <Textarea
                                         defaultValue={data.note}
@@ -176,11 +182,12 @@ function FunctionalNotes() {
                                     </Textarea>) : null}
                                 <Button
                                     className="functional-buttons"
-                                    id="delete-note"
+                                    // id="delete-note"
+                                    id={data._id}
                                     node="button"
                                     type="submit"
                                     waves="light"
-                                    onClick={deleteNote}
+                                    onClick={handleClick}
                                 >
                                     Delete
                                     <Icon right>delete</Icon>

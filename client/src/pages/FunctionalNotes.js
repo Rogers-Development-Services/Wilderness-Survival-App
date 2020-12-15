@@ -64,12 +64,11 @@ function FunctionalNotes() {
             })
     }
 
+    // On click for delete button
     const handleClick = e => deleteNote(e.target.id);
-
+    // Build record & send API delete request
     const deleteNote = (noteID) => {
-
         let record = { _id: noteID }
-
         API.deleteNote(record).then(getSavedNotes());
     }
 

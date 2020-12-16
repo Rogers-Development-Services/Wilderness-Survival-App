@@ -6,7 +6,7 @@
   "proxy": "http://localhost:3000/",
   "secure": false,
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start": "npm run start:prod",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
@@ -14,7 +14,8 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
     "watch": "nodemon server.js",
-    "build-and-start": "npm run build && npm run start:prod"
+    "build-and-start": "npm run build && npm run start:prod",
+    "local": "npm run start:dev"
   },
   "author": "",
   "license": "ISC",

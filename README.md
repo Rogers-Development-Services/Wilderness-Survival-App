@@ -28,9 +28,9 @@ Nomad will assist users in finding edible plants, nearby animals and provide sev
 ​
 ## Deployed Application
 ​
-Here is an example of our app in action:</br> 
+Here is an example of our app in action:</br> https://drive.google.com/file/d/18geekIHstXaA_a-sL9SXf7Wq8LQ02J0b/view
 ​
-Access our [deployed application here!]()
+Access our [deployed application here!](https://wilderness-survival-app.herokuapp.com/)
 ​
 ## Installation
 ​
@@ -84,7 +84,7 @@ This application is a work in progress, future updates will include:
 3. Enhancement to the hamburger
 4. Incorporate Toasts to alert users 
 5. Rich text editor for the Collapsibles 
-6. Access to Notes page offline
+6. Access to Notes page offline 
 
 ## Questions
 ​
@@ -108,45 +108,38 @@ Licensed under the MIT License lincense.
 
 A screenshot of your Project Management Board that shows breakdown of tasks, assigned to group members with a schedule.
 
-## Technical Requirements
-* Must use ReactJS in some way (even if minimal)
-* Must use a Node and Express Web Server
-* Must be backed by a MySQL or MongoDB Database with a Sequelize or Mongoose ORM  
-    * MongoDB
-    * Mongoose
-* Must have both GET and POST routes for retrieving and adding new data
-* Must be deployed using Heroku (with Data)
-* Must utilize at least two libraries, packages, or technologies that we haven’t discussed
-    * LOCAL FORAGE & FUSION AUTH
-* Must allow for or involve the authentication of users in some way
-    * Fusion AUth
-* Must have a polished frontend/UI 
-    * Materialize 
-* Must have folder structure that meets MVC Paradigm
-* Must meet good quality coding standards (indentation, scoping, naming)
-* Must not expose sensitive API key information on the server
+## Tech Used 
+* ReactJS 
+* Node and Express Web Server
+* MongoDB Database with a Mongoose ORM  
+* Utilized GET and POST routes for retrieving and adding new data
+* Deployed using Heroku (with Data)
+* GoogleMaps API
+* Auth0
+* React Materialize CSS
+* Passport
+* Axios
+
 
 ## Color Scheme:
 * #2E7D32
 * #ffffff
 * ##808080
+* #285943
+* #77AF9C
 
-
-
-
-
-## Wireframe: 
+## Wireframes: 
 [Click Here for our outline](https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fs3.amazonaws.com%2Fassets.mockflow.com%2Fapp%2Fwireframepro%2Fcompany%2FCa7256b44d73b4257b2884d30210e64e7%2Fprojects%2FMe6dd3a2e9e27ee5c72cf4f76de3a33f41605552968657%2Fpages%2Ff9fd5991f23545a2a75188c6718a3ba2%2Fimage%2Ff9fd5991f23545a2a75188c6718a3ba2.png)
 
 ## User Stories
 [Click Here for our User Stories](https://docs.google.com/spreadsheets/d/1UpVH7u-TKHPJdKX1x6HFqRxYiuRFf75wdM8JwPEmWXk/edit?usp=sharing)
 
 ## References
-Location map: https://morioh.com/p/8461df41e752#google_vignette
-Plants:  https://morningchores.com/edible-wild-plants/, https://www.outdoorlife.com/blogs/survivalist/2014/05/survival-skills-14-wild-medicinal-plants/
-Animals: https://en.wikipedia.org/wiki 
-Guides: https://www.tacticalogy.com/survival-tips/
-Survival Checklist: http://www.lovetheoutdoors.com/camping/checklists.htm 
-Site logo: https://www.canva.com/
-Background image: https://pixabay.com/photos/water-river-lake-mountains-alpine-3161063/
+* Location map: https://morioh.com/p/8461df41e752#google_vignette
+* Plants:  https://morningchores.com/edible-wild-plants/, https://www.outdoorlife.com/blogs/survivalist/2014/05/survival-skills-14-wild-medicinal-plants/
+* Animals: https://en.wikipedia.org/wiki 
+* Guides: https://www.tacticalogy.com/survival-tips/
+* Survival Checklist: http://www.lovetheoutdoors.com/camping/checklists.htm 
+* Site logo: https://www.canva.com/
+* Background image: https://pixabay.com/photos/water-river-lake-mountains-alpine-3161063/
 

@@ -9,7 +9,7 @@ import localforage from "localforage";
 // import Forage from "react-localforage";
 import "materialize-css";
 import Footer from './components/footer';
-import { NavItem, Navbar, Icon } from 'react-materialize';
+import { Navbar, Icon } from 'react-materialize';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import "./App.css";
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';

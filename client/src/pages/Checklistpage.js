@@ -39,7 +39,7 @@ function ChecklistItems(props) {
         popout
         children={
           [
-            checklist.map(data => 
+            checklist.map(data =>
               <CollapsibleItem
                 expanded={false}
                 header={data.category}

@@ -11,6 +11,7 @@ function FunctionalNotes() {
 
     const [title, setTitle] = useState("");
     const [note, setNote] = useState("");
+    const [submitButton, setSubmitButon] = useState(true);
     const [noteIndex, setNoteIndex] = useState(-1);
     const [allNotes, setAllNotes] = useState([]);
     const [pTag, setPTag] = useState("show");
@@ -28,13 +29,18 @@ function FunctionalNotes() {
             getSavedNotes();
             // This function checks whether the user is authenticated on page load
             const getUserInfo = async () => {
-                console.log(isAuthenticated);
+                // console.log(isAuthenticated);
             };
             if (!loading) {
                 getUserInfo();
-            }
+            };
+
+            if (title.length > 0 && note.length > 0 ) {
+                // console.log(title + " and " + note + " changed");
+                setSubmitButon(false);
+            } 
         },
-        [loading, isAuthenticated]
+        [loading, isAuthenticated, title, note]
     );
 
     // when a user logs in with their account this is the page, their saved notes will render on page load
@@ -46,6 +52,7 @@ function FunctionalNotes() {
     }
 
     const createNewNote = () => {
+
         let record = {
             userID: user.sub,
             title: title,
@@ -56,8 +63,8 @@ function FunctionalNotes() {
         API.createNote(record)
             .then(results => {
                 console.log('Note Saved Succesffuly', results)
-                setTitle(" ")
-                setNote(" ")
+                setTitle("")
+                setNote("")
                 console.log("this is a verification check.", title, note)
                 getSavedNotes()
             })
@@ -99,18 +106,18 @@ function FunctionalNotes() {
     return (
         <div id="user-input" className="container">
             <h1>Notes</h1>
-            <p>Title</p>
             <TextInput
                 icon="subject"
-                placeholder="Write you new note here"
+                label="Write you new note here"
                 onChange={e => setTitle(e.target.value)}
+                value={title}
             />
 
-            <p>Message</p>
             <Textarea
                 icon={<Icon>note</Icon>}
-                placeholder="Write you new note message here"
+                label="Write you new note message here"
                 onChange={e => setNote(e.target.value)}
+                value={note}
             >
             </Textarea>
 
@@ -120,6 +127,7 @@ function FunctionalNotes() {
                 node="button"
                 type="submit"
                 waves="light"
+                disabled={submitButton}
                 onClick={createNewNote}
             >
                 Submit

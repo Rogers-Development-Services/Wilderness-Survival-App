@@ -114,7 +114,7 @@ function FunctionalNotes() {
                         m={12}
                         l={12}
                         icon="subject"
-                        label="Write you new note title here"
+                        label="Write your new note title here"
                         onChange={e => setTitle(e.target.value)}
                         value={title}
                     />
@@ -124,7 +124,7 @@ function FunctionalNotes() {
                         m={12}
                         l={12}
                         icon={<Icon>note</Icon>}
-                        label="Write you new message here"
+                        label="Write your new message here"
                         onChange={e => setNote(e.target.value)}
                         value={note}
                     >
@@ -193,6 +193,7 @@ function FunctionalNotes() {
                                                 </Col>
                                             </Row>
                                         ) : null}
+
                                         <Row className="btn-row">
                                             <Col className="btn-col">
                                                 <Button

@@ -13,6 +13,7 @@
     "localforage-plugin-boilerplate": "^1.1.1",
     "materialize-css": "^1.0.0-rc.2",
     "react": "^16.6.3",
+    "react-detect-offline": "^2.4.0",
     "react-dom": "^16.6.3",
     "react-localforage": "^1.0.1",
     "react-materialize": "^3.9.3",

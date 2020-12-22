@@ -15,7 +15,8 @@ import "./App.css";
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
 import Profile from './components/Profile';
 // import Home from "./pages/Homepage";
-
+import { Offline, Online } from "react-detect-offline";
+ 
 const ProtectedRoute = ({ component, ...args }) => (
   <Route component={withAuthenticationRequired(component)} {...args} />
 );
@@ -67,6 +68,9 @@ function App() {
             <Link to="/Tools">Tools
           {/* This is where custom styling and extra tabs would be added to appear within the sidenav */}</Link>
             <Link to="/Checklist">Checklist</Link>
+            {/* This is how we show if the website is offline or offline */}
+            <Online>Only shown when you're online</Online>
+            <Offline>Only shown offline (surprise!)</Offline>
           </Navbar>
 
           <div className="not-footer center-align">

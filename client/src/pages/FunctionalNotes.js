@@ -82,7 +82,7 @@ function FunctionalNotes() {
     function getThisUpdatedNote(data) {
         const thisUpdatedNote = allNotes.find(element => element._id === data._id);
         console.log("THIS UPDATED NOTE", thisUpdatedNote);
-        return thisUpdatedNote.note;
+        return thisUpdatedNote;
     };
 
     function displayFunction() {
@@ -178,15 +178,13 @@ function FunctionalNotes() {
                                                                 n[index].note = event.target.value;
                                                                 console.log("The current object of the n'th object in allNotes with a modified note: \n", n[index]);
                                                                 setAllNotes(n);
-                                                                setNoteIndex(index);
+                                                                // setNoteIndex(index);
                                                             }
                                                         }
                                                     >
 
                                                         <Toasts
-                                                            noteId={data._id}
-                                                            noteTitle={data.title}
-                                                            noteMessage={getThisUpdatedNote(data)} // <--- This is not passing through the new modified note, it sends the old note body
+                                                            noteObjecttoBeUpdated={getThisUpdatedNote(data)} // <--- This is not passing through the new modified note, it sends the old note body
                                                         />
 
                                                     </Textarea>

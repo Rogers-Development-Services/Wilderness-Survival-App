@@ -3,31 +3,35 @@ body {
     font-style: normal;
 }
 
-h1 {
-    padding-top: 2rem;
-}
-
 .input {
     font-size: medium;
     font-weight: bold;
-}
-
-.textarea {
-    padding-right: 25px;
-    padding-left: 25px;
-    margin-inline-start: 20px;
-    text-align: left
 }
  
 #create-new-note {
     margin-bottom: 2rem;
 }
 
-.functional-buttons {
-    margin: 0 .25rem;
+div.btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
 }
 
+div.btn-col {
+    margin: .5rem 0;
+}
+
+/* 
+.functional-buttons {
+    display: flex;
+    justify-content: center;
+} */
+
+/* 
 #save-updated-note {
     margin: 0 .25rem;
 }
- 
+  */

@@ -1,36 +1,25 @@
 body {
-  
     font-weight: bold;
     font-style: normal;
 }
 
-p {
-    margin-inline-start: 20px;
-    text-align: left
-}
-
 .input {
-    padding: 25px;
     font-size: medium;
     font-weight: bold;
-}
-
-.textarea {
-    padding-right: 25 px;
-    padding-left: 25 px;
-    margin-inline-start: 20px;
-    text-align: left
 }
  
 #create-new-note {
     margin-bottom: 2rem;
 }
 
-.functional-buttons {
-    margin: 0 .25rem;
+div.btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
 }
 
-#save-updated-note {
-    margin: 0 .25rem;
+div.btn-col {
+    margin: .5rem 0;
 }
- 

@@ -31,19 +31,14 @@ div#root  div  div  nav {
 }
 
 h1, h2 {
-  font-family: 'PT Sans', sans-serif;
+  font-family: PT Sans, sans-serif;
 }
-
-/* div#root > div.fullscreen-container.center-align > div.not-footer.center-align > div > img.test {
-  height: 40px;
-} */
 
 #header-img {
   height: -webkit-fill-available!important;
 }
 
 .responsive-img {
-  /* height: -webkit-fill-available !important; */
   width: auto;
   padding: 1px;
 }

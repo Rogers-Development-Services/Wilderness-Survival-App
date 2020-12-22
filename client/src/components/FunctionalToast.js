@@ -1,7 +1,7 @@
 import React from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
-import { Button, Icon } from 'react-materialize';
+import { Button, Icon, Row, Col } from 'react-materialize';
 import API from "../utils/API";
 
 function FunctionalToast(props) {
@@ -41,17 +41,21 @@ function FunctionalToast(props) {
   }
 
   return (
-    <Button
-      className="functional-buttons"
-      id="save-updated-note"
-      node="button"
-      type="submit"
-      waves="light"
-      onClick={test}
-    >
-      Save
+    <Row className="btn-row">
+      <Col className="btn-col">
+        <Button
+          className="functional-buttons"
+          id="save-updated-note"
+          node="button"
+          type="submit"
+          waves="light"
+          onClick={test}
+        >
+          Save
       <Icon right>save</Icon>
-    </Button>
+        </Button>
+      </Col>
+    </Row>
   )
 }
 

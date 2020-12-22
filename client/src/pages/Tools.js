@@ -137,8 +137,7 @@ function Home() {
         <h2>Guides</h2>
 
         <Select
-          className="bob"
-          id="Select-9"
+          className="guide-selector"
           multiple={false}
           onChange={showFunction} //The change event will have the information from the option tag I want to target
           options={{

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { TextInput, Textarea, Button, Icon, Collapsible, CollapsibleItem } from 'react-materialize';
+import { TextInput, Textarea, Button, Icon, Collapsible, CollapsibleItem, Row, Col } from 'react-materialize';
 import * as localforage from "localforage";
 import { useAuth0 } from '@auth0/auth0-react';
 import API from "../utils/API";
@@ -11,6 +11,7 @@ function FunctionalNotes() {
 
     const [title, setTitle] = useState("");
     const [note, setNote] = useState("");
+    const [submitButton, setSubmitButon] = useState(true);
     const [noteIndex, setNoteIndex] = useState(-1);
     const [allNotes, setAllNotes] = useState([]);
     const [pTag, setPTag] = useState("show");
@@ -30,11 +31,17 @@ function FunctionalNotes() {
             const getUserInfo = async () => {
                 console.log(isAuthenticated);
             };
+
             if (!loading) {
                 getUserInfo();
+            };
+
+            if (title.length > 0 && note.length > 0) {
+                // console.log(title + " and " + note + " changed");
+                setSubmitButon(false);
             }
         },
-        [loading, isAuthenticated]
+        [loading, isAuthenticated, title, note]
     );
 
     // when a user logs in with their account this is the page, their saved notes will render on page load
@@ -46,6 +53,7 @@ function FunctionalNotes() {
     }
 
     const createNewNote = () => {
+
         let record = {
             userID: user.sub,
             title: title,
@@ -56,8 +64,8 @@ function FunctionalNotes() {
         API.createNote(record)
             .then(results => {
                 console.log('Note Saved Succesffuly', results)
-                setTitle(" ")
-                setNote(" ")
+                setTitle("")
+                setNote("")
                 console.log("this is a verification check.", title, note)
                 getSavedNotes()
             })
@@ -98,106 +106,134 @@ function FunctionalNotes() {
 
     return (
         <div id="user-input" className="container">
-            <h1>Notes</h1>
-            <p>Title</p>
-            <TextInput
-                icon="subject"
-                placeholder="Write you new note here"
-                onChange={e => setTitle(e.target.value)}
-            />
+            <Row>
+                <Col s={12} m={12} l={12}>
+                    <h1>Notes</h1>
+                    <TextInput
+                        s={12}
+                        m={12}
+                        l={12}
+                        icon="subject"
+                        label="Write your new note title here"
+                        onChange={e => setTitle(e.target.value)}
+                        value={title}
+                    />
 
-            <p>Message</p>
-            <Textarea
-                icon={<Icon>note</Icon>}
-                placeholder="Write you new note message here"
-                onChange={e => setNote(e.target.value)}
-            >
-            </Textarea>
+                    <Textarea
+                        s={12}
+                        m={12}
+                        l={12}
+                        icon={<Icon>note</Icon>}
+                        label="Write your new message here"
+                        onChange={e => setNote(e.target.value)}
+                        value={note}
+                    >
+                    </Textarea>
 
-            <Button
-                className="functional-buttons"
-                id="create-new-note"
-                node="button"
-                type="submit"
-                waves="light"
-                onClick={createNewNote}
-            >
-                Submit
+                    <Button
+                        className="functional-buttons"
+                        id="create-new-note"
+                        node="button"
+                        type="submit"
+                        waves="light"
+                        disabled={submitButton}
+                        onClick={createNewNote}
+                    >
+                        Submit
             <Icon right>send</Icon>
-            </Button>
+                    </Button>
+                </Col>
+            </Row>
 
-            <Collapsible
-                accordion
-                popout
-                children={
-                    [
-                        allNotes.map(data => (
-                            <CollapsibleItem
-                                expanded={false}
-                                header={data.title}
-                                node="div"
-                            >
-                                { pTag ? (<p id={data._id}>{data.note}</p>) : null}
-                                { textArea ? (
-                                    <Textarea
-                                        defaultValue={data.note}
-                                        iconClassName={"update-note"}
-                                        onChange={
-                                            (event) => {
-                                                console.log(data);
-                                                let n = allNotes;
-                                                console.log("This is the note being updated: \n", data._id);
-
-                                                const index = n.findIndex((element) => element._id === data._id);
-                                                console.log("Index of note in allNotes state being change in Text Area: \n", index);
-
-                                                n[index].note = event.target.value;
-                                                console.log("The current object of the n'th object in allNotes with a modified note: \n", n[index]);
-                                                setAllNotes(n);
-                                                setNoteIndex(index);
-                                            }
-                                        }
+            <Row>
+                <Col s={12} m={12} l={12}>
+                    <Collapsible
+                        accordion
+                        popout
+                        children={
+                            [
+                                allNotes.map(data => (
+                                    <CollapsibleItem
+                                        expanded={false}
+                                        header={data.title}
+                                        node="div"
                                     >
-                                        <Toasts
-                                            noteId={data._id}
-                                            noteTitle={data.title}
-                                            noteMessage={getThisUpdatedNote(data)} // <--- This is not passing through the new modified note, it sends the old note body
-                                        />
+                                        { pTag ? (<p id={data._id}>{data.note}</p>) : null}
+                                        { textArea ? (
+                                            <Row>
+                                                <Col s={12} m={12} l={12}>
+                                                    <Textarea
+                                                        s={12} m={12} l={12}
+                                                        defaultValue={data.note}
+                                                        iconClassName={"update-note"}
+                                                        onChange={
+                                                            (event) => {
+                                                                console.log(data);
+                                                                let n = allNotes;
+                                                                console.log("This is the note being updated: \n", data._id);
 
-                                    </Textarea>) : null}
-                                <Button
-                                    className="functional-buttons"
-                                    // id="delete-note"
-                                    id={data._id}
-                                    node="button"
-                                    type="submit"
-                                    waves="light"
-                                    onClick={handleClick}
-                                >
-                                    Delete
-                                    <Icon right>delete</Icon>
-                                </Button>
+                                                                const index = n.findIndex((element) => element._id === data._id);
+                                                                console.log("Index of note in allNotes state being change in Text Area: \n", index);
 
-                                <Button
-                                    className="functional-buttons"
-                                    id="update-note"
-                                    node="button"
-                                    type="submit"
-                                    waves="light"
-                                    onClick={displayFunction}
-                                >
-                                    Update
-                                    <Icon right>create</Icon>
-                                </Button>
+                                                                n[index].note = event.target.value;
+                                                                console.log("The current object of the n'th object in allNotes with a modified note: \n", n[index]);
+                                                                setAllNotes(n);
+                                                                setNoteIndex(index);
+                                                            }
+                                                        }
+                                                    >
 
+                                                        <Toasts
+                                                            noteId={data._id}
+                                                            noteTitle={data.title}
+                                                            noteMessage={getThisUpdatedNote(data)} // <--- This is not passing through the new modified note, it sends the old note body
+                                                        />
 
-                            </CollapsibleItem>
-                        )
-                        )
-                    ]
-                }
-            >
-            </Collapsible>
+                                                    </Textarea>
+                                                </Col>
+                                            </Row>
+                                        ) : null}
+
+                                        <Row className="btn-row">
+                                            <Col className="btn-col">
+                                                <Button
+                                                    className="functional-buttons offset-s6"
+                                                    id={data._id}
+                                                    node="button"
+                                                    type="submit"
+                                                    waves="light"
+                                                    onClick={handleClick}
+                                                >
+                                                    Delete
+                                                    <Icon right>delete</Icon>
+                                                </Button>
+                                            </Col>
+
+                                            <Col className="btn-col">
+                                                <Button
+                                                    className="functional-buttons"
+                                                    id="update-note"
+                                                    node="button"
+                                                    type="submit"
+                                                    waves="light"
+                                                    onClick={displayFunction}
+                                                >
+                                                    Update
+                                                    <Icon right>create</Icon>
+                                                </Button>
+                                            </Col>
+                                        </Row>
+
+                                    </CollapsibleItem>
+                                )
+                                )
+                            ]
+                        }
+                    >
+                    </Collapsible>
+                </Col>
+            </Row>
+
 
 
         </div>

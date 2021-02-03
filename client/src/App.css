@@ -35,7 +35,8 @@ h1, h2 {
 }
 
 #header-img {
-  height: -webkit-fill-available!important;
+  height: 4rem;
+  margin-bottom: auto;
 }
 
 .responsive-img {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { TextInput, Textarea, Button, Icon, Collapsible, CollapsibleItem, Row, Col } from 'react-materialize';
-import * as localforage from "localforage";
+// import * as localforage from "localforage";
 import { useAuth0 } from '@auth0/auth0-react';
 import API from "../utils/API";
 import "./Notes.css";
@@ -12,7 +12,6 @@ function FunctionalNotes() {
     const [title, setTitle] = useState("");
     const [note, setNote] = useState("");
     const [submitButton, setSubmitButon] = useState(true);
-    const [noteIndex, setNoteIndex] = useState(-1);
     const [allNotes, setAllNotes] = useState([]);
     const [pTag, setPTag] = useState("show");
     const [textArea, setTextArea] = useState(null);
@@ -90,19 +89,19 @@ function FunctionalNotes() {
         setPTag(null); //how do I get this to fire using the functionaltoast event
     };
 
-    function localstuff() {
-        //local forage
-        localforage.setItem("userNotes", allNotes, function (err) {
-            // console.log(localforage)
-            // console.log("data: " + allNotes)
+    // function localstuff() {
+    //     //local forage
+    //     localforage.setItem("userNotes", allNotes, function (err) {
+    //         // console.log(localforage)
+    //         // console.log("data: " + allNotes)
 
-            // if err is non-null, we got an error
-            localforage.getItem("userNotes", function (err, allNotes) {
-                // console.log(localforage)
-                // if err is non-null, we got an error. otherwise, value is the value
-            });
-        });
-    }
+    //         // if err is non-null, we got an error
+    //         localforage.getItem("userNotes", function (err, allNotes) {
+    //             // console.log(localforage)
+    //             // if err is non-null, we got an error. otherwise, value is the value
+    //         });
+    //     });
+    // }
 
     return (
         <div id="user-input" className="container">
@@ -178,7 +177,6 @@ function FunctionalNotes() {
                                                                 n[index].note = event.target.value;
                                                                 console.log("The current object of the n'th object in allNotes with a modified note: \n", n[index]);
                                                                 setAllNotes(n);
-                                                                // setNoteIndex(index);
                                                             }
                                                         }
                                                     >

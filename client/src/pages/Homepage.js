@@ -9,7 +9,7 @@ function Home() {
   return (
     <div>
       <br></br>
-      <img className="responsive-img" alt="mountain" src="/assets/mountain.jpg"></img>
+      <img className="responsive-img" alt="mountain" src="https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/mountain.jpg"></img>
 
       <h2 className="center-align homepage-title">Support for the great outdoors.</h2>
       <Wrapper>

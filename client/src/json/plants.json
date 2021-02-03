@@ -5,7 +5,7 @@
         "info": "This plant is easy to spot if you look for the annoying burrs. When those aren’t present, look for a rosette of oblong, pointed leaves with no stem that grow close to the ground in the first year.",
         "usefullness": "The leaves are edible, but older leaves are tough and taste better when cooked. Young roots and the interior of the flower stalks are also edible.",
         "caution": "Cocklebur looks a lot like Burdock, but its leaves must be cooked to eliminate toxic components.",
-        "image": "./assets/plantPictures/Burdock.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Burdock.jpg"
     },
     {
         "id": 1,
@@ -13,7 +13,7 @@
         "info": "Look for cup-shaped, purple-spotted orange flowers on a 1 to 3-foot stalk. The stem has long, narrow leaves in whorls. This plant is becoming less common.",
         "usefullness": "You can eat the flowers and seeds of this edible wild plant.",
         "caution": "Not all lily varieties are edible.",
-        "image": "./assets/plantPictures/Wood-Lily.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Wood-Lily.jpg"
     },
     {
         "id": 2,
@@ -21,7 +21,7 @@
         "info": "There are hundreds of bamboo species, and 110 of them are edible. Use a guide to determine which types grow near you.",
         "usefullness": "The shoots are the edible portion of the plant.",
         "caution": "Make sure you know which bamboo type you are eating. Some contain a toxic amount of cyanogenic glycosides. Shoots should be boiled before consuming.",
-        "image": "./assets/plantPictures/bamboo.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/bamboo.jpg"
     },
     {
         "id": 3,
@@ -29,7 +29,7 @@
         "info": "Blueberries grow multiple thornless canes directly out of the soil in sunny areas close to water. They only grow wild in the northern and eastern areas of the U.S.",
         "usefullness": "The freshly picked berries are delicious on their own or added to desserts.",
         "caution": "Plenty of poisonous berries look like blueberries, so make sure you are identifying the plant correctly.",
-        "image": "./assets/plantPictures/blueberries.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Blackberries.jpg"
     },
     {
         "id": 4,
@@ -37,7 +37,7 @@
         "info": "Look for a many-branched cactus with broad, flat pads. They bloom from April to June and can be found wild from Canada to Argentina.",
         "usefullness": "You can eat the flesh of this edible wild plant, but you have to get past the spikes first. You can also eat the fruit.",
         "caution": "Other cacti may not be edible. Be careful to remove the spines and prickly parts before consuming the flesh.",
-        "image": "./assets/plantPictures/cactus.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/cactus.jpg"
     },
     {
         "id": 5,
@@ -45,7 +45,7 @@
         "info": "Clover is in the pea family, and it has a bit of a pea-like taste. Look for pale green leaves with a distinct chevron pattern.",
         "usefullness": "Anything and everything, but you should cook older leaves.",
         "caution": "Red clover variety is edible but contains high amounts of alkaloids in the fall. Not everyone tolerates clover as an edible. Pregnant women shouldn’t eat it.",
-        "image": "./assets/plantPictures/red-clover-flower.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/red-clover-flower.jpg"
     },
     {
         "id": 6,
@@ -53,7 +53,7 @@
         "info": "Also known as seaweed or sea vegetables, kelp has a ton of fiber, is low in calories and is dense in nutrients. All seaweed is edible, but some taste much better than others.",
         "usefullness": "You can eat the entire kelp plant.",
         "caution": "Blue-green algae found in freshwater is poisonous. Also, be aware that kelp can contain lead and copper concentrate when it grows in industrial areas. Don’t eat kelp washed up on shore because it can be rotting.",
-        "image": "./assets/plantPictures/seaweed.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/seaweed.jpg"
     },
     {
         "id": 7,
@@ -61,7 +61,7 @@
         "info": "This North American native has been eaten and used as medicine for hundreds of years. Look for the daisy-like flower that features petals popping out of a prickly center cone.",
         "usefullness": "You can eat the leaves and petals of this edible wild plant.",
         "caution": "Some flower varieties resemble yellow coneflowers which are not edible.",
-        "image": "./assets/plantPictures/purple-coneflower.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/purple-coneflower.jpg"
     },
     {
         "id": 8,
@@ -69,7 +69,7 @@
         "info": "People consider this a weed, and you’ll find it in neglected areas like parking strips, roadsides, and overgrown lawns. Look for long, pointed leaves with a wavy edge growing out of a central taproot.",
         "usefullness": "You can eat the leaves, but note that the young ones taste best.",
         "caution": "Don’t overeat this green plant as it contains oxalic acid. Make sure you aren’t eating a plant that has been poisoned.",
-        "image": "./assets/plantPictures/Curly-Dock.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Curly-Dock.jpg"
     },
     {
         "id": 9,
@@ -77,7 +77,7 @@
         "info": "Dandelions are an underappreciated plant that far too many people are eager to eliminate. They are nutritious, easy to find and taste wonderful.",
         "usefullness": "The whole plant is edible and contains many macronutrients, including plenty of calcium.",
         "caution": "Because people consider this a weed, make sure you are foraging from an area that hasn’t been treated with pesticides.",
-        "image": "./assets/plantPictures/dandelion.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/dandelion.jpg"
     },
     {
         "id": 10,
@@ -85,7 +85,7 @@
         "info": "The lobster mushroom is an orange-red capped mushroom covered in bumps. Inside, it’s white, and it often twists itself into odd shapes as it matures. They prefer old-growth forests.",
         "usefullness": "Whole mushroom is edible.",
         "caution": "Mushroom identification is not for beginners! Many mushrooms have poisonous doppelgängers. Wild mushroom foraging requires careful identification, and you shouldn’t dig in until a professional has given you the go-ahead.",
-        "image": "./assets/plantPictures/Lobster-mushroom.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Lobster-mushroom.jpg"
     },
     {
         "id": 11,
@@ -93,7 +93,7 @@
         "info": "There are two types of hazelnuts native to North America, and some European types have naturalized in the U.S. Nuts are ready in early August and into the fall. Look for multi-stemmed shrubs that grow about 10-feet tall (though they can get up to 25-feet with the right conditions) with husk-covered brown nuts.",
         "usefullness": "Nuts from this tree are edible.",
         "caution": "Some states limit or prohibit foraging tree nuts, so be sure to check your local laws.",
-        "image": "./assets/plantPictures/hazelnut.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/hazelnut.jpg"
     },
     {
         "id": 12,
@@ -101,7 +101,7 @@
         "info": "Wild roses have pink flowers with five petals. When the fruits form, they are round or pear-shaped, and orange or red in color. They grow everywhere from wooded areas to roadsides.",
         "usefullness": "Petals, rosebuds and young shoots and leaves.",
         "caution": "Rasberry and blackberry plants look like wild roses. That’s because they are all in the rose family.",
-        "image": "./assets/plantPictures/rose-hip.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/rose-hip.jpg"
     },
     {
         "id": 13,
@@ -109,7 +109,7 @@
         "info": "Yaupon is the only native tea plant in North America and, until recently, many landowners were trying to eradicate it as an invasive species (which it isn’t). A cup of tea from this plant contains as much caffeine as your average cup of coffee.",
         "usefullness": "Dry or boil the leaves to make tea.",
         "caution": "Don’t eat the berries because they can make you vomit.",
-        "image": "./assets/plantPictures/Yaupon.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Yaupon.jpg"
     },
     {
         "id": 14,
@@ -117,7 +117,7 @@
         "info": "If you are lucky enough to live in an area where cloudberry grows, then you must give it a try. There’s nothing like a fresh cloudberry. Look for a low-growing plant with three leaves per plant in northern boreal regions. The flowers are small and white, and each plant grows one light red berry.",
         "usefullness": "Fruit and flowers of this plant are edible. If you can find it, I highly recommend cloudberry jelly. It’s amazing.",
         "caution": "Many berries look alike. Carefully identify the plant before consuming its berries.",
-        "image": "./assets/plantPictures/cloudberry.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/cloudberry.jpg"
     },
     {
         "id": 15,
@@ -125,7 +125,7 @@
         "info": "Also known as the bog myrtle, this plant has several medicinal benefits, including as a treatment for acne, stomach ache, and liver issues. You can also keep the leaves around as a potent insect repellent. This plant grows as a shrub near bogs, with flat, oblong leaves.",
         "usefullness": "Its fruit and leaves are edible and make a tasty tea.",
         "caution": "Pregnant women shouldn’t eat this plant.",
-        "image": "./assets/plantPictures/Sweet-gale.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Sweet-gale.jpg"
     },
     {
         "id": 16,
@@ -133,7 +133,7 @@
         "info": "This pretty plant is part of the evening primrose family. Look for the tall, purple blossoms growing from long, pointed, alternate leaves.",
         "usefullness": "Flowers are edible raw or cooked. Leaves from young plants can be eaten, as well.",
         "caution": "Watch your quantities when eating fireweed. Too much can have a laxative effect.",
-        "image": "./assets/plantPictures/fireweed.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/fireweed.jpg"
     },
     {
         "id": 17,
@@ -141,7 +141,7 @@
         "info": "People consider this plant a weed so you can do your part to help keep it in check in the wild by eating it, which is fortunate because it’s delicious. It has scalloped leaves in a basal rosette, but the surest way to tell that you’ve found the right plant is to crush the leaves. It will smell like garlic.",
         "usefullness": "The entire plant is edible.",
         "caution": "Multiple doppelgängers exist including ground ivy, black mustard, and fringecup. You’ll know it’s garlic mustard if it smells pungent and a lot like garlic.",
-        "image": "./assets/plantPictures/garlic-mustard.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/garlic-mustard.jpg"
     },
     {
         "id": 18,
@@ -149,7 +149,7 @@
         "info": "Fiddleheads are ferns before they have fully opened. You’ll find them emerging from the ground in spring from wet, fertile soil.",
         "usefullness": "Furled-up fern portion of the plant.",
         "caution": "Remember that ostrich fern fiddleheads are the edible kind. Some ferns are poisonous, so identification is crucial.",
-        "image": "./assets/plantPictures/Fiddleheads.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Fiddleheads.jpg"
     },
     {
         "id": 19,
@@ -157,7 +157,7 @@
         "info": "Wood sorrel gets confused with clover, and it’s even known as American shamrock, even though it isn’t a shamrock at all. Look for three joined heart-shaped leaves. Each “heart” will have a crease down the middle. When it is blooming, you can spot it by the pink, white and lavender flowers.",
         "usefullness": "Leaves and flowers are edible raw, but the flavor is milder when cooked, and toxic compounds are removed via the cooking process.",
         "caution": "Watch out, this edible wild plant, like other sorrel varieties, contains oxalic acid. This component gives it its acidic taste but is also toxic in large quantities. Not safe for pets to consume.",
-        "image": "./assets/plantPictures/wood-sorrel.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/wood-sorrel.jpg"
     },
     {
         "id": 20,
@@ -165,7 +165,7 @@
         "info": "Also known as ramps or ramsons. If you can find these, you’ve hit the wild edible plant jackpot, because they are delicious. In the spring, look for wild leeks in the moist soil, usually under trees. They grow in 2 or 3 broad, smooth leaves out of a white bulb. Don’t harvest the bulb, because ramp populations are dwindling, and it takes five years or more for a ramp plant to mature.",
         "usefullness": "You can eat the bulbs and leaves, but we recommend leaving the bulb in the ground to produce a new plant.",
         "caution": "Lily of the Valley is a poisonous lookalike, so watch out. They only grow in the eastern and mid-western U.S.",
-        "image": "./assets/plantPictures/Wild-leeks.jpeg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Wild-leeks.jpg"
     },
     {
         "id": 21,
@@ -173,7 +173,7 @@
         "info": "You’ll find this European-native growing wild in lawns and cool, shady areas where the soil is moist.",
         "usefullness": "You can eat the leaves of this plant raw, but they taste better if cooked.",
         "caution": "Don’t eat too much of this plant at one time.",
-        "image": "./assets/plantPictures/Chickweed.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Chickweed.jpg"
     },
     {
         "id": 22,
@@ -181,7 +181,7 @@
         "info": "This plant is packed with nutrients, and you can also use it medicinally to treat diarrhea and digestive issues. Look for oval or egg-shaped leaves growing in a rosette. When you break the stems, you’ll find strings that look like celery.",
         "usefullness": "Leaves are edible.",
         "caution": "You can mistake young lily plants for broadleaf plantain.",
-        "image": "./assets/plantPictures/Broadleaf-plantain.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Broadleaf-plantain.jpg"
     },
     {
         "id": 23,
@@ -189,7 +189,7 @@
         "info": "This common “weed” grows pretty much everywhere humans live. Look for diamond-shaped leaves coated with a flour-like powder on the underside.",
         "usefullness": "All parts are edible.",
         "caution": "Be careful not to overeat this plant. It shouldn’t be consumed as a daily staple since the compounds in lamb’s quarter can hinder the absorption of certain nutrients.",
-        "image": "./assets/plantPictures/Lambs-quarters.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Lambs-quarters.jpg"
     },
     {
         "id": 24,
@@ -197,7 +197,7 @@
         "info": "While the blossom looks similar to dandelion, coltsfoot’s leaves have a heart-shaped, waxy appearance.",
         "usefullness": "Flowers, stems, and leaves.",
         "caution": "Pregnant women should not consume this plant, and there may be small amounts of toxins in the leaves, so don’t overeat.",
-        "image": "./assets/plantPictures/coltsfoot.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/coltsfoot.jpg"
     },
     {
         "id": 25,
@@ -205,7 +205,7 @@
         "info": "Also known as a sunchoke, this wild plant is in the sunflower family. You can spot it by its bright yellow flower and oval leaves growing in large colonies.",
         "usefullness": "The tuberous root can be eaten raw or cooked.",
         "caution": "You might confuse this plant with a perennial sunflower. Young sunchokes can cause gas.",
-        "image": "./assets/plantPictures/helianthus-tuberosus.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/helianthus-tuberosus.jpg"
     },
     {
         "id": 26,
@@ -213,7 +213,7 @@
         "info": "This member of the lily family grows broad, fleshy leaves with yellow flowers in the spring. In the summer, the blossoms turn into dark blue berries. Look for them growing in dense clusters in the forest.",
         "usefullness": "You can eat the leaves of this plant, but the rest of it is poisonous.",
         "caution": "This plant is part of the lily family, and many plants in this family are poisonous. The berries, roots, and flowers of this plant are toxic.",
-        "image": "./assets/plantPictures/Bluebead.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Bluebead.jpg"
     },
     {
         "id": 27,
@@ -221,7 +221,7 @@
         "info": "Look for this biennial growing in dry, sunny locations. It’s easy to identify by its tall, erect stem with yellow blossoms, but the large, velvety leaves are easy to spot as well.",
         "usefullness": "You can eat the flowers and leaves.",
         "caution": "Some people are allergic to this plant, particularly the little hairs that grow on the leaves.",
-        "image": "./assets/plantPictures/mulleins.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/mulleins.jpg"
     },
     {
         "id": 28,
@@ -229,7 +229,7 @@
         "info": "This plant is hardy and grows where others might not. The white flower will sometimes have a single purple spot in the center. The leaves look like a domestic carrot.",
         "usefullness": "Leaves and roots can be eaten.",
         "caution": "Watch out, this plant looks like poison hemlock and giant hogweed.",
-        "image": "./assets/plantPictures/queen-annes-lace.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/queen-annes-lace.jpg"
     },
     {
         "id": 29,
@@ -237,7 +237,7 @@
         "info": "Also known as bulrushes, not only can you eat this plant, but you can use it to make baskets or mats. The head can be dipped in fat and used as a candle. Look for a brown, cigar-like head on a tall stalk.",
         "usefullness": "Inner part of the plant, roots, flower spikes, and pollen can be consumed.",
         "caution": "Don’t mistake this for the blue flag iris (Iris versicolor). They grow in similar areas.",
-        "image": "./assets/plantPictures/cattail.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/cattail.jpg"
     },
     {
         "id": 30,
@@ -245,7 +245,7 @@
         "info": "Morels aren’t farmed, you can only find them in the wild, and they are worth the work. They are oblong or bulbous, and they can vary between light brown to dark gray. Make sure to verify that you have identified the right mushroom by talking to an expert before consuming.",
         "usefullness": "Entire morel is edible.",
         "caution": "False morels are toxic and cause serious illness if consumed. In some cases, ingestion may be fatal, so talk to an expert before eating.",
-        "image": "./assets/plantPictures/Morels.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Morels.jpg"
     },
     {
         "id": 31,
@@ -253,7 +253,7 @@
         "info": "Self-heal is the bane of lawn owners, but an excellent plant for foragers. It grows in clusters with ovate leaves and small, purple, tubular flowers.",
         "usefullness": "Leaves are edible.",
         "caution": "Make sure not to mistake this for ground ivy.",
-        "image": "./assets/plantPictures/Self-heal.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Self-heal.jpg"
     },
     {
         "id": 32,
@@ -261,7 +261,7 @@
         "info": "You might have heard this plant called pigweed and you’ll often find it growing wild in fields or abandoned gardens. The stem is the easiest way to identify this plant. It is erect, and the upper part is covered in dense, short hairs that have a reddish tint.",
         "usefullness": "Both wild and domesticated versions of this plant are edible. You can eat the whole plant, though some parts are best cooked before being eaten.",
         "caution": "Be sure to pick from areas that haven’t been poisoned.",
-        "image": "./assets/plantPictures/Amaranth.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Amaranth.jpg"
     },
     {
         "id": 33,
@@ -269,7 +269,7 @@
         "info": "This salt-loving plant is sought after by chefs for its savory taste. It grows primarily near the coasts, but also inland near saline water. It has opposite shooting branches and a succulent-like leaf.",
         "usefullness": "Top parts of the stems can be consumed raw or cooked.",
         "caution": "This plant is an integral part of the saltmarsh environment, so be sure that you are sourcing from an area that hasn’t been over-harvested.",
-        "image": "./assets/plantPictures/Pickleweed.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Pickleweed.jpg"
     },
     {
         "id": 34,
@@ -277,7 +277,7 @@
         "info": "Yarrow has feathery, lance-shaped leaves that are smaller as they grow up the stem. Flowers bloom from spring to autumn and feature round-topped clusters of tiny, white blossoms. It’s an adaptable plant that grows in a variety of places.",
         "usefullness": "The leaves of this plant are edible.",
         "caution": "Poison hemlock looks a lot like yarrow, so be sure to identify the plant correctly.",
-        "image": "./assets/plantPictures/yarrow.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/yarrow.jpg"
     },
     {
         "id": 35,
@@ -285,7 +285,7 @@
         "info": "Catnip grows almost anywhere. Look for the fuzzy, arrow-shaped leaf with rounded teeth on the edges. It smells slightly minty (it’s a member of the mint family).",
         "usefullness": "Eat the leaves and young flowers.",
         "caution": "Catnip can look like wood nettle, but it lacks the fuzzy, soft look. Wood nettle will also give you a bite if you touch it.",
-        "image": "./assets/plantPictures/catnip.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/catnip.jpg"
     },
     {
         "id": 36,
@@ -293,7 +293,7 @@
         "info": "Finding the golden, wavy chanterelle mushroom is like finding a pot of forest gold. They are delicious.",
         "usefullness": "You can eat the whole mushroom.",
         "caution": "Proper identification is vital. Many mushrooms look the same, but some are extremely poisonous. Chanterelle lookalikes include Jack o’ lanterns and false chanterelles. Always consult a professional until you are certain of what you are foraging.",
-        "image": "./assets/plantPictures/Chanterelles.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Chanterelles.jpg"
     },
     {
         "id": 37,
@@ -301,7 +301,7 @@
         "info": "A member of the honeysuckle family, elderberry is grown as an ornamental in some areas. It’s native to North America east of the Rocky Mountains. Look for compound leaves on a medium-sized shrub. When fruiting, look for black berries in umbrella-shaped clusters.",
         "usefullness": "The flowers and fruits are edible.",
         "caution": "Don’t mistake this for water hemlock.",
-        "image": "./assets/plantPictures/elderberry.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/elderberry.jpg"
     },
     {
         "id": 38,
@@ -309,7 +309,7 @@
         "info": "It’s too bad that stinging nettles have such a negative reputation because they are nutritious and tasty. Look for the distinctive arrow-shaped leaves with teeth on the edges. You also know you’ve found it when you feel the bite.",
         "usefullness": "You can eat the leaves, stems, and roots.",
         "caution": "Wear gloves and long sleeves when picking this plant. Best when they are young. You must cook them to get rid of the sting.",
-        "image": "./assets/plantPictures/Stinging-Nettle.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Stinging-Nettle.jpg"
     },
     {
         "id": 39,
@@ -317,7 +317,7 @@
         "info": "As the name implies, watercress grows in dense mats in shallow running water. It is full of vitamins and minerals.",
         "usefullness": "The leaves, stems, and flowers are edible.",
         "caution": "Be sure you are picking from safe water sources and always wash before eating.",
-        "image": "./assets/plantPictures/Watercress.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Watercress.jpg"
     },
     {
         "id": 40,
@@ -325,7 +325,7 @@
         "info": "This grass-like plant can be identified by the onion-like scent. It grows small six-petaled flowers with a small white bulb underground. It likes rich soil.",
         "usefullness": "The entire plant is edible.",
         "caution": "Wild onions are part of the lily family, which contains toxic varieties. Be sure to smell the plant, because that will tell you if it’s the edible type.",
-        "image": "./assets/plantPictures/Wild-onion.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Wild-onion.jpg"
     },
     {
         "id": 41,
@@ -333,7 +333,7 @@
         "info": "Milkweed is the only source of food for Monarch Butterfly caterpillars, but it also makes a good snack for humans. Because it is bitter and contains toxins, it should be a last resort for nutrition.",
         "usefullness": "Leaves, flower buds, and pods.",
         "caution": "The sap from this plant can be toxic to humans and animals in large quantities.",
-        "image": "./assets/plantPictures/Milkweed.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Milkweed.jpg"
     },
     {
         "id": 42,
@@ -341,7 +341,7 @@
         "info": "True blackberries grow across the U.S., and they are a delicious treat to eat right off the vine. Himalayan blackberries, which are part of the same family, grow pretty much everywhere on the west coast, whether you want them to or not. They look like trailing blackberry bushes, though the fruit isn’t nearly as sweet as a real blackberry.",
         "usefullness": "Leaves, shoots, and berries are edible.",
         "caution": "Forage away from roads to avoid pollutants.",
-        "image": "./assets/plantPictures/Blackberries.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Blackberries.jpg"
     },
     {
         "id": 43,
@@ -349,7 +349,7 @@
         "info": "There are over 100 types of gooseberries in North America. In the early fall, these cheerful berries start popping up in cooler climates. The plants are covered in thorns and have maple-like leaves with scalloped edges. The berries can be anywhere from pale gold to dark red.",
         "usefullness": "Berries are edible.",
         "caution": "Some gooseberries are covered in spikes. Boil and mash the spiky kind before forcing it through a strainer.",
-        "image": "./assets/plantPictures/Gooseberry.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Gooseberry.jpg"
     },
     {
         "id": 44,
@@ -357,7 +357,7 @@
         "info": "Sheep sorrel is in the buckwheat family. It has arrow-shaped leaves with red stems covered in tiny flowers in the spring.",
         "usefullness": "Leaves and seeds.",
         "caution": "Only eat this edible wild plant raw in small quantities.",
-        "image": "./assets/plantPictures/Sheep-Sorrel.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Sheep-Sorrel.jpg"
     },
     {
         "id": 45,
@@ -365,7 +365,7 @@
         "info": "This plant got its name because miners would eat it to stave off scurvy. It’s easy to identify by the disk-like leaf with the stem passing through the middle.",
         "usefullness": "Flower, leaves, and roots are edible.",
         "caution": "If you eat too much of this plant, it can have a laxative effect.",
-        "image": "./assets/plantPictures/Claytonia.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Claytonia.jpg"
     },
     {
         "id": 46,
@@ -373,7 +373,7 @@
         "info": "This shade-loving edible wild plant has heart-shaped leaves that grow low to the ground. It looks similar to coltsfoot.",
         "usefullness": "Snack on the rhizomes and leaves.",
         "caution": "Don’t overeat this plant because it contains an acid that can be a diuretic.",
-        "image": "./assets/plantPictures/Wild-Ginger.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Wild-Ginger.jpg"
     },
     {
         "id": 47,
@@ -381,7 +381,7 @@
         "info": "You’ve had cultivated strawberries, but a wild strawberry has a flavor all its own. They look like the ones growing in your garden, but smaller.",
         "usefullness": "The berries are edible.",
         "caution": "Can be confused with mock or false strawberries.",
-        "image": "./assets/plantPictures/Wild-Strawberries.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Wild-Strawberries.jpg"
     },
     {
         "id": 48,
@@ -389,7 +389,7 @@
         "info": "You’ll find this succulent weed growing all over cities and suburbs, where it likes to grow in the cracks of sidewalks and under trees. It’s nutritious, and you can eat it raw or cooked.",
         "usefullness": "Flowers, leaves, and stems are edible.",
         "caution": "It can look like spurge, which is poisonous (and a terrible weed). If you break it open and there is white liquid, don’t eat it.",
-        "image": "./assets/plantPictures/Purslane.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Purslane.jpg"
     },
     {
         "id": 49,
@@ -397,7 +397,7 @@
         "info": "You have probably seen them lying around on the ground in parks and forests, but did you know acorns are edible? The little nut provides a healthy dose of starch, which is usually difficult to forage. You can crush the nuts to make a flour substitute.",
         "usefullness": "You can eat the nut, though you should crush, roast or leach them first.",
         "caution": "Look for a hole in the shell, which means the dreaded oak weevil has invaded the nut. Eating these raw can cause constipation.",
-        "image": "./assets/plantPictures/Acorns.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Acorns.jpg"
     },
     {
         "id": 50,
@@ -405,7 +405,7 @@
         "info": "Make the best lemonade you've ever tasted by adding bruised lemon balm leaves to the drink. This plant also makes an outstanding topical agent for cold sores, and it is often used as a calming tea to fight insomnia.",
         "usefullness": "Germany's Commission E (their version of our FDA) lists lemon balm as a more effective remedy for cold sores than the leading prescription medicine.",
         "caution": "Crush the fresh leaves and bind them over the sores, or use a cream containing a high concentration of lemon balm.",
-        "image": "./assets/plantPictures/LemonBalm.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/LemonBalm.jpg"
     },
     {
         "id": 51,
@@ -413,7 +413,7 @@
         "info": "Typically employed as a fragrance today, lavender has been used since ancient times to repel insects; to treat bug bites, burns, and skin disorders; to relieve itching and rashes; and to reduce swelling.",
         "usefullness": "Apply the crushed fresh leaves to the affected area, or fill a jar with dried leaves and cover them with olive oil. Let this soak for 6-8 weeks, and decant the oil as a lavender-infused medicinal oil for skin problems.",
         "caution": "Lavender is not to be taken internally by pregnant and nursing women or small children.",
-        "image": "./assets/plantPictures/Lavender.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Lavender.jpg"
     },
     {
         "id": 52,
@@ -421,7 +421,7 @@
         "info": "Cooked, mashed roots of comfrey used as a topical treatment is great for arthritis, bruises, burns, and sprains. Just don't eat it: Recent research shows that it is damaging to the liver if consumed in quantity. Due to variations in pyrrolizidine alkaloid content, root preparations are unsafe for internal use unless they are guaranteed pyrrolizidine-free.",
         "usefullness": "To make the topical treatment, simmer 3.5 ounces (100 grams) of dried or fresh, peeled root in 1 pint (500 ml) of water for ten to fifteen minutes. Soak cloth or gauze in this liquid, then apply it to the skin for at least 15 minutes. Fresh leaves can be ground up lightly and applied directly to the skin. Alternatively, creams or ointments made from root or leaf can be applied. All topical preparations should be applied several times per day.",
         "caution": "Although comfrey root tea has been used traditionally, the danger of its pyrrolizidine alkaloids is significant. Therefore, comfrey root and young leaf preparations should not be taken internally.",
-        "image": "./assets/plantPictures/Comfrey.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Comfrey.jpg"
     },
     {
         "id": 53,
@@ -429,7 +429,7 @@
         "info": "This humble weed is common in lawns and fields across America and around the world. Plantain is a small plant with parallel veins and a rubbery feel. The green leaves can be crushed into a paste and applied to venomous stings and bites with great effect.",
         "usefullness": "Though not strong enough to tackle snake bites, plantain can help to neutralize the venom of bees, wasps, scorpions, and other pain inducing creatures.",
         "caution": "Just keep the paste of plantain leaf on the wound, and replace as it dries out. Relief should be swift.",
-        "image": "./assets/plantPictures/Plantain.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Plantain.jpg"
     },
     {
         "id": 54,
@@ -437,7 +437,7 @@
         "info": "To prepare willow as a medicine, pick one that you can easily identify. Weeping willow is a common tree throughout North America. Though not native, it prospers in any moist area and can be identified by its droopy twigs and branches. The leaves and bark have been used as medicine for centuries.",
         "usefullness": "Boil a palmful of green leaves in one cup of water for 10 minutes to create an astringent. Soak a clean cloth in this brew and apply it directly to boils, abscesses, carbuncles, and ulcers when no other medical treatment is available. Soak the bark scrapings off several twigs and soak them in one cup of hot water for 10 minutes for a bitter tasting anti-diarrhea drink. Take a few sips every 2 hours, and continue until the symptoms subside.",
         "caution": "Black willow bark contains salicin, a predecessor to aspirin. It was once common for people to chew directly on the shaved bark for pain and fever relief.",
-        "image": "./assets/plantPictures/Willow.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Willow.jpg"
     },
     {
         "id": 55,
@@ -445,7 +445,7 @@
         "info": "The green husks of walnuts have many uses in folk medicine. One tablespoon of the dried green husk material in one cup of hot water will make a horrible tasting, parasite expelling tea.",
         "usefullness": "Sip on one cup over the course of a day and repeat this for seven days.",
         "caution": "Fresh walnut husks have been used as a substitute for iodine tincture as an antiseptic on small cuts and wounds (they even stain the skin like iodine).",
-        "image": "./assets/plantPictures/BlackWalnut.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/BlackWalnut.jpg"
     },
     {
         "id": 56,
@@ -453,7 +453,7 @@
         "info": "If you come into contact with poison ivy, oak, or sumac, locate some jewelweed (Impatiens capensis), crush the juicy, purplish stalk of into a slimy paste, and scrub it all over the affected skin.",
         "usefullness": "After 2 minutes of contact, wash off the jewelweed mush with clean water. If you're able to do this within 30 to 45 minutes of ivy exposure, you should have little to no poison ivy reaction.",
         "caution": "If it took more time to find the jewelweed, you can still experience some relief from using it as a wash. If you already have blisters and itch, then you got into the ivy yesterday. Jewelweed will cool the itch.",
-        "image": "./assets/plantPictures/Jewelweed.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Jewelweed.jpg"
     },
     {
         "id": 57,
@@ -461,6 +461,6 @@
         "info": "Birch bark, particularly sweet birch bark, can be an effective analgesic if it has enough salicylates. Bark scraped from sweet birch (Betula lenta) twigs can be steeped to make a delicious tea.",
         "usefullness": "Higher than commonly recommended doses of this herb can cause upset stomach, nausea, or tinnitus (ringing in the ears). If any of these reactions develop, stop taking it. A suggested dosage for salicin is 6 to 120 mg per day.",
         "caution": "However, newer studies suggest a higher salicin intake of 240 mg per day may be more effective for treating pain. Prepare sweet birch bark tea by adding ¼ to ½ teaspoon (1 to 2 grams) of bark to about 7 ounces (200 ml) of water and then boiling for ten minutes. The tea can be taken up to five times per day.",
-        "image": "./assets/plantPictures/Birch.jpg"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/plant_images/Birch.jpg"
     }
 ]

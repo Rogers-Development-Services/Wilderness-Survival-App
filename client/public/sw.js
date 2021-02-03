@@ -1,17 +1,2 @@
-importScripts("workbox-v6.0.2/workbox-sw.js")
-
-workbox.setConfig({modulePathPrefix: 'workbox-v6.0.2'})
-
-const precacheManifest = [];
-
-workbox.precaching.supressWarnings();
-workbox.precaching.precacheAndRoute(precacheManifest);
-
-const dataCacheConfig = {
-    cacheName: 'app-precache'
-};
-
-workbox.routing.registerRoute(/.Tools/, workbox.strategies.cacheFirst(dataCacheConfig), 'GET');
-workbox.routing.registerRoute(/.Location/, workbox.strategies.cacheFirst(dataCacheConfig), 'GET');
-workbox.routing.registerRoute(/.Notes/, workbox.strategies.cacheFirst(dataCacheConfig), 'GET');
-workbox.routing.registerRoute(/.Checklist/, workbox.strategies.cacheFirst(dataCacheConfig), 'GET');
+if(!self.define){const e=e=>{"require"!==e&&(e+=".js");let s=Promise.resolve();return i[e]||(s=new Promise((async s=>{if("document"in self){const i=document.createElement("script");i.src=e,document.head.appendChild(i),i.onload=s}else importScripts(e),s()}))),s.then((()=>{if(!i[e])throw new Error(`Module ${e} didn’t register its module`);return i[e]}))},s=(s,i)=>{Promise.all(s.map(e)).then((e=>i(1===e.length?e[0]:e)))},i={require:Promise.resolve(s)};self.define=(s,c,n)=>{i[s]||(i[s]=Promise.resolve().then((()=>{let i={};const r={uri:location.origin+s.slice(1)};return Promise.all(c.map((s=>{switch(s){case"exports":return i;case"module":return r;default:return e(s)}}))).then((e=>{const s=n(...e);return i.default||(i.default=s),i}))})))}}define("./sw.js",["./workbox-59f4d326"],(function(e){"use strict";self.addEventListener("message",(e=>{e.data&&"SKIP_WAITING"===e.data.type&&self.skipWaiting()})),e.precacheAndRoute([{url:"assets/images/icons/icon-128x128.png",revision:"ca354af50d9e94dfcbb995897060ccd9"},{url:"assets/images/icons/icon-144x144.png",revision:"1676e271f4aa064de62e0ce04e57d0c5"},{url:"assets/images/icons/icon-152x152.png",revision:"aa3a01e30695f6507205cccc261f3728"},{url:"assets/images/icons/icon-192x192.png",revision:"0087c4941343048bd7809d1b6bd292ea"},{url:"assets/images/icons/icon-384x384.png",revision:"4652410b102b8d35187f3f2ff4a47f5a"},{url:"assets/images/icons/icon-512x512.png",revision:"02d74ff42850d2503e9488b98cf1076a"},{url:"assets/images/icons/icon-72x72.png",revision:"a5c123a2be718d5f0f25e40b8d94c6f1"},{url:"assets/images/icons/icon-96x96.png",revision:"19d9251365c1fcebad36a76ba1306bd0"},{url:"checklist.json",revision:"6637e4e26a7231e06c906acb39e5fa19"},{url:"favicon.ico",revision:"faebbcfe137d06c38458ed4914dca82a"},{url:"index.html",revision:"6c8710d8a01c34e1c1d3b5cc35208df1"},{url:"manifest.json",revision:"f9122d2cdd44edff1c8d0c4d170f46af"}],{})}));
+//# sourceMappingURL=sw.js.map

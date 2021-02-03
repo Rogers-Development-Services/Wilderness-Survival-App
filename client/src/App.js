@@ -44,7 +44,7 @@ function App() {
           <Navbar
             alignLinks="right"
             brand={<a className="brand-logo" href="/">
-                    <img id="header-img" className="responsive-img test" src="/assets/Nomad-home-button.jpg" alt="brand-home-button"/>
+                    <img id="header-img" className="responsive-img" src="https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/Nomad-home-button.jpg" alt="brand-home-button"/>
                   </a>}
             id="mobile-nav"
             menuIcon={<Icon>menu</Icon>}

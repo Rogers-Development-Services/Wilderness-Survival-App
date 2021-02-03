@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'PT Sans', sans-serif;
-  background-image: url(./nomad.jpg);
+  background-image: url(https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/nomad.jpg);
   background-size:     cover;               
   background-repeat:   no-repeat;
   background-position: center; 

@@ -3,162 +3,162 @@
         "id": 0,
         "name": "White-Tailed Deer",
         "description": "The white-tailed deer, also known as the whitetail or Virginia deer, is a medium-sized deer native to North America, Central America, Ecuador, and South America as far south as Peru and Bolivia.",
-        "image": "./assets/images/whiteTailedDeer/image.jpg",
-        "footprint": "./assets/images/whiteTailedDeer/footprint.png",
-        "map": "./assets/images/whiteTailedDeer/map.png",
-        "status": "./assets/images/whiteTailedDeer/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/whiteTailedDeer/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/whiteTailedDeer/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/whiteTailedDeer/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/whiteTailedDeer/status.jpg"
     },
     {
         "id": 1,
         "name": "Moose",
         "description": "The moose or elk, Alces alces, is a member of the New World deer subfamily and is the largest and heaviest extant species in the deer family. Most adult male moose have distinctive broad, palmate antlers; most other members of the deer family have antlers with a dendritic configuration.",
-        "image": "./assets/images/Moose/image.jpg",
-        "footprint": "./assets/images/Moose/footprint.png",
-        "map": "./assets/images/Moose/map.png",
-        "status": "./assets/images/Moose/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/moose/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/moose/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/moose/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/moose/status.jpg"
     },
     {
         "id": 2,
         "name": "Cayote",
         "description": "The coyote is a species of canine native to North America. It is smaller than its close relative, the wolf, and slightly smaller than the closely related eastern wolf and red wolf. It fills much of the same ecological niche as the golden jackal does in Eurasia.",
-        "image": "./assets/images/cayote/image.jpg",
-        "footprint": "./assets/images/cayote/footprint.png",
-        "map": "./assets/images/cayote/map.png",
-        "status": "./assets/images/cayote/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/cayote/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/cayote/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/cayote/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/cayote/status.jpg"
     },
     {
         "id": 3,
         "name": "Red Fox",
         "description": "The red fox is the largest of the true foxes and one of the most widely distributed members of the order Carnivora, being present across the entire Northern Hemisphere including most of North America, Europe and Asia, plus parts of North Africa. It is listed as least concern by the IUCN.",
-        "image": "./assets/images/redfox/image.jpg",
-        "footprint": "./assets/images/redfox/footprint.png",
-        "map": "./assets/images/redfox/map.png",
-        "status": "./assets/images/redfox/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/redfox/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/redfox/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/redfox/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/redfox/status.jpg"
     },
     {
         "id": 4,
         "name": "Gray Fox",
         "description": "The gray fox, or grey fox, is an omnivorous mammal of the family Canidae, widespread throughout North America and Central America.",
-        "image": "./assets/images/grayfox/image.jpeg",
-        "footprint": "./assets/images/grayfox/footprint.jpg",
-        "map": "./assets/images/grayfox/map.jpeg",
-        "status": "./assets/images/grayfox/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/grayfox/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/grayfox/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/grayfox/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/grayfox/status.jpg"
     },
     {
         "id": 5,
         "name": "Bob Cat",
         "description": "The bobcat, also known as the red lynx, is a medium-sized cat native to North America from southern Canada, most of the contiguous United States to Oaxaca in Mexico. It is listed as Least Concern on the IUCN Red List since 2002, because it is widely distributed and abundant.",
-        "image": "./assets/images/bobcat/image.jpg",
-        "footprint": "./assets/images/bobcat/footprint.png",
-        "map": "./assets/images/bobcat/map.jpg",
-        "status": "./assets/images/bobcat/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/bobcat/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/bobcat/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/bobcat/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/bobcat/status.jpg"
     },
     {
         "id": 6,
         "name": "Fisher",
         "description": "The fisher is a small, carnivorous mammal native to North America. It is a member of the mustelid family, and is in the monospecific genus Pekania. The fisher is closely related to, but larger than, the American marten.",
-        "image": "./assets/images/fisher/image.png",
-        "footprint": "./assets/images/fisher/footprint.jpg",
-        "map": "./assets/images/fisher/map.png",
-        "status": "./assets/images/fisher/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/fisher/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/fisher/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/fisher/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/fisher/status.jpg"
     },
     {
         "id": 7,
         "name": "Weasel",
         "description": "A weasel is a mammal of the genus Mustela of the family Mustelidae. The genus Mustela includes the least weasels, polecats, stoats, ferrets and mink. Members of this genus are small, active predators, with long and slender bodies and short legs.",
-        "image": "./assets/images/weasel/image.jpg",
-        "footprint": "./assets/images/weasel/footprint.png",
-        "map": "./assets/images/weasel/map.png",
-        "status": "./assets/images/weasel/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/weasel/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/weasel/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/weasel/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/weasel/status.jpg"
     },
     {
         "id": 8,
         "name": "Racoon",
         "description": "The raccoon is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm and a body weight of 5 to 26 kg. Its grayish coat mostly consists of dense underfur which insulates it against cold weather.",
-        "image": "./assets/images/racoon/image.jpg",
-        "footprint": "./assets/images/racoon/footprint.jpg",
-        "map": "./assets/images/racoon/map.png",
-        "status": "./assets/images/racoon/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/racoon/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/racoon/footprint.jpg",
+        "map": "https://s3.console.aws.amazon.com/s3/object/wilderness-survival-app?region=us-west-1&prefix=images/animal_images/racoon/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/racoon/status.jpg"
     },
     {
         "id": 9,
         "name": "Striped Skunk",
         "description": "The striped skunk is a skunk of the genus Mephitis that occurs across most of North America, including southern Canada, the United States, and northern Mexico. It is currently listed as least concern by the IUCN on account of its wide range and ability to adapt to human-modified environments.",
-        "image": "./assets/images/stripedskunk/image.jpg",
-        "footprint": "./assets/images/stripedskunk/footprint.jpg",
-        "map": "./assets/images/stripedskunk/map.png",
-        "status": "./assets/images/stripedskunk/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/stripedskunk/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/stripedskunk/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/stripedskunk/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/stripedskunk/status.jpg"
     },
     {
         "id": 10,
         "name": "Beaver",
         "description": "Beavers are large, semiaquatic rodents of the temperate Northern Hemisphere. There are two extant species in the genus Castor, the North American beaver and the Eurasian beaver. Beavers are the second largest living rodents after the capybaras.",
-        "image": "./assets/images/beaver/image.jpg",
-        "footprint": "./assets/images/beaver/footprint.jpg",
-        "map": "./assets/images/beaver/map.png",
-        "status": "./assets/images/beaver/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/beaver/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/beaver/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/beaver/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/beaver/status.jpg"
     },
     {
         "id": 11,
         "name": "Black Bear",
         "description": "The American black bear is a medium-sized bear native to North America. It is the continent's smallest and most widely distributed bear species. American black bears are omnivores, with their diets varying greatly depending on season and location.",
-        "image": "./assets/images/blackbear/image.jpg",
-        "footprint": "./assets/images/blackbear/footprint.jpg",
-        "map": "./assets/images/blackbear/map.png",
-        "status": "./assets/images/blackbear/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/blackbear/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/blackbear/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/blackbear/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/blackbear/status.jpg"
     },
     {
         "id": 12,
         "name": "Woodchuck",
         "description": "The groundhog, also known as a woodchuck, is a rodent of the family Sciuridae, belonging to the group of large ground squirrels known as marmots. The groundhog is a lowland creature of North America; it is found through much of the eastern United States, across Canada and into Alaska.",
-        "image": "./assets/images/woodchuck/image.jpg",
-        "footprint": "./assets/images/woodchuck/footprint.jpg",
-        "map": "./assets/images/woodchuck/map.png",
-        "status": "./assets/images/woodchuck/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/woodchuck/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/woodchuck/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/woodchuck/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/woodchuck/status.jpg"
     },
     {
         "id": 13,
         "name": "Muskrat",
         "description": "The muskrat, the only species in genus Ondatra and tribe ondatrini, is a medium-sized semiaquatic rodent native to North America and an introduced species in parts of Europe, Asia, and South America. The muskrat is found in wetlands over a wide range of climates and habitats.",
-        "image": "./assets/images/muskrat/image.jpeg",
-        "footprint": "./assets/images/muskrat/footprint.jpg",
-        "map": "./assets/images/muskrat/map.jpg",
-        "status": "./assets/images/muskrat/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/muskrat/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/muskrat/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/muskrat/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/muskrat/status.jpg"
     },
     {
         "id": 14,
         "name": "Eastern Cottontail Rabbit",
         "description": "Cottontail rabbits are among the 20 lagomorph species in the genus Sylvilagus, found in the Americas. Most Sylvilagus species have stub tails with white undersides that show when they retreat, giving them their characteristic name. However, this feature is not present in all cottontails nor is it unique to the genus",
-        "image": "./assets/images/easterncottontailrabbit/image.jpg",
-        "footprint": "./assets/images/easterncottontailrabbit/footprint.png",
-        "map": "./assets/images/easterncottontailrabbit/map.png",
-        "status": "./assets/images/easterncottontailrabbit/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/easterncottontailrabbit/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/easterncottontailrabbit/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/easterncottontailrabbit/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/easterncottontailrabbit/status.jpg"
     },
     {
         "id": 15,
         "name": "Gray Squirrel",
         "description": "The eastern gray squirrel, also known as the grey squirrel depending on region, is a tree squirrel in the genus Sciurus. It is native to eastern North America, where it is the most prodigious and ecologically essential natural forest regenerator.",
-        "image": "./assets/images/graysquirrel/image.jpg",
-        "footprint": "./assets/images/graysquirrel/footprint.png",
-        "map": "./assets/images/graysquirrel/map.png",
-        "status": "./assets/images/graysquirrel/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/graysquirrel/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/graysquirrel/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/graysquirrel/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/graysquirrel/status.jpg"
     },
     {
         "id": 16,
         "name": "White-Footed Mouse",
         "description": "The white-footed mouse is a rodent native to North America from Ontario, Quebec, Labrador, and the Maritime Provinces to the southwest United States and Mexico. In the Maritimes, its only location is a disjunct population in southern Nova Scotia. It is also known as the woodmouse, particularly in Texas.",
-        "image": "./assets/images/whitefootedmouse/image.jpg",
-        "footprint": "./assets/images/whitefootedmouse/footprint.jpg",
-        "map": "./assets/images/whitefootedmouse/map.png",
-        "status": "./assets/images/whitefootedmouse/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/whitefootedmouse/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/whitefootedmouse/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/whitefootedmouse/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/whitefootedmouse/status.jpg"
     },
     {
         "id": 17,
         "name": "Grizzely Bear",
         "description": "The brown bear is a large bear species found across Eurasia and North America. In North America, the populations of brown bears are called grizzly bears.",
-        "image": "./assets/images/grizzelybear/image.jpg",
-        "footprint": "./assets/images/grizzelybear/footprint.png",
-        "map": "./assets/images/grizzelybear/map.png",
-        "status": "./assets/images/grizzelybear/status.png"
+        "image": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/grizzelybear/image.jpg",
+        "footprint": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/grizzelybear/footprint.jpg",
+        "map": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/grizzelybear/map.jpg",
+        "status": "https://wilderness-survival-app.s3-us-west-1.amazonaws.com/images/animal_images/grizzelybear/status.jpg"
     }
 ]
